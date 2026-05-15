@@ -54,7 +54,23 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-royal-blue-dark via-royal-blue to-royal-blue-light" />
+        {/* Sky gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-royal-blue-dark via-royal-blue to-[#2a4a6e]" />
+        {/* Warm horizon glow */}
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 50% 110%, rgba(197,160,89,0.18) 0%, transparent 65%)' }} />
+        {/* Stars */}
+        <div className="absolute inset-0 overflow-hidden">
+          {[
+            [12,8],[25,15],[38,6],[52,18],[67,10],[80,20],[93,7],[8,30],[30,28],[45,35],[72,25],[88,32],
+            [18,50],[60,45],[85,48],[35,55],[55,12],[70,38],[20,22],[90,18],
+          ].map(([x, y], i) => (
+            <div
+              key={i}
+              className="absolute rounded-full bg-cream"
+              style={{ left: `${x}%`, top: `${y}%`, width: i % 3 === 0 ? 2 : 1, height: i % 3 === 0 ? 2 : 1, opacity: 0.3 + (i % 4) * 0.1 }}
+            />
+          ))}
+        </div>
 
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <div className="flex justify-center mb-6">
@@ -92,9 +108,32 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-cream/40 text-xs tracking-widest">
+        {/* Layered mountain silhouette */}
+        <div className="absolute bottom-0 left-0 right-0 z-10">
+          <svg viewBox="0 0 1440 130" xmlns="http://www.w3.org/2000/svg" className="w-full block">
+            {/* Far mountains */}
+            <path
+              d="M0,130 L0,75 L60,35 L120,58 L200,18 L280,48 L360,10 L440,42 L520,20 L600,40 L680,8 L760,38 L840,14 L920,44 L1000,24 L1080,50 L1160,20 L1240,46 L1320,30 L1380,52 L1440,36 L1440,130 Z"
+              fill="#fdfaf5"
+              fillOpacity="0.08"
+            />
+            {/* Mid mountains */}
+            <path
+              d="M0,130 L0,90 L90,62 L180,82 L270,52 L360,75 L450,48 L540,70 L630,55 L720,78 L810,50 L900,72 L990,60 L1080,80 L1170,55 L1260,74 L1350,63 L1440,76 L1440,130 Z"
+              fill="#fdfaf5"
+              fillOpacity="0.12"
+            />
+            {/* Foreground ridge */}
+            <path
+              d="M0,130 L0,105 L80,88 L160,108 L240,85 L320,100 L400,80 L480,98 L560,82 L640,102 L720,86 L800,104 L880,88 L960,106 L1040,84 L1120,100 L1200,88 L1280,105 L1360,90 L1440,100 L1440,130 Z"
+              fill="#fdfaf5"
+            />
+          </svg>
+        </div>
+
+        <div className="absolute bottom-14 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 text-cream/40 text-xs tracking-widest">
           <span>scroll</span>
-          <div className="w-px h-10 bg-cream/20" />
+          <div className="w-px h-8 bg-cream/20" />
         </div>
       </section>
 
@@ -118,6 +157,16 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Wave divider cream → pink */}
+      <div className="bg-cream -mb-px">
+        <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" className="w-full block">
+          <path
+            d="M0,30 C180,60 360,0 540,30 C720,60 900,10 1080,35 C1200,50 1320,20 1440,30 L1440,60 L0,60 Z"
+            fill="rgba(244,194,194,0.35)"
+          />
+        </svg>
+      </div>
 
       {/* Featured trips */}
       <section className="py-20 px-6 bg-pink/30">
@@ -158,9 +207,27 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Wave divider pink → royal blue */}
+      <div className="bg-pink/30 -mb-px">
+        <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" className="w-full block">
+          <path
+            d="M0,20 C240,55 480,0 720,25 C960,50 1200,5 1440,20 L1440,60 L0,60 Z"
+            fill="#1D3557"
+          />
+        </svg>
+      </div>
+
       {/* Testimonial */}
-      <section className="py-20 px-6 bg-royal-blue text-cream">
-        <div className="max-w-3xl mx-auto text-center space-y-6">
+      <section className="py-20 px-6 bg-royal-blue text-cream relative overflow-hidden">
+        {/* Subtle leaf accents */}
+        <svg className="absolute left-0 top-0 opacity-5 w-64" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10,100 Q50,10 100,10 Q150,10 190,100 Q150,190 100,190 Q50,190 10,100 Z" fill="#fdfaf5"/>
+        </svg>
+        <svg className="absolute right-0 bottom-0 opacity-5 w-64 rotate-180" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10,100 Q50,10 100,10 Q150,10 190,100 Q150,190 100,190 Q50,190 10,100 Z" fill="#fdfaf5"/>
+        </svg>
+
+        <div className="max-w-3xl mx-auto text-center space-y-6 relative z-10">
           <div className="flex justify-center gap-1">
             {[...Array(5)].map((_, i) => (
               <Star key={i} size={18} className="text-gold fill-gold" />
@@ -173,9 +240,27 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Wave divider royal blue → cream */}
+      <div className="bg-royal-blue -mb-px">
+        <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" className="w-full block">
+          <path
+            d="M0,40 C360,10 720,55 1080,30 C1260,18 1380,45 1440,40 L1440,60 L0,60 Z"
+            fill="#fdfaf5"
+          />
+        </svg>
+      </div>
+
       {/* CTA */}
       <section className="py-20 px-6 bg-cream">
         <div className="max-w-2xl mx-auto text-center space-y-6">
+          {/* Decorative botanical divider */}
+          <div className="flex items-center justify-center gap-3 mb-2">
+            <div className="h-px w-16 bg-gold/30" />
+            <svg viewBox="0 0 24 24" className="w-5 h-5 text-gold" fill="currentColor">
+              <path d="M12 2C9 2 6 5 6 9c0 2.5 1.5 4.5 3 6l3 3 3-3c1.5-1.5 3-3.5 3-6 0-4-3-7-6-7z"/>
+            </svg>
+            <div className="h-px w-16 bg-gold/30" />
+          </div>
           <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium">Ready?</p>
           <h2 className="font-serif text-4xl font-bold text-royal-blue">Your Next Chapter Starts Here</h2>
           <p className="text-charcoal/70 text-lg leading-relaxed">
