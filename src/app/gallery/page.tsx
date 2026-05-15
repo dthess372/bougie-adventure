@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Gallery',
-  description: 'Photos from our luxury adventure trips — see where Bougie Adventure has taken women like you.',
+  description: 'Photos from our luxury adventure trips. See where Bougie Adventure has taken women like you.',
 };
 
 const placeholders = Array.from({ length: 12 }, (_, i) => ({
@@ -32,7 +32,7 @@ export default function GalleryPage() {
       <section className="py-16 px-6 bg-cream">
         <div className="max-w-6xl mx-auto">
           <p className="text-center text-charcoal/50 text-sm mb-10 italic">
-            Photos coming soon — follow us on Instagram for the latest from our adventures.
+            Photos coming soon. Follow us on Instagram for the latest from our adventures.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
             {placeholders.map(({ id, label }) => (

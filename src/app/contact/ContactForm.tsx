@@ -86,7 +86,7 @@ export default function ContactForm() {
           <option>Smoky Mountain Kayak Escape</option>
           <option>Pacific Northwest White Water</option>
           <option>Custom Private Adventure</option>
-          <option>Not sure yet — tell me what's available</option>
+          <option>Not sure yet, tell me what's available</option>
         </select>
       </div>
 

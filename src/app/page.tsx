@@ -6,7 +6,7 @@ const features = [
   {
     icon: Compass,
     title: 'Curated Itineraries',
-    body: 'Every trip is thoughtfully planned — from the rapids to the yoga mat to the wine glass. No guesswork, just adventure.',
+    body: 'Every trip is thoughtfully planned, from the rapids to the yoga mat to the wine glass. No guesswork, just adventure.',
   },
   {
     icon: Star,
@@ -43,7 +43,7 @@ const trips = [
   {
     name: 'Mountain Yoga & Wilderness Retreat',
     tag: 'Wellness',
-    description: 'Morning yoga overlooking mountain peaks, afternoon nature hikes, and evenings at a secluded luxury lodge — rest, restore, and reconnect.',
+    description: 'Morning yoga overlooking mountain peaks, afternoon nature hikes, and evenings at a secluded luxury lodge. Rest, restore, and reconnect.',
     duration: '6 days',
     difficulty: 'Gentle',
   },
@@ -234,9 +234,9 @@ export default function HomePage() {
             ))}
           </div>
           <blockquote className="font-serif text-2xl md:text-3xl italic leading-relaxed text-cream/90">
-            "I turned 56 on a white water raft in the Grand Canyon. Best birthday of my life — and I didn't break a nail."
+            "I turned 56 on a white water raft in the Grand Canyon. Best birthday of my life, and I didn't break a nail."
           </blockquote>
-          <p className="text-gold text-sm tracking-widest uppercase">— Margaret T., Arizona</p>
+          <p className="text-gold text-sm tracking-widest uppercase">Margaret T., Arizona</p>
         </div>
       </section>
 

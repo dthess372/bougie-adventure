@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Journal',
-  description: 'Trip recaps, travel tips, and stories from Bougie Adventure — luxury adventures for women 50+.',
+  description: 'Trip recaps, travel tips, and stories from Bougie Adventure. Luxury adventures for women 50+.',
 };
 
 const placeholderPosts = [
@@ -17,7 +17,7 @@ const placeholderPosts = [
   {
     slug: 'packing-list',
     title: 'The Bougie Packing List: What to Bring (and What to Leave Behind)',
-    excerpt: "After dozens of river trips, we've narrowed it down. Pack light, pack right — and always bring one thing that makes you feel like yourself.",
+    excerpt: "After dozens of river trips, we've narrowed it down. Pack light, pack right. And always bring one thing that makes you feel like yourself.",
     date: 'March 2025',
     tag: 'Travel Tips',
   },
@@ -51,7 +51,7 @@ export default function BlogPage() {
       <section className="py-20 px-6 bg-cream">
         <div className="max-w-5xl mx-auto">
           <p className="text-charcoal/50 text-sm text-center italic mb-12">
-            Full blog powered by Sanity CMS — posts will appear here once content is added.
+            Full blog powered by Sanity CMS. Posts will appear here once content is added.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -85,7 +85,7 @@ export default function BlogPage() {
       <section className="py-16 px-6 bg-pink/20 text-center">
         <div className="max-w-xl mx-auto space-y-4">
           <h2 className="font-serif text-3xl font-bold text-royal-blue">Get Trip Stories in Your Inbox</h2>
-          <p className="text-charcoal/65 text-sm">Recaps, early trip announcements, and packing guides — no spam, ever.</p>
+          <p className="text-charcoal/65 text-sm">Recaps, early trip announcements, and packing guides. No spam, ever.</p>
           <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
             <input
               type="email"

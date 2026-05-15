@@ -4,7 +4,7 @@ import { Clock, ChartBar, Check } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Adventures',
-  description: 'Browse our curated luxury adventure packages — river kayaking, white water rafting, and more for women 50+.',
+  description: 'Browse our curated luxury adventure packages: river kayaking, white water rafting, and more for women 50+.',
 };
 
 const packages = [
@@ -12,7 +12,7 @@ const packages = [
     name: 'Grand Canyon River Run',
     tag: 'Signature',
     tagColor: 'bg-gold/15 text-gold-dark',
-    description: 'Our most iconic trip. Six days rafting the Colorado through the heart of the Grand Canyon — one of the most awe-inspiring places on Earth.',
+    description: 'Our most iconic trip. Six days rafting the Colorado through the heart of the Grand Canyon, one of the most awe-inspiring places on Earth.',
     duration: '6 days / 5 nights',
     difficulty: 'Moderate',
     groupSize: 'Up to 10',
@@ -34,7 +34,7 @@ const packages = [
     difficulty: 'Easy',
     groupSize: 'Up to 10',
     highlights: [
-      'Electric bikes — no cycling experience required',
+      'Electric bikes, no cycling experience required',
       'Private winery tours and tastings',
       'Boutique inn accommodations nightly',
       'Farm-to-table dining and local artisan markets',
@@ -46,12 +46,12 @@ const packages = [
     name: 'Mountain Yoga & Wilderness Retreat',
     tag: 'Wellness',
     tagColor: 'bg-pink text-royal-blue',
-    description: 'Morning yoga overlooking mountain peaks, afternoon nature hikes, and evenings at a secluded luxury lodge — rest, restore, and reconnect with yourself and your fellow adventurers.',
+    description: 'Morning yoga overlooking mountain peaks, afternoon nature hikes, and evenings at a secluded luxury lodge. Rest, restore, and reconnect with yourself and your fellow adventurers.',
     duration: '6 days / 5 nights',
     difficulty: 'Gentle',
     groupSize: 'Up to 8',
     highlights: [
-      'Daily guided yoga — all levels welcome',
+      'Daily guided yoga, all levels welcome',
       'Guided wilderness hikes through meadows and peaks',
       'Luxury mountain lodge accommodations',
       'Spa treatments and restorative sessions',
@@ -124,7 +124,7 @@ export default function ServicesPage() {
             Find Your Perfect Trip
           </h1>
           <p className="text-cream/75 text-lg leading-relaxed max-w-xl mx-auto">
-            From white water rapids to mountain yoga retreats to wine country e-biking — every trip is designed for women who want real adventure without giving up a single comfort.
+            From white water rapids to mountain yoga retreats to wine country e-biking. Every trip is designed for women who want real adventure without giving up a single comfort.
           </p>
         </div>
       </section>
@@ -183,7 +183,7 @@ export default function ServicesPage() {
             {[
               'Experienced, certified female guides',
               'All adventure equipment and safety gear',
-              'Curated accommodations — hand selected',
+              'Curated accommodations, hand selected',
               'Most meals (detailed per itinerary)',
               'Airport pickup / group transport',
               'Pre-trip planning consultation',

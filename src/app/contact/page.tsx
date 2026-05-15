@@ -4,7 +4,7 @@ import { Mail } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: "Ready to plan your adventure? Reach out to the Bougie Adventure team — we'd love to hear from you.",
+  description: "Ready to plan your adventure? Reach out to the Bougie Adventure team. We'd love to hear from you.",
 };
 
 export default function ContactPage() {

@@ -3,14 +3,14 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Meet the women behind Bougie Adventure — expert guides who believe every woman deserves a thrilling, luxurious adventure.',
+  description: 'Meet the women behind Bougie Adventure, expert guides who believe every woman deserves a thrilling, luxurious adventure.',
 };
 
 const values = [
   { title: 'Safety First', body: 'Every trip is designed with your safety as the absolute priority. Certified guides, quality gear, and detailed emergency plans on every journey.' },
-  { title: 'Real Adventure', body: 'No watered-down experiences. We take you on the real thing — Class III rapids, remote wilderness, breathtaking terrain.' },
+  { title: 'Real Adventure', body: 'No watered-down experiences. We take you on the real thing: Class III rapids, remote wilderness, breathtaking terrain.' },
   { title: 'Unapologetic Luxury', body: "Adventure ends at the water's edge. The rest of your day includes fine food, comfortable beds, and beautiful surroundings." },
-  { title: 'Community', body: 'Our trips attract incredible women. Many guests return year after year — not just for the adventure, but for the friendships.' },
+  { title: 'Community', body: 'Our trips attract incredible women. Many guests return year after year, not just for the adventure, but for the friendships.' },
 ];
 
 export default function AboutPage() {
@@ -63,7 +63,7 @@ export default function AboutPage() {
                 <h3 className="font-serif text-2xl font-bold text-royal-blue">Your Name Here</h3>
                 <p className="text-gold text-sm tracking-widest uppercase">Co-Founder & Lead Guide</p>
                 <p className="text-charcoal/70 text-sm leading-relaxed max-w-sm mx-auto">
-                  [Add your bio here — your experience, what you love about leading trips, and what guests can expect traveling with you.]
+                  [Add your bio here: your experience, what you love about leading trips, and what guests can expect traveling with you.]
                 </p>
               </div>
             </div>
@@ -77,7 +77,7 @@ export default function AboutPage() {
                 <h3 className="font-serif text-2xl font-bold text-royal-blue">Partner Name Here</h3>
                 <p className="text-gold text-sm tracking-widest uppercase">Co-Founder & Guide</p>
                 <p className="text-charcoal/70 text-sm leading-relaxed max-w-sm mx-auto">
-                  [Add partner bio here — her background, certifications, what she brings to every trip, and her adventure philosophy.]
+                  [Add partner bio here: her background, certifications, what she brings to every trip, and her adventure philosophy.]
                 </p>
               </div>
             </div>

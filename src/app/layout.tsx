@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s | Bougie Adventure",
   },
   description:
-    "Curated luxury adventure trips for women 50+. White water rafting, river kayaking, and more — with the comfort and camaraderie you deserve.",
+    "Curated luxury adventure trips for women 50+. White water rafting, river kayaking, and more, with the comfort and camaraderie you deserve.",
   openGraph: {
     title: "Bougie Adventure",
     description: "Luxury adventure travel for women who refuse to choose between comfort and thrill.",
