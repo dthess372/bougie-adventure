@@ -57,44 +57,16 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
-        {/* Sky gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-royal-blue-dark via-royal-blue to-[#2a4a6e]" />
-        {/* Warm horizon glow */}
-        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 50% 110%, rgba(197,160,89,0.18) 0%, transparent 65%)' }} />
-        {/* Topographic overlay */}
-        <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs>
-            <pattern id="topo" x="0" y="0" width="420" height="320" patternUnits="userSpaceOnUse">
-              <ellipse cx="210" cy="160" rx="28"  ry="18"  fill="none" stroke="white" strokeWidth="0.8" opacity="0.12"/>
-              <ellipse cx="210" cy="160" rx="56"  ry="36"  fill="none" stroke="white" strokeWidth="0.8" opacity="0.09"/>
-              <ellipse cx="210" cy="160" rx="84"  ry="54"  fill="none" stroke="white" strokeWidth="0.8" opacity="0.07"/>
-              <ellipse cx="210" cy="160" rx="112" ry="72"  fill="none" stroke="white" strokeWidth="0.8" opacity="0.06"/>
-              <ellipse cx="210" cy="160" rx="140" ry="90"  fill="none" stroke="white" strokeWidth="0.8" opacity="0.05"/>
-              <ellipse cx="210" cy="160" rx="168" ry="108" fill="none" stroke="white" strokeWidth="0.8" opacity="0.04"/>
-              <ellipse cx="210" cy="160" rx="196" ry="126" fill="none" stroke="white" strokeWidth="0.8" opacity="0.03"/>
-              <ellipse cx="0"   cy="0"   rx="56"  ry="36"  fill="none" stroke="white" strokeWidth="0.8" opacity="0.06"/>
-              <ellipse cx="0"   cy="0"   rx="84"  ry="54"  fill="none" stroke="white" strokeWidth="0.8" opacity="0.04"/>
-              <ellipse cx="420" cy="0"   rx="56"  ry="36"  fill="none" stroke="white" strokeWidth="0.8" opacity="0.06"/>
-              <ellipse cx="420" cy="0"   rx="84"  ry="54"  fill="none" stroke="white" strokeWidth="0.8" opacity="0.04"/>
-              <ellipse cx="0"   cy="320" rx="56"  ry="36"  fill="none" stroke="white" strokeWidth="0.8" opacity="0.05"/>
-              <ellipse cx="420" cy="320" rx="56"  ry="36"  fill="none" stroke="white" strokeWidth="0.8" opacity="0.05"/>
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#topo)"/>
-        </svg>
-        {/* Stars */}
-        <div className="absolute inset-0 overflow-hidden">
-          {[
-            [12,8],[25,15],[38,6],[52,18],[67,10],[80,20],[93,7],[8,30],[30,28],[45,35],[72,25],[88,32],
-            [18,50],[60,45],[85,48],[35,55],[55,12],[70,38],[20,22],[90,18],
-          ].map(([x, y], i) => (
-            <div
-              key={i}
-              className="absolute rounded-full bg-cream"
-              style={{ left: `${x}%`, top: `${y}%`, width: i % 3 === 0 ? 2 : 1, height: i % 3 === 0 ? 2 : 1, opacity: 0.3 + (i % 4) * 0.1 }}
-            />
-          ))}
-        </div>
+        {/* Background image — photo by Samuel Ferrara / Unsplash */}
+        <Image
+          src="/hero.jpg"
+          alt="Mountain peaks above a sea of clouds at sunset"
+          fill
+          priority
+          className="object-cover object-center"
+        />
+        {/* Overlay: darkens for text legibility, fades to brand blue at bottom */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/40 to-royal-blue-dark/80" />
 
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <div className="flex justify-center mb-6">
