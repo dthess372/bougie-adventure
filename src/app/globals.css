@@ -31,3 +31,26 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
 }
+
+@keyframes shimmer-slide {
+  from { transform: translateX(-100%) skewX(-12deg); }
+  to   { transform: translateX(260%) skewX(-12deg); }
+}
+
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 35%;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.22), transparent);
+  transform: translateX(-100%) skewX(-12deg);
+}
+
+.btn-shimmer:hover::after {
+  animation: shimmer-slide 0.55s ease-in-out forwards;
+}

@@ -11,7 +11,7 @@ const packages = [
   {
     name: 'Grand Canyon River Run',
     tag: 'Signature',
-    tagColor: 'bg-gold/15 text-gold-dark',
+    tagColor: 'bg-gold text-royal-blue-dark',
     description: 'Our most iconic trip. Six days rafting the Colorado through the heart of the Grand Canyon, one of the most awe-inspiring places on Earth.',
     duration: '6 days / 5 nights',
     difficulty: 'Moderate',
@@ -28,7 +28,7 @@ const packages = [
   {
     name: 'Wine Country E-Bike Tour',
     tag: 'New',
-    tagColor: 'bg-pink text-royal-blue',
+    tagColor: 'bg-royal-blue text-cream',
     description: 'Glide through stunning vineyard landscapes on premium e-bikes at your own pace, with curated wine tastings, farm-to-table lunches, and boutique inn stays each evening.',
     duration: '5 days / 4 nights',
     difficulty: 'Easy',
@@ -45,7 +45,7 @@ const packages = [
   {
     name: 'Mountain Yoga & Wilderness Retreat',
     tag: 'Wellness',
-    tagColor: 'bg-pink text-royal-blue',
+    tagColor: 'bg-pink-dark text-royal-blue-dark',
     description: 'Morning yoga overlooking mountain peaks, afternoon nature hikes, and evenings at a secluded luxury lodge. Rest, restore, and reconnect with yourself and your fellow adventurers.',
     duration: '6 days / 5 nights',
     difficulty: 'Gentle',
@@ -62,7 +62,7 @@ const packages = [
   {
     name: 'Smoky Mountain Kayak Escape',
     tag: 'Popular',
-    tagColor: 'bg-royal-blue/10 text-royal-blue',
+    tagColor: 'bg-pink text-royal-blue',
     description: 'A peaceful float through Appalachian splendor with stops at hidden waterfalls, local artisan markets, and a luxury mountain lodge each evening.',
     duration: '4 days / 3 nights',
     difficulty: 'Easy',
@@ -79,7 +79,7 @@ const packages = [
   {
     name: 'Pacific Northwest White Water',
     tag: 'Thrill',
-    tagColor: 'bg-royal-blue/10 text-royal-blue',
+    tagColor: 'bg-royal-blue-dark text-cream',
     description: 'Heart-pounding white water through the Cascades by day, cedar spa retreat and gourmet Pacific Northwest cuisine by night.',
     duration: '5 days / 4 nights',
     difficulty: 'Challenging',
@@ -133,31 +133,31 @@ export default function ServicesPage() {
       <section className="py-20 px-6 bg-cream">
         <div className="max-w-5xl mx-auto space-y-12">
           {packages.map((pkg) => (
-            <div key={pkg.name} className="bg-white rounded-3xl border border-gold/15 shadow-sm overflow-hidden grid grid-cols-1 md:grid-cols-5">
+            <div key={pkg.name} className="bg-white rounded-3xl border border-gold/15 shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden grid grid-cols-1 md:grid-cols-5 group">
               {/* Photo */}
-              <div className="md:col-span-2 min-h-48 bg-gradient-to-br from-royal-blue to-royal-blue-light flex items-center justify-center">
-                <span className="text-cream/30 text-xs tracking-widest uppercase">Photo Coming Soon</span>
+              <div className="md:col-span-2 min-h-48 overflow-hidden relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-royal-blue to-royal-blue-light group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                <span className="absolute inset-0 flex items-center justify-center text-cream/20 text-xs tracking-widest uppercase">Photo Coming Soon</span>
+                <span className={`absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold tracking-wide ${pkg.tagColor}`}>
+                  {pkg.tag}
+                </span>
               </div>
 
               {/* Details */}
               <div className="md:col-span-3 p-8 space-y-5">
-                <div className="flex items-center gap-3 flex-wrap">
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold tracking-wide ${pkg.tagColor}`}>
-                    {pkg.tag}
-                  </span>
-                  <div className="flex items-center gap-4 text-xs text-charcoal/50">
-                    <span className="flex items-center gap-1"><Clock size={12} /> {pkg.duration}</span>
-                    <span className="flex items-center gap-1"><ChartBar size={12} /> {pkg.difficulty}</span>
-                  </div>
+                <div className="flex items-center gap-4 text-sm text-charcoal/50">
+                  <span className="flex items-center gap-1"><Clock size={13} /> {pkg.duration}</span>
+                  <span className="flex items-center gap-1"><ChartBar size={13} /> {pkg.difficulty}</span>
                 </div>
 
                 <h2 className="font-serif text-2xl font-bold text-royal-blue">{pkg.name}</h2>
-                <p className="text-sm text-charcoal/70 leading-relaxed">{pkg.description}</p>
+                <p className="text-base text-charcoal/70 leading-relaxed">{pkg.description}</p>
 
                 <ul className="space-y-1.5">
                   {pkg.highlights.map((h) => (
-                    <li key={h} className="flex items-start gap-2 text-sm text-charcoal/70">
-                      <Check size={14} className="text-gold mt-0.5 shrink-0" />
+                    <li key={h} className="flex items-start gap-2 text-base text-charcoal/70">
+                      <Check size={14} className="text-gold mt-1 shrink-0" />
                       {h}
                     </li>
                   ))}

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
@@ -16,19 +16,26 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handler = () => setScrolled(window.scrollY > 50);
+    window.addEventListener('scroll', handler, { passive: true });
+    return () => window.removeEventListener('scroll', handler);
+  }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-royal-blue/95 backdrop-blur-sm shadow-md">
-      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
+    <header className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-sm transition-all duration-300 ${scrolled ? 'bg-royal-blue/98 shadow-lg' : 'bg-royal-blue/95 shadow-md'}`}>
+      <div className={`max-w-6xl mx-auto px-6 flex items-center justify-between transition-all duration-300 ${scrolled ? 'h-13' : 'h-16'}`}>
         <Link href="/" onClick={() => setOpen(false)} className="flex items-center gap-2.5">
           <Image
             src="/Choice 1.jpg"
             alt="Bougie Adventure"
             width={42}
             height={42}
-            className="rounded-full border border-gold/30"
+            className={`rounded-full border border-gold/30 transition-all duration-300 ${scrolled ? 'w-8 h-8' : 'w-[42px] h-[42px]'}`}
           />
-          <span className="font-serif font-bold text-gold text-lg tracking-wide hidden sm:block">Bougie Adventure</span>
+          <span className={`font-serif font-bold text-gold tracking-wide hidden sm:block transition-all duration-300 ${scrolled ? 'text-base' : 'text-lg'}`}>Bougie Adventure</span>
         </Link>
 
         {/* Desktop nav */}
@@ -46,7 +53,7 @@ export default function Navbar() {
 
         <Link
           href="/contact"
-          className="hidden md:inline-flex items-center px-5 py-2 rounded-full bg-gold text-royal-blue-dark text-sm font-semibold tracking-wide hover:bg-gold-light transition-colors duration-200"
+          className="hidden md:inline-flex items-center px-5 py-2 rounded-full bg-gold text-royal-blue-dark text-sm font-semibold tracking-wide hover:bg-gold-light transition-colors duration-200 btn-shimmer"
         >
           Book a Trip
         </Link>
@@ -77,7 +84,7 @@ export default function Navbar() {
             ))}
             <Link
               href="/contact"
-              className="mt-2 inline-flex items-center justify-center px-5 py-2 rounded-full bg-gold text-royal-blue-dark text-sm font-semibold tracking-wide hover:bg-gold-light transition-colors"
+              className="mt-2 inline-flex items-center justify-center px-5 py-2 rounded-full bg-gold text-royal-blue-dark text-sm font-semibold tracking-wide hover:bg-gold-light transition-colors btn-shimmer"
               onClick={() => setOpen(false)}
             >
               Book a Trip
