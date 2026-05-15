@@ -113,15 +113,6 @@ export default function HomePage() {
           </svg>
         </div>
 
-        {/* Animated scroll chevron */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-0.5 animate-bounce">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-cream/50">
-            <polyline points="6 9 12 15 18 9"/>
-          </svg>
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-cream/25">
-            <polyline points="6 9 12 15 18 9"/>
-          </svg>
-        </div>
       </section>
 
       {/* Features */}

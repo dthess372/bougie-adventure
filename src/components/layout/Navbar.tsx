@@ -35,7 +35,7 @@ export default function Navbar() {
             height={48}
             className={`rounded-full border border-gold/40 shadow-sm transition-all duration-300 ${scrolled ? 'w-9 h-9' : 'w-12 h-12'}`}
           />
-          <span className={`font-serif font-bold text-gold tracking-wide hidden sm:block transition-all duration-300 drop-shadow-sm ${scrolled ? 'text-base' : 'text-lg'}`}>Bougie Adventure</span>
+          <span className={`font-serif font-bold text-gold tracking-wide hidden sm:block transition-all duration-300 drop-shadow-sm ${scrolled ? 'text-lg' : 'text-2xl'}`}>Bougie Adventure</span>
         </Link>
 
         {/* Desktop nav */}
