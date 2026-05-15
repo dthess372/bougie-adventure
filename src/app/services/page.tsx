@@ -133,12 +133,12 @@ export default function ServicesPage() {
       <section className="py-20 px-6 bg-cream">
         <div className="max-w-5xl mx-auto space-y-12">
           {packages.map((pkg) => (
-            <div key={pkg.name} className="bg-white rounded-3xl border border-gold/15 shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden grid grid-cols-1 md:grid-cols-5 group">
+            <div key={pkg.name} className="bg-white rounded-3xl border border-gold/15 shadow-md hover:shadow-2xl hover:ring-2 hover:ring-gold/25 transition-all duration-300 overflow-hidden grid grid-cols-1 md:grid-cols-5 group">
               {/* Photo */}
               <div className="md:col-span-2 min-h-48 overflow-hidden relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-royal-blue to-royal-blue-light group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                <span className="absolute inset-0 flex items-center justify-center text-cream/20 text-xs tracking-widest uppercase">Photo Coming Soon</span>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                <span className="absolute inset-0 flex items-center justify-center text-cream/15 text-xs tracking-widest uppercase">Photo Coming Soon</span>
                 <span className={`absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold tracking-wide ${pkg.tagColor}`}>
                   {pkg.tag}
                 </span>

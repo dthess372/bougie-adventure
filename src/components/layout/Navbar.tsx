@@ -31,11 +31,11 @@ export default function Navbar() {
           <Image
             src="/Choice 1.jpg"
             alt="Bougie Adventure"
-            width={42}
-            height={42}
-            className={`rounded-full border border-gold/30 transition-all duration-300 ${scrolled ? 'w-8 h-8' : 'w-[42px] h-[42px]'}`}
+            width={48}
+            height={48}
+            className={`rounded-full border border-gold/40 shadow-sm transition-all duration-300 ${scrolled ? 'w-9 h-9' : 'w-12 h-12'}`}
           />
-          <span className={`font-serif font-bold text-gold tracking-wide hidden sm:block transition-all duration-300 ${scrolled ? 'text-base' : 'text-lg'}`}>Bougie Adventure</span>
+          <span className={`font-serif font-bold text-gold tracking-wide hidden sm:block transition-all duration-300 drop-shadow-sm ${scrolled ? 'text-base' : 'text-lg'}`}>Bougie Adventure</span>
         </Link>
 
         {/* Desktop nav */}

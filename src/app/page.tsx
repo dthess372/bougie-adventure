@@ -106,8 +106,8 @@ export default function HomePage() {
               className="rounded-full border-2 border-gold/40 shadow-xl"
             />
           </div>
-          <p className="text-gold text-sm tracking-[0.4em] uppercase font-medium mb-6">
-            Adventure · Wellness · Sisterhood
+          <p className="text-gold text-xs uppercase font-medium mb-6" style={{ letterSpacing: '0.35em' }}>
+            Adventure &nbsp;·&nbsp; Wellness &nbsp;·&nbsp; Sisterhood
           </p>
           <h1 className="font-serif text-5xl md:text-7xl font-bold text-cream leading-tight mb-6">
             Adventure Awaits,<br />
@@ -153,9 +153,9 @@ export default function HomePage() {
       </section>
 
       {/* Features */}
-      <section className="py-20 px-6 bg-cream">
+      <section className="py-24 px-6 bg-cream">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-14">
+          <div className="text-center mb-16">
             <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium mb-3">Why Bougie Adventure</p>
             <h2 className="font-serif text-4xl font-bold text-royal-blue tracking-wide">The Experience You Deserve</h2>
           </div>
@@ -181,33 +181,33 @@ export default function HomePage() {
       </div>
 
       {/* Featured trips */}
-      <section className="py-20 px-6 bg-pink/30">
+      <section className="py-24 px-6 bg-pink/30">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-14">
+          <div className="text-center mb-16">
             <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium mb-3">Featured Adventures</p>
             <h2 className="font-serif text-4xl font-bold text-royal-blue tracking-wide">Trips Made for You</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {trips.map((trip) => (
-              <div key={trip.name} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gold/10 group">
+              <div key={trip.name} className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:ring-2 hover:ring-gold/30 transition-all duration-300 border border-gold/10 group">
                 {/* Image with overlay */}
                 <div className="h-52 overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-royal-blue to-royal-blue-light group-hover:scale-105 transition-transform duration-500" />
-                  {/* Dark bottom gradient so metadata pops */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
-                  <span className="absolute inset-0 flex items-center justify-center text-cream/20 text-xs tracking-widest uppercase">Photo Coming Soon</span>
-                  {/* Metadata overlaid on image */}
-                  <div className="absolute bottom-3 left-4 flex items-center gap-2 text-xs text-white/80 font-medium">
+                  {/* Stronger scrim for clear metadata legibility */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                  <span className="absolute inset-0 flex items-center justify-center text-cream/15 text-xs tracking-widest uppercase">Photo Coming Soon</span>
+                  {/* Metadata — padded 16px from edges */}
+                  <div className="absolute bottom-4 left-4 flex items-center gap-2 text-xs text-white/90 font-medium tracking-wide">
                     <span>{trip.duration}</span>
-                    <span className="opacity-50">·</span>
+                    <span className="opacity-40">·</span>
                     <span>{trip.difficulty}</span>
                   </div>
-                  {/* Badge overlaid top-left */}
-                  <span className={`absolute top-3 left-4 px-2.5 py-1 rounded-full text-xs font-semibold tracking-wide ${trip.tagClass}`}>
+                  {/* Badge top-left */}
+                  <span className={`absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold tracking-wide ${trip.tagClass}`}>
                     {trip.tag}
                   </span>
                 </div>
-                <div className="p-6 space-y-3">
+                <div className="px-6 pt-5 pb-7 space-y-3">
                   <h3 className="font-serif text-xl font-semibold text-royal-blue">{trip.name}</h3>
                   <p className="text-base text-charcoal/70 leading-relaxed">{trip.description}</p>
                 </div>
@@ -217,7 +217,7 @@ export default function HomePage() {
           <div className="text-center mt-10">
             <Link
               href="/services"
-              className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-royal-blue text-cream text-sm font-semibold tracking-wide hover:bg-royal-blue-light transition-colors btn-shimmer"
+              className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-royal-blue text-cream text-sm font-semibold tracking-wide transition-all duration-300 hover:bg-transparent hover:text-royal-blue hover:ring-2 hover:ring-royal-blue hover:shadow-[0_0_20px_rgba(197,160,89,0.2)]"
             >
               View All Adventures
             </Link>
