@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Journal',
@@ -13,6 +14,7 @@ const placeholderPosts = [
     excerpt: "We expected rapids. We didn't expect to cry at sunset every single night. Here's what our spring Grand Canyon trip was really like.",
     date: 'April 2025',
     tag: 'Trip Recap',
+    image: '/blog-canyon.jpg',
   },
   {
     slug: 'packing-list',
@@ -20,6 +22,7 @@ const placeholderPosts = [
     excerpt: "After dozens of river trips, we've narrowed it down. Pack light, pack right. And always bring one thing that makes you feel like yourself.",
     date: 'March 2025',
     tag: 'Travel Tips',
+    image: '/blog-packing.jpg',
   },
   {
     slug: 'why-women-50',
@@ -27,6 +30,7 @@ const placeholderPosts = [
     excerpt: "They show up prepared. They don't complain. They laugh harder and sleep better than anyone else on the river. Here's our love letter to our guests.",
     date: 'February 2025',
     tag: 'Story',
+    image: '/blog-women.jpg',
   },
 ];
 
@@ -57,8 +61,8 @@ export default function BlogPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {placeholderPosts.map((post) => (
               <article key={post.slug} className="bg-white rounded-2xl border border-gold/10 overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
-                <div className="h-44 bg-gradient-to-br from-royal-blue to-royal-blue-light flex items-center justify-center">
-                  <span className="text-cream/25 text-xs tracking-widest uppercase">Photo</span>
+                <div className="h-44 relative overflow-hidden">
+                  <Image src={post.image} alt={post.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-6 space-y-3">
                   <div className="flex items-center gap-3">

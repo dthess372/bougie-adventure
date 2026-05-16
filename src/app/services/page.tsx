@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Clock, ChartBar, Check } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -24,6 +25,7 @@ const packages = [
       'All safety gear and guide fees included',
     ],
     cta: 'Inquire About This Trip',
+    image: '/trip-grand-canyon.jpg',
   },
   {
     name: 'Wine Country E-Bike Tour',
@@ -41,6 +43,7 @@ const packages = [
       'Scenic countryside routes, no traffic',
     ],
     cta: 'Inquire About This Trip',
+    image: '/trip-ebike.jpg',
   },
   {
     name: 'Mountain Yoga & Wilderness Retreat',
@@ -58,6 +61,7 @@ const packages = [
       'Wholesome gourmet meals included',
     ],
     cta: 'Inquire About This Trip',
+    image: '/trip-yoga.jpg',
   },
   {
     name: 'Smoky Mountain Kayak Escape',
@@ -75,6 +79,7 @@ const packages = [
       'Optional spa day add-on',
     ],
     cta: 'Inquire About This Trip',
+    image: '/trip-kayak.jpg',
   },
   {
     name: 'Pacific Northwest White Water',
@@ -92,6 +97,7 @@ const packages = [
       'Guided forest trail on rest day',
     ],
     cta: 'Inquire About This Trip',
+    image: '/trip-whitewater.jpg',
   },
   {
     name: 'Custom Private Adventure',
@@ -109,6 +115,7 @@ const packages = [
       'White-glove planning from start to finish',
     ],
     cta: 'Start Designing Your Trip',
+    image: '/trip-custom.jpg',
   },
 ];
 
@@ -136,9 +143,8 @@ export default function ServicesPage() {
             <div key={pkg.name} className="bg-white rounded-3xl border border-gold/15 shadow-md hover:shadow-2xl hover:ring-2 hover:ring-gold/25 transition-all duration-300 overflow-hidden grid grid-cols-1 md:grid-cols-5 group">
               {/* Photo */}
               <div className="md:col-span-2 min-h-48 overflow-hidden relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-royal-blue to-royal-blue-light group-hover:scale-105 transition-transform duration-500" />
+                <Image src={pkg.image} alt={pkg.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-                <span className="absolute inset-0 flex items-center justify-center text-cream/15 text-xs tracking-widest uppercase">Photo Coming Soon</span>
                 <span className={`absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold tracking-wide ${pkg.tagColor}`}>
                   {pkg.tag}
                 </span>

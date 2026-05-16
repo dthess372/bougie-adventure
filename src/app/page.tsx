@@ -33,6 +33,7 @@ const trips = [
     description: 'Six days rafting the Colorado through the heart of the Grand Canyon. Class III–IV rapids, glamping under the stars, and canyon-side gourmet dinners.',
     duration: '6 days',
     difficulty: 'Moderate',
+    image: '/trip-grand-canyon.jpg',
   },
   {
     name: 'Wine Country E-Bike Tour',
@@ -41,6 +42,7 @@ const trips = [
     description: 'Pedal through stunning vineyard landscapes at your own pace, with curated wine tastings, farm-to-table lunches, and boutique inn stays each night.',
     duration: '5 days',
     difficulty: 'Easy',
+    image: '/trip-ebike.jpg',
   },
   {
     name: 'Mountain Yoga & Wilderness Retreat',
@@ -49,6 +51,7 @@ const trips = [
     description: 'Morning yoga overlooking mountain peaks, afternoon nature hikes, and evenings at a secluded luxury lodge. Rest, restore, and reconnect.',
     duration: '6 days',
     difficulty: 'Gentle',
+    image: '/trip-yoga.jpg',
   },
 ];
 
@@ -164,10 +167,9 @@ export default function HomePage() {
               <div key={trip.name} className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:ring-2 hover:ring-gold/30 transition-all duration-300 border border-gold/10 group">
                 {/* Image with overlay */}
                 <div className="h-52 overflow-hidden relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-royal-blue to-royal-blue-light group-hover:scale-105 transition-transform duration-500" />
+                  <Image src={trip.image} alt={trip.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                   {/* Stronger scrim for clear metadata legibility */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-                  <span className="absolute inset-0 flex items-center justify-center text-cream/15 text-xs tracking-widest uppercase">Photo Coming Soon</span>
                   {/* Metadata — padded 16px from edges */}
                   <div className="absolute bottom-4 left-4 flex items-center gap-2 text-xs text-white/90 font-medium tracking-wide">
                     <span>{trip.duration}</span>
