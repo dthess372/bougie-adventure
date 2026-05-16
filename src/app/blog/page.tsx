@@ -62,7 +62,7 @@ export default function BlogPage() {
             {placeholderPosts.map((post) => (
               <article key={post.slug} className="bg-white rounded-2xl border border-gold/10 overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
                 <div className="h-44 relative overflow-hidden">
-                  <Image src={post.image} alt={post.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <Image src={post.image} alt={post.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-6 space-y-3">
                   <div className="flex items-center gap-3">

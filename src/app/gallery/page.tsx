@@ -48,7 +48,7 @@ export default function GalleryPage() {
                 key={id}
                 className="aspect-square rounded-xl overflow-hidden relative group cursor-pointer"
               >
-                <Image src={src} alt={alt} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                <Image src={src} alt={alt} fill sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
             ))}
           </div>

@@ -143,7 +143,7 @@ export default function ServicesPage() {
             <div key={pkg.name} className="bg-white rounded-3xl border border-gold/15 shadow-md hover:shadow-2xl hover:ring-2 hover:ring-gold/25 transition-all duration-300 overflow-hidden grid grid-cols-1 md:grid-cols-5 group">
               {/* Photo */}
               <div className="md:col-span-2 min-h-48 overflow-hidden relative">
-                <Image src={pkg.image} alt={pkg.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                <Image src={pkg.image} alt={pkg.name} fill sizes="(max-width: 768px) 100vw, 40vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
                 <span className={`absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold tracking-wide ${pkg.tagColor}`}>
                   {pkg.tag}

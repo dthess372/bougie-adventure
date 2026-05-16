@@ -167,7 +167,7 @@ export default function HomePage() {
               <div key={trip.name} className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:ring-2 hover:ring-gold/30 transition-all duration-300 border border-gold/10 group">
                 {/* Image with overlay */}
                 <div className="h-52 overflow-hidden relative">
-                  <Image src={trip.image} alt={trip.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <Image src={trip.image} alt={trip.name} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
                   {/* Stronger scrim for clear metadata legibility */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                   {/* Metadata — padded 16px from edges */}
