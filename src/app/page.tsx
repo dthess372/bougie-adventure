@@ -55,6 +55,15 @@ const trips = [
 export default function HomePage() {
   return (
     <>
+      {/* Coming Soon Banner */}
+      <div className="w-full bg-gold text-royal-blue-dark text-center py-3 px-4 text-sm font-semibold tracking-wide">
+        <span className="inline-flex items-center gap-2.5 justify-center flex-wrap">
+          <span className="w-1.5 h-1.5 rounded-full bg-royal-blue animate-pulse" />
+          Our site is coming soon — we&apos;re putting the finishing touches on something beautiful. Stay tuned!
+          <span className="w-1.5 h-1.5 rounded-full bg-royal-blue animate-pulse" />
+        </span>
+      </div>
+
       {/* Hero */}
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
         {/* Background image — photo by Samuel Ferrara / Unsplash */}
