@@ -83,10 +83,12 @@ export default function ContactForm() {
         >
           <option value="">Select a trip…</option>
           <option>Grand Canyon River Run</option>
+          <option>Wine Country E-Bike Tour</option>
+          <option>Mountain Yoga &amp; Wilderness Retreat</option>
           <option>Smoky Mountain Kayak Escape</option>
           <option>Pacific Northwest White Water</option>
           <option>Custom Private Adventure</option>
-          <option>Not sure yet, tell me what's available</option>
+          <option>Not sure yet — tell me what&apos;s available</option>
         </select>
       </div>
 

@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
@@ -71,9 +70,6 @@ export default function BlogPage() {
                     {post.title}
                   </h2>
                   <p className="text-sm text-charcoal/65 leading-relaxed">{post.excerpt}</p>
-                  <Link href={`/blog/${post.slug}`} className="text-gold text-sm font-medium hover:text-gold-dark transition-colors">
-                    Read more →
-                  </Link>
                 </div>
               </article>
             ))}

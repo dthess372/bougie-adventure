@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Clock, ChartBar, Check } from 'lucide-react';
+import FAQ from './FAQ';
 
 export const metadata: Metadata = {
   title: 'Adventures',
@@ -119,6 +120,24 @@ const packages = [
   },
 ];
 
+const steps = [
+  {
+    step: '01',
+    title: 'Tell Us Your Dream',
+    body: "Fill out a quick inquiry with your dates, travel interests, and group size. No commitment required — just a conversation starter.",
+  },
+  {
+    step: '02',
+    title: 'We Craft Your Plan',
+    body: "You'll hear from us within 24 hours. We'll schedule a planning call and send you a custom itinerary built around what you actually want.",
+  },
+  {
+    step: '03',
+    title: 'Show Up and Thrive',
+    body: "Your only job is to enjoy every single moment. We handle every detail — from gear to dinners to the stories you'll tell for years.",
+  },
+];
+
 export default function ServicesPage() {
   return (
     <>
@@ -141,7 +160,6 @@ export default function ServicesPage() {
         <div className="max-w-5xl mx-auto space-y-12">
           {packages.map((pkg) => (
             <div key={pkg.name} className="bg-white rounded-3xl border border-gold/15 shadow-md hover:shadow-2xl hover:ring-2 hover:ring-gold/25 transition-all duration-300 overflow-hidden grid grid-cols-1 md:grid-cols-5 group">
-              {/* Photo */}
               <div className="md:col-span-2 min-h-48 overflow-hidden relative">
                 <Image src={pkg.image} alt={pkg.name} fill sizes="(max-width: 768px) 100vw, 40vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
@@ -149,17 +167,13 @@ export default function ServicesPage() {
                   {pkg.tag}
                 </span>
               </div>
-
-              {/* Details */}
               <div className="md:col-span-3 p-8 space-y-5">
                 <div className="flex items-center gap-4 text-sm text-charcoal/50">
                   <span className="flex items-center gap-1"><Clock size={13} /> {pkg.duration}</span>
                   <span className="flex items-center gap-1"><ChartBar size={13} /> {pkg.difficulty}</span>
                 </div>
-
                 <h2 className="font-serif text-2xl font-bold text-royal-blue">{pkg.name}</h2>
                 <p className="text-base text-charcoal/70 leading-relaxed">{pkg.description}</p>
-
                 <ul className="space-y-1.5">
                   {pkg.highlights.map((h) => (
                     <li key={h} className="flex items-start gap-2 text-base text-charcoal/70">
@@ -168,16 +182,31 @@ export default function ServicesPage() {
                     </li>
                   ))}
                 </ul>
-
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-7 py-3 rounded-full bg-gold text-royal-blue-dark text-sm font-semibold tracking-wide hover:bg-gold-light transition-colors"
-                >
+                <Link href="/contact" className="inline-flex items-center justify-center px-7 py-3 rounded-full bg-gold text-royal-blue-dark text-sm font-semibold tracking-wide hover:bg-gold-light transition-colors">
                   {pkg.cta}
                 </Link>
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="py-20 px-6 bg-royal-blue text-cream">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium mb-3">Simple by Design</p>
+            <h2 className="font-serif text-4xl font-bold">How It Works</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {steps.map(({ step, title, body }) => (
+              <div key={step} className="text-center space-y-4">
+                <div className="font-serif text-7xl font-bold text-gold/25 leading-none">{step}</div>
+                <h3 className="font-serif text-xl font-semibold text-cream">{title}</h3>
+                <p className="text-cream/65 text-sm leading-relaxed">{body}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -202,13 +231,31 @@ export default function ServicesPage() {
               </div>
             ))}
           </div>
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-royal-blue text-cream font-semibold tracking-wide hover:bg-royal-blue-light transition-colors"
-          >
+          <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-royal-blue text-cream font-semibold tracking-wide hover:bg-royal-blue-light transition-colors">
             Book a Consultation
           </Link>
         </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 px-6 bg-cream">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium mb-3">Questions & Answers</p>
+            <h2 className="font-serif text-4xl font-bold text-royal-blue">Things You Might Be Wondering</h2>
+            <p className="text-charcoal/60 text-base mt-3 leading-relaxed">We hear these before most trips. Hopefully one of them is yours.</p>
+          </div>
+          <FAQ />
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 px-6 bg-royal-blue text-cream text-center space-y-5">
+        <h2 className="font-serif text-3xl font-bold">Still have questions?</h2>
+        <p className="text-cream/65 text-base max-w-md mx-auto">Reach out directly and we&apos;ll answer every single one — no pressure, no sales pitch.</p>
+        <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-gold text-royal-blue-dark font-semibold tracking-wide hover:bg-gold-light transition-colors">
+          Get in Touch
+        </Link>
       </section>
     </>
   );
