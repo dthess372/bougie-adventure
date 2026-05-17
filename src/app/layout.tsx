@@ -4,6 +4,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://bougieadventure.com'),
   title: {
     default: "Bougie Adventure | Luxury Adventure Travel for Women 50+",
     template: "%s | Bougie Adventure",

@@ -54,10 +54,6 @@ export default function BlogPage() {
       {/* Posts */}
       <section className="py-20 px-6 bg-cream">
         <div className="max-w-5xl mx-auto">
-          <p className="text-charcoal/50 text-sm text-center italic mb-12">
-            Full blog powered by Sanity CMS. Posts will appear here once content is added.
-          </p>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {placeholderPosts.map((post) => (
               <article key={post.slug} className="bg-white rounded-2xl border border-gold/10 overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
