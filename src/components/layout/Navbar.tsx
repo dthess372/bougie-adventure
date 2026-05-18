@@ -19,7 +19,8 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 50);
+    const handler = () => setScrolled(window.scrollY > 10);
+    handler();
     window.addEventListener('scroll', handler, { passive: true });
     return () => window.removeEventListener('scroll', handler);
   }, []);
@@ -29,11 +30,11 @@ export default function Navbar() {
       <div className={`max-w-6xl mx-auto px-6 flex items-center justify-between transition-all duration-300 ${scrolled ? 'h-13' : 'h-16'}`}>
         <Link href="/" onClick={() => setOpen(false)} className="flex items-center gap-2.5">
           <Image
-            src="/Choice 1.jpg"
+            src="/logo.png"
             alt="Bougie Adventure"
             width={48}
             height={48}
-            className={`rounded-full border border-gold/40 shadow-sm transition-all duration-300 ${scrolled ? 'w-9 h-9' : 'w-12 h-12'}`}
+            className={`drop-shadow-sm transition-all duration-300 ${scrolled ? 'w-9 h-9' : 'w-12 h-12'}`}
           />
           <span className={`font-serif font-bold text-gold tracking-wide hidden sm:block transition-all duration-300 drop-shadow-sm ${scrolled ? 'text-lg' : 'text-2xl'}`}>Bougie Adventure</span>
         </Link>
@@ -55,7 +56,7 @@ export default function Navbar() {
           href="/contact"
           className="hidden md:inline-flex items-center px-5 py-2 rounded-full bg-gold text-royal-blue-dark text-sm font-semibold tracking-wide hover:bg-gold-light transition-colors duration-200 btn-shimmer"
         >
-          Book a Trip
+          Book a Bougie Trip
         </Link>
 
         {/* Mobile hamburger */}
@@ -87,7 +88,7 @@ export default function Navbar() {
               className="mt-2 inline-flex items-center justify-center px-5 py-2 rounded-full bg-gold text-royal-blue-dark text-sm font-semibold tracking-wide hover:bg-gold-light transition-colors btn-shimmer"
               onClick={() => setOpen(false)}
             >
-              Book a Trip
+              Book a Bougie Trip
             </Link>
           </nav>
         </div>

@@ -5,11 +5,11 @@ export default function NotFound() {
   return (
     <section className="min-h-[80vh] flex flex-col items-center justify-center px-6 bg-cream text-center">
       <Image
-        src="/Choice 1.jpg"
+        src="/logo.png"
         alt="Bougie Adventure"
         width={80}
         height={80}
-        className="rounded-full border border-gold/30 mb-8"
+        className="drop-shadow mb-8"
       />
       <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium mb-3">Lost on the trail</p>
       <h1 className="font-serif text-5xl font-bold text-royal-blue mb-4">Page Not Found</h1>

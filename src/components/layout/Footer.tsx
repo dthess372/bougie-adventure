@@ -10,11 +10,11 @@ export default function Footer() {
         <div className="space-y-3">
           <div className="flex items-center gap-3">
             <Image
-              src="/Choice 1.jpg"
+              src="/logo.png"
               alt="Bougie Adventure"
               width={56}
               height={56}
-              className="rounded-full border border-gold/30"
+              className="drop-shadow"
             />
             <div>
               <span className="text-gold font-serif font-bold text-xl block">Bougie Adventure</span>
@@ -30,7 +30,7 @@ export default function Footer() {
                 <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
               </svg>
             </a>
-            <a href="mailto:hello@bougieadventure.com" aria-label="Email"
+            <a href="mailto:laurel@bougieadventure.com" aria-label="Email Laurel"
               className="text-cream/60 hover:text-gold transition-colors">
               <Mail size={20} />
             </a>
@@ -63,8 +63,11 @@ export default function Footer() {
         <div>
           <h4 className="text-gold font-serif text-sm tracking-widest uppercase mb-4">Get in Touch</h4>
           <div className="space-y-2 text-sm text-cream/60">
-            <a href="mailto:hello@bougieadventure.com" className="hover:text-gold transition-colors block">
-              hello@bougieadventure.com
+            <a href="mailto:laurel@bougieadventure.com" className="hover:text-gold transition-colors block">
+              laurel@bougieadventure.com
+            </a>
+            <a href="mailto:nicole@bougieadventure.com" className="hover:text-gold transition-colors block">
+              nicole@bougieadventure.com
             </a>
             <p className="leading-relaxed">
               Ready for your next great adventure?<br />

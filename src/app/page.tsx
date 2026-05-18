@@ -1,27 +1,28 @@
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Users, ShieldCheck, Bed, Mountain, Check, Star } from 'lucide-react';
 
-const features = [
+const features: { icon: React.ElementType; title: React.ReactNode; body: string }[] = [
   {
     icon: Users,
-    title: 'Small Groups, Big Bonds',
+    title: <>Small Groups,<br />Big Bonds</>,
     body: 'Max 10 women per trip. More personal attention from your guides, more flexibility in the day, and the chance to actually connect with who you\'re adventuring with.',
   },
   {
     icon: ShieldCheck,
-    title: 'Certified Female Guides',
+    title: <>Certified<br />Female Guides</>,
     body: 'Every trip is led by experienced, certified women who live for this work. You\'re in expert hands from the first morning to the last evening.',
   },
   {
     icon: Bed,
-    title: 'Luxury Every Night',
-    body: 'Hand-selected lodges, boutique inns, and glamping sites — never an afterthought, always a highlight.',
+    title: <>Luxury<br />Every Night</>,
+    body: 'Hand-selected lodges, boutique inns, and glamping sites. Never an afterthought, always a highlight.',
   },
   {
     icon: Mountain,
-    title: 'Adventure on Your Terms',
-    body: 'Every trip has difficulty options. Easy floats to challenging runs — you set the pace and we make it work. No pressure, ever.',
+    title: <>Adventure on<br />Your Terms</>,
+    body: 'Every trip has difficulty options. Easy floats to challenging runs. You set the pace and we make it work. No pressure, ever.',
   },
 ];
 
@@ -32,7 +33,7 @@ const reassurances = [
   },
   {
     title: 'All fitness levels welcome.',
-    body: "Every trip has a difficulty rating — Easy, Moderate, or Challenging. We'll help you find your fit. If you can walk a mile comfortably, you can do most of our trips.",
+    body: "Every trip has a difficulty rating: Easy, Moderate, or Challenging. We'll help you find your fit. If you can walk a mile comfortably, you can do most of our trips.",
   },
   {
     title: 'You will never be left behind.',
@@ -46,13 +47,13 @@ const reassurances = [
 
 const trips = [
   {
-    name: 'Grand Canyon River Run',
+    name: 'Salmon River Expedition',
     tag: 'Signature',
     tagClass: 'bg-gold text-royal-blue-dark',
-    description: 'Six days rafting the Colorado through the heart of the Grand Canyon. Class III–IV rapids, glamping under the stars, and canyon-side gourmet dinners.',
+    description: "Six days rafting Idaho's legendary River of No Return through one of the most remote wilderness corridors in North America. Class III-IV rapids, riverside glamping with real beds and linens, and gourmet dinners under a sky full of stars.",
     duration: '6 days',
     difficulty: 'Moderate',
-    image: '/trip-grand-canyon.jpg',
+    image: '/trip-idaho.jpg',
   },
   {
     name: 'Wine Country E-Bike Tour',
@@ -76,19 +77,19 @@ const trips = [
 
 const testimonials = [
   {
-    quote: "I turned 56 on a white water raft in the Grand Canyon. Best birthday of my life, and I didn't break a nail.",
-    name: 'Margaret T.',
-    location: 'Arizona',
+    quote: "[Add guest quote here — something about how the trip made her feel, a specific moment, or a before/after.]",
+    name: 'Guest Name',
+    location: 'Location',
   },
   {
-    quote: "I was terrified before I went. By day two I was leading the charge. These guides make you believe in yourself.",
-    name: 'Carol R.',
-    location: 'Colorado',
+    quote: "[Add guest quote here — something about overcoming fear, surprise at the experience, or what she told friends after.]",
+    name: 'Guest Name',
+    location: 'Location',
   },
   {
-    quote: "I've done luxury travel. I've done adventure travel. I've never done both at the same time until Bougie Adventure.",
-    name: 'Diane W.',
-    location: 'Tennessee',
+    quote: "[Add guest quote here — something about the luxury + adventure combination, the guides, or why she'd go again.]",
+    name: 'Guest Name',
+    location: 'Location',
   },
 ];
 
@@ -99,34 +100,33 @@ export default function HomePage() {
       <div className="w-full bg-gold text-royal-blue-dark text-center py-3 px-4 text-sm font-semibold tracking-wide">
         <span className="inline-flex items-center gap-2.5 justify-center flex-wrap">
           <span className="w-1.5 h-1.5 rounded-full bg-royal-blue animate-pulse" />
-          Our site is coming soon — we&apos;re putting the finishing touches on something beautiful. Stay tuned!
+          Our site is coming soon. We&apos;re putting the finishing touches on something beautiful. Stay tuned!
           <span className="w-1.5 h-1.5 rounded-full bg-royal-blue animate-pulse" />
         </span>
       </div>
 
       {/* Hero */}
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
-        <Image src="/hero.jpg" alt="Mountain peaks above a sea of clouds at sunset" fill priority className="object-cover object-center" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/40 to-royal-blue-dark/80" />
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+        <Image src="/hero.jpg" alt="Mountain peaks above a sea of clouds at sunset" fill priority className="object-cover object-center scale-105 blur-sm" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/55 to-royal-blue-dark/90" />
+        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto -mt-20">
           <div className="flex justify-center mb-6">
-            <Image src="/Choice 1.jpg" alt="Bougie Adventure" width={120} height={120} className="rounded-full border-2 border-gold/40 shadow-xl" />
+            <div className="logo-glimmer drop-shadow-xl w-[200px] h-[200px]">
+              <Image src="/logo.png" alt="Bougie Adventure" width={200} height={200} className="scale-[1.263]" />
+            </div>
           </div>
-          <p className="text-gold text-xs uppercase font-medium mb-6" style={{ letterSpacing: '0.35em' }}>
-            Adventure &nbsp;·&nbsp; Wellness &nbsp;·&nbsp; Sisterhood
-          </p>
-          <h1 className="font-serif text-5xl md:text-7xl font-bold text-cream leading-tight mb-6">
-            Adventure Awaits,<br />
-            <em className="text-gold not-italic">Darling.</em>
+          <h1 className="font-serif text-4xl md:text-6xl font-bold text-cream leading-tight mb-6">
+            Come as a stranger<br />
+            <span className="text-pink-dark">Stay as a sister</span>
           </h1>
           <p className="text-cream/80 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-10">
             Curated luxury adventure trips for women 50+ who want thrilling experiences without sacrificing comfort, community, or style.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/services" className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-gold text-royal-blue-dark font-semibold text-base tracking-wide hover:bg-gold-light transition-colors shadow-lg btn-shimmer">
-              Explore Adventures
+            <Link href="/services" className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-gold text-royal-blue-dark font-semibold text-base tracking-wide hover:bg-gold-light hover:scale-105 transition-all shadow-lg btn-shimmer">
+              Find Your Next Bougie Adventure
             </Link>
-            <Link href="/about" className="inline-flex items-center justify-center px-8 py-4 rounded-full border-2 border-cream/40 text-cream font-medium text-base tracking-wide hover:border-gold hover:text-gold transition-colors">
+            <Link href="/about" className="inline-flex items-center justify-center px-8 py-4 rounded-full border-2 border-cream/40 text-cream font-medium text-base tracking-wide hover:border-gold hover:text-gold hover:scale-105 transition-all">
               Meet Your Guides
             </Link>
           </div>
@@ -141,15 +141,15 @@ export default function HomePage() {
       </section>
 
       {/* The Bougie Promise */}
-      <section className="py-24 px-6 bg-cream">
+      <section className="py-24 px-6 bg-cream" data-animate>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium mb-3">The Bougie Promise</p>
-            <h2 className="font-serif text-4xl font-bold text-royal-blue tracking-wide">What Every Trip Delivers</h2>
+            <h2 className="font-serif text-4xl font-semibold text-royal-blue tracking-wide">What Every Trip Delivers</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map(({ icon: Icon, title, body }) => (
-              <div key={title} className="text-center space-y-4 p-6">
+              <div key={Icon.displayName} className="text-center space-y-4 p-6">
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-pink border border-pink-dark">
                   <Icon className="text-royal-blue" size={24} />
                 </div>
@@ -169,11 +169,11 @@ export default function HomePage() {
       </div>
 
       {/* Made for Women Like You */}
-      <section className="py-24 px-6 bg-pink/20">
+      <section className="py-24 px-6 bg-pink/20" data-animate>
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14">
             <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium mb-3">Made for Women Like You</p>
-            <h2 className="font-serif text-4xl font-bold text-royal-blue">No Experience Required.<br className="hidden sm:block" /> No Compromises Either.</h2>
+            <h2 className="font-serif text-4xl font-semibold text-royal-blue">No Experience Required.<br className="hidden sm:block" /> No Compromises Either.</h2>
             <p className="text-charcoal/60 text-lg mt-4 max-w-xl mx-auto leading-relaxed">We hear the same questions before every trip. Here is what we want you to know.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -193,11 +193,11 @@ export default function HomePage() {
       </section>
 
       {/* Featured trips */}
-      <section className="py-24 px-6 bg-pink/30">
+      <section className="py-24 px-6 bg-pink/30" data-animate>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium mb-3">Featured Adventures</p>
-            <h2 className="font-serif text-4xl font-bold text-royal-blue tracking-wide">Trips Made for You</h2>
+            <h2 className="font-serif text-4xl font-semibold text-royal-blue tracking-wide">Trips Made for You</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {trips.map((trip) => (
@@ -237,7 +237,7 @@ export default function HomePage() {
       </div>
 
       {/* Testimonials */}
-      <section className="py-20 px-6 bg-royal-blue text-cream relative overflow-hidden">
+      <section className="py-20 px-6 bg-royal-blue text-cream relative overflow-hidden" data-animate>
         <svg className="absolute left-0 top-0 opacity-5 w-64" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M10,100 Q50,10 100,10 Q150,10 190,100 Q150,190 100,190 Q50,190 10,100 Z" fill="#fdfaf5"/>
         </svg>
@@ -247,11 +247,11 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-12">
             <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium mb-3">Real Women, Real Trips</p>
-            <h2 className="font-serif text-4xl font-bold text-cream">What Our Adventurers Say</h2>
+            <h2 className="font-serif text-4xl font-semibold text-cream">What Our Adventurers Say</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map(({ quote, name, location }) => (
-              <div key={name} className="p-8 rounded-2xl border border-cream/10 bg-white/5 space-y-5">
+            {testimonials.map(({ quote, name, location }, i) => (
+              <div key={i} className="p-8 rounded-2xl border border-cream/10 bg-white/5 space-y-5">
                 <div className="flex gap-1">
                   {[...Array(5)].map((_, i) => <Star key={i} size={14} className="text-gold fill-gold" />)}
                 </div>
@@ -276,7 +276,7 @@ export default function HomePage() {
       </div>
 
       {/* CTA */}
-      <section className="py-20 px-6 bg-cream">
+      <section className="py-20 px-6 bg-cream" data-animate>
         <div className="max-w-2xl mx-auto text-center space-y-6">
           <div className="flex items-center justify-center gap-3 mb-2">
             <div className="h-px w-16 bg-gold/30" />
@@ -286,7 +286,7 @@ export default function HomePage() {
             <div className="h-px w-16 bg-gold/30" />
           </div>
           <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium">Ready?</p>
-          <h2 className="font-serif text-4xl font-bold text-royal-blue tracking-wide">Your Next Chapter Starts Here</h2>
+          <h2 className="font-serif text-4xl font-semibold text-royal-blue tracking-wide">Your Next Chapter Starts Here</h2>
           <p className="text-charcoal/70 text-lg leading-relaxed">
             Tell us your dream adventure and we&apos;ll build the perfect itinerary around you.
           </p>

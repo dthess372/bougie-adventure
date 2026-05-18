@@ -37,8 +37,9 @@ export default function BlogPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative py-28 px-6 bg-royal-blue text-cream">
-        <div className="absolute inset-0 bg-gradient-to-b from-royal-blue-dark to-royal-blue opacity-80" />
+      <section className="relative py-28 px-6 text-cream overflow-hidden">
+        <Image src="/hero-blog.jpg" alt="Wide river flowing through a lush forest" fill className="object-cover object-center scale-105 blur-sm" priority />
+        <div className="absolute inset-0 bg-gradient-to-b from-royal-blue-dark/70 via-black/50 to-royal-blue-dark/80" />
         <div className="relative z-10 max-w-3xl mx-auto text-center space-y-4">
           <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium">Journal</p>
           <h1 className="font-serif text-5xl md:text-6xl font-bold leading-tight">
@@ -80,7 +81,7 @@ export default function BlogPage() {
       {/* Newsletter */}
       <section className="py-16 px-6 bg-pink/20 text-center">
         <div className="max-w-xl mx-auto space-y-4">
-          <h2 className="font-serif text-3xl font-bold text-royal-blue">Get Trip Stories in Your Inbox</h2>
+          <h2 className="font-serif text-3xl font-semibold text-royal-blue">Get Trip Stories in Your Inbox</h2>
           <p className="text-charcoal/65 text-sm">Recaps, early trip announcements, and packing guides. No spam, ever.</p>
           <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
             <input

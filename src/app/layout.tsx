@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://bougieadventure.com'),
@@ -29,6 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full antialiased scroll-smooth">
       <body className="min-h-full flex flex-col bg-cream text-charcoal">
+        <ScrollReveal />
         <Navbar />
         <main className="flex-1 pt-16">{children}</main>
         <Footer />

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import ContactForm from './ContactForm';
 import { Mail } from 'lucide-react';
 
@@ -11,8 +12,9 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative py-28 px-6 bg-royal-blue text-cream">
-        <div className="absolute inset-0 bg-gradient-to-b from-royal-blue-dark to-royal-blue opacity-80" />
+      <section className="relative py-28 px-6 text-cream overflow-hidden">
+        <Image src="/hero-contact.jpg" alt="Mountains reflecting in a turquoise lake" fill className="object-cover object-center scale-105 blur-sm" priority />
+        <div className="absolute inset-0 bg-gradient-to-b from-royal-blue-dark/70 via-black/50 to-royal-blue-dark/80" />
         <div className="relative z-10 max-w-3xl mx-auto text-center space-y-4">
           <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium">Let's Talk</p>
           <h1 className="font-serif text-5xl md:text-6xl font-bold leading-tight">
@@ -30,18 +32,24 @@ export default function ContactPage() {
           {/* Contact info */}
           <div className="md:col-span-2 space-y-8">
             <div>
-              <h2 className="font-serif text-2xl font-bold text-royal-blue mb-4">Get in Touch</h2>
+              <h2 className="font-serif text-2xl font-semibold text-royal-blue mb-4">Get in Touch</h2>
               <p className="text-charcoal/70 text-sm leading-relaxed">
                 We respond to all inquiries within 24 hours. For urgent questions, reach us directly on Instagram.
               </p>
             </div>
 
             <div className="space-y-4">
-              <a href="mailto:hello@bougieadventure.com" className="flex items-center gap-3 text-sm text-charcoal/70 hover:text-gold transition-colors group">
+              <a href="mailto:laurel@bougieadventure.com" className="flex items-center gap-3 text-sm text-charcoal/70 hover:text-gold transition-colors group">
                 <div className="w-10 h-10 rounded-full bg-pink flex items-center justify-center group-hover:bg-gold/10 transition-colors">
                   <Mail size={16} className="text-royal-blue" />
                 </div>
-                hello@bougieadventure.com
+                laurel@bougieadventure.com
+              </a>
+              <a href="mailto:nicole@bougieadventure.com" className="flex items-center gap-3 text-sm text-charcoal/70 hover:text-gold transition-colors group">
+                <div className="w-10 h-10 rounded-full bg-pink flex items-center justify-center group-hover:bg-gold/10 transition-colors">
+                  <Mail size={16} className="text-royal-blue" />
+                </div>
+                nicole@bougieadventure.com
               </a>
               <a href="https://instagram.com/bougieadventure" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-sm text-charcoal/70 hover:text-gold transition-colors group">
                 <div className="w-10 h-10 rounded-full bg-pink flex items-center justify-center group-hover:bg-gold/10 transition-colors">

@@ -11,22 +11,22 @@ export const metadata: Metadata = {
 
 const packages = [
   {
-    name: 'Grand Canyon River Run',
+    name: 'Salmon River Expedition',
     tag: 'Signature',
     tagColor: 'bg-gold text-royal-blue-dark',
-    description: 'Our most iconic trip. Six days rafting the Colorado through the heart of the Grand Canyon, one of the most awe-inspiring places on Earth.',
+    description: "Our most iconic trip. Six days rafting Idaho's legendary River of No Return through a protected wilderness corridor so remote it can only be reached by boat or small plane.",
     duration: '6 days / 5 nights',
     difficulty: 'Moderate',
     groupSize: 'Up to 10',
     highlights: [
-      'Class III–IV rapids',
-      'Guided geology and history tours',
-      'Camp-to-hut glamping accommodations',
-      'Canyon-side gourmet dinners',
-      'All safety gear and guide fees included',
+      'Class III-IV Salmon River rapids',
+      'Fly-in access to a pristine backcountry put-in',
+      'Riverside glamping — real beds, linens, and lights',
+      'Gourmet riverside dinners each evening',
+      'Wildlife spotting: bears, eagles, bighorn sheep',
     ],
     cta: 'Inquire About This Trip',
-    image: '/trip-grand-canyon.jpg',
+    image: '/trip-idaho.jpg',
   },
   {
     name: 'Wine Country E-Bike Tour',
@@ -80,7 +80,7 @@ const packages = [
       'Optional spa day add-on',
     ],
     cta: 'Inquire About This Trip',
-    image: '/trip-kayak.jpg',
+    image: '/trip-smoky-kayak.jpg',
   },
   {
     name: 'Pacific Northwest White Water',
@@ -104,14 +104,14 @@ const packages = [
     name: 'Custom Private Adventure',
     tag: 'Bespoke',
     tagColor: 'bg-charcoal/5 text-charcoal',
-    description: "Design your dream adventure from scratch. Choose your destination, activity level, group size, and we'll handle everything else.",
+    description: "Have an idea of what you want? Tell us and we'll build it. From the first conversation to the last day on the trail, we take care of every detail.",
     duration: 'Your choice',
     difficulty: 'Your choice',
-    groupSize: 'Private groups',
+    groupSize: 'Any size',
     highlights: [
-      'Fully customized itinerary',
+      'Fully customized itinerary around your vision',
+      'Host-led or self-guided, your call',
       'Perfect for birthdays, reunions, and milestones',
-      'Private guide team',
       'Any destination, any pace',
       'White-glove planning from start to finish',
     ],
@@ -124,17 +124,17 @@ const steps = [
   {
     step: '01',
     title: 'Tell Us Your Dream',
-    body: "Fill out a quick inquiry with your dates, travel interests, and group size. No commitment required — just a conversation starter.",
+    body: "Fill out a quick inquiry with your dates, travel interests, and group size. No commitment required. Just a conversation starter.",
   },
   {
     step: '02',
     title: 'We Craft Your Plan',
-    body: "You'll hear from us within 24 hours. We'll schedule a planning call and send you a custom itinerary built around what you actually want.",
+    body: "We'll schedule a planning call and send you a custom itinerary built around what you actually want.",
   },
   {
     step: '03',
     title: 'Show Up and Thrive',
-    body: "Your only job is to enjoy every single moment. We handle every detail — from gear to dinners to the stories you'll tell for years.",
+    body: "Your only job is to enjoy every single moment. We handle every detail, from gear to dinners to the stories you'll tell for years.",
   },
 ];
 
@@ -142,10 +142,11 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative py-28 px-6 bg-royal-blue text-cream">
-        <div className="absolute inset-0 bg-gradient-to-b from-royal-blue-dark to-royal-blue opacity-80" />
+      <section className="relative py-24 px-6 text-cream overflow-hidden">
+        <Image src="/hero-adventures.jpg" alt="Mountain wilderness landscape" fill className="object-cover object-center scale-105 blur-sm" priority />
+        <div className="absolute inset-0 bg-gradient-to-b from-royal-blue-dark/70 via-black/50 to-royal-blue-dark/80" />
         <div className="relative z-10 max-w-3xl mx-auto text-center space-y-4">
-          <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium">Adventures</p>
+          <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium">Adventure by Day. Wine by Night.</p>
           <h1 className="font-serif text-5xl md:text-6xl font-bold leading-tight">
             Find Your Perfect Trip
           </h1>
@@ -172,7 +173,7 @@ export default function ServicesPage() {
                   <span className="flex items-center gap-1"><Clock size={13} /> {pkg.duration}</span>
                   <span className="flex items-center gap-1"><ChartBar size={13} /> {pkg.difficulty}</span>
                 </div>
-                <h2 className="font-serif text-2xl font-bold text-royal-blue">{pkg.name}</h2>
+                <h2 className="font-serif text-2xl font-semibold text-royal-blue">{pkg.name}</h2>
                 <p className="text-base text-charcoal/70 leading-relaxed">{pkg.description}</p>
                 <ul className="space-y-1.5">
                   {pkg.highlights.map((h) => (
@@ -196,7 +197,7 @@ export default function ServicesPage() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14">
             <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium mb-3">Simple by Design</p>
-            <h2 className="font-serif text-4xl font-bold">How It Works</h2>
+            <h2 className="font-serif text-4xl font-semibold">How It Works</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {steps.map(({ step, title, body }) => (
@@ -213,7 +214,7 @@ export default function ServicesPage() {
       {/* What's included */}
       <section className="py-16 px-6 bg-pink/20">
         <div className="max-w-3xl mx-auto text-center space-y-6">
-          <h2 className="font-serif text-3xl font-bold text-royal-blue">Every Trip Includes</h2>
+          <h2 className="font-serif text-3xl font-semibold text-royal-blue">Every Trip Includes</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
             {[
               'Experienced, certified female guides',
@@ -242,7 +243,7 @@ export default function ServicesPage() {
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium mb-3">Questions & Answers</p>
-            <h2 className="font-serif text-4xl font-bold text-royal-blue">Things You Might Be Wondering</h2>
+            <h2 className="font-serif text-4xl font-semibold text-royal-blue">Things You Might Be Wondering</h2>
             <p className="text-charcoal/60 text-base mt-3 leading-relaxed">We hear these before most trips. Hopefully one of them is yours.</p>
           </div>
           <FAQ />
@@ -251,8 +252,8 @@ export default function ServicesPage() {
 
       {/* CTA */}
       <section className="py-16 px-6 bg-royal-blue text-cream text-center space-y-5">
-        <h2 className="font-serif text-3xl font-bold">Still have questions?</h2>
-        <p className="text-cream/65 text-base max-w-md mx-auto">Reach out directly and we&apos;ll answer every single one — no pressure, no sales pitch.</p>
+        <h2 className="font-serif text-3xl font-semibold">Still have questions?</h2>
+        <p className="text-cream/65 text-base max-w-md mx-auto">Reach out directly and we&apos;ll answer every single one. No pressure, no sales pitch.</p>
         <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-gold text-royal-blue-dark font-semibold tracking-wide hover:bg-gold-light transition-colors">
           Get in Touch
         </Link>

@@ -14,7 +14,7 @@ export async function POST(request: Request) {
     // const resend = new Resend(process.env.RESEND_API_KEY);
     // await resend.emails.send({
     //   from: 'contact@bougieadventure.com',
-    //   to: 'hello@bougieadventure.com',
+    //   to: ['laurel@bougieadventure.com', 'nicole@bougieadventure.com'],
     //   subject: `New inquiry from ${name}`,
     //   html: `<p>Name: ${name}</p><p>Email: ${email}</p>...`
     // });

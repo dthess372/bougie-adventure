@@ -82,13 +82,13 @@ export default function ContactForm() {
           className="w-full px-4 py-3 rounded-xl border border-gold/25 bg-white text-sm text-charcoal focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold transition"
         >
           <option value="">Select a trip…</option>
-          <option>Grand Canyon River Run</option>
+          <option>Salmon River Expedition</option>
           <option>Wine Country E-Bike Tour</option>
           <option>Mountain Yoga &amp; Wilderness Retreat</option>
           <option>Smoky Mountain Kayak Escape</option>
           <option>Pacific Northwest White Water</option>
           <option>Custom Private Adventure</option>
-          <option>Not sure yet — tell me what&apos;s available</option>
+          <option>Not sure yet, tell me what&apos;s available</option>
         </select>
       </div>
 
@@ -130,7 +130,7 @@ export default function ContactForm() {
       )}
       {status === 'error' && (
         <div className="p-4 rounded-xl bg-red-50 border border-red-200 text-red-700 text-sm">
-          Something went wrong. Please email us directly at hello@bougieadventure.com
+          Something went wrong. Please email us directly at laurel@bougieadventure.com or nicole@bougieadventure.com
         </div>
       )}
 
