@@ -63,7 +63,13 @@ export default function AboutPage() {
                 <h3 className="font-serif text-2xl font-bold text-royal-blue">Nicole</h3>
                 <p className="text-gold text-sm tracking-widest uppercase">Co-Founder & Guide</p>
                 <p className="text-charcoal/70 text-sm leading-relaxed max-w-sm mx-auto">
-                  [Add partner bio here: her background, certifications, what she brings to every trip, and her adventure philosophy.]
+                  Travel is more than reaching a destination. It&apos;s about creating experiences that stay with you long after you return home. Growing up immersed in travel from an early age, I learned that the best trips are thoughtfully designed around the people taking them. Those early experiences shaped not only my love of travel, but my understanding of what makes a journey truly meaningful.
+                </p>
+                <p className="text-charcoal/70 text-sm leading-relaxed max-w-sm mx-auto">
+                  For the past 15 years, I have specialized in creating personalized travel experiences tailored to each client&apos;s unique interests, travel style, and sense of adventure. My approach combines thoughtful planning, curated experiences, and seamless logistics to remove the stress from travel while maximizing the moments that matter most.
+                </p>
+                <p className="text-charcoal/70 text-sm leading-relaxed max-w-sm mx-auto">
+                  The greatest reward is helping travelers create lifelong memories, strengthen connections, and experience the excitement and joy that meaningful travel can bring to their lives.
                 </p>
               </div>
             </div>
