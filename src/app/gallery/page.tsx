@@ -8,18 +8,18 @@ export const metadata: Metadata = {
 };
 
 const galleryImages = [
-  { id: 1, alt: 'Grand Canyon adventure', src: '/gallery-1.jpg', trip: 'Grand Canyon' },
-  { id: 2, alt: 'Smoky Mountains landscape', src: '/gallery-2.jpg', trip: 'Smoky Mountains' },
-  { id: 3, alt: 'Pacific Northwest wilderness', src: '/gallery-3.jpg', trip: 'Pacific Northwest' },
-  { id: 4, alt: 'Grand Canyon river', src: '/gallery-4.jpg', trip: 'Grand Canyon' },
-  { id: 5, alt: 'Smoky Mountains hiking', src: '/gallery-5.jpg', trip: 'Smoky Mountains' },
-  { id: 6, alt: 'Custom trip adventure', src: '/gallery-6.jpg', trip: 'Custom Trip' },
-  { id: 7, alt: 'Grand Canyon rafting', src: '/gallery-7.jpg', trip: 'Grand Canyon' },
-  { id: 8, alt: 'Pacific Northwest kayaking', src: '/gallery-8.jpg', trip: 'Pacific Northwest' },
-  { id: 9, alt: 'Custom trip scenery', src: '/gallery-9.jpg', trip: 'Custom Trip' },
-  { id: 10, alt: 'Smoky Mountains retreat', src: '/gallery-10.jpg', trip: 'Smoky Mountains' },
-  { id: 11, alt: 'Grand Canyon sunset', src: '/gallery-11.jpg', trip: 'Grand Canyon' },
-  { id: 12, alt: 'Pacific Northwest forest', src: '/gallery-12.jpg', trip: 'Pacific Northwest' },
+  { id: 1,  alt: 'Guides on the raft together',        src: '/gallery-guides-raft.jpg',       trip: 'Salmon River' },
+  { id: 2,  alt: 'Rafting the river',                  src: '/gallery-raft.jpg',               trip: 'Salmon River' },
+  { id: 3,  alt: 'Kayaks on calm water',               src: '/gallery-kayaks.jpg',             trip: 'Smoky Mountain Kayak' },
+  { id: 4,  alt: 'E-bikes through wine country',       src: '/gallery-bikes.jpg',              trip: 'Wine Country E-Bike' },
+  { id: 5,  alt: 'Nicole at a waterfall',              src: '/gallery-nicole-waterfall.jpg',   trip: 'Pacific Northwest' },
+  { id: 6,  alt: 'Waterfall in the wilderness',        src: '/gallery-waterfall.jpg',          trip: 'Pacific Northwest' },
+  { id: 7,  alt: 'Towering redwood trees',             src: '/gallery-redwood.jpg',            trip: 'Pacific Northwest' },
+  { id: 8,  alt: 'Fly-in arrival to the backcountry',  src: '/gallery-plane.jpg',              trip: 'Salmon River' },
+  { id: 9,  alt: 'Nicole rafting the river',           src: '/gallery-nicole-raft.png',        trip: 'Salmon River' },
+  { id: 10, alt: 'Nicole on a bridge overlook',        src: '/gallery-nicole-bridge.jpg',      trip: 'Custom Trip' },
+  { id: 11, alt: 'Nicole on a rocky outcrop',          src: '/gallery-nicole-rock.jpg',        trip: 'Mountain Retreat' },
+  { id: 12, alt: 'Laurel on the river',                src: '/laurel.jpg',                     trip: 'Salmon River' },
 ];
 
 export default function GalleryPage() {

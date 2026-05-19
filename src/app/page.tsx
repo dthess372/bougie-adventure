@@ -111,7 +111,7 @@ export default function HomePage() {
 
       {/* Hero */}
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
-        <Image src="/hero.jpg" alt="Mountain peaks above a sea of clouds at sunset" fill priority className="object-cover object-center scale-105 blur-sm" />
+        <Image src="/hero-home.png" alt="Bougie Adventure guides on the river" fill priority className="object-cover object-center scale-105 blur-sm" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/55 to-royal-blue-dark/90" />
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto -mt-20">
           <div className="flex justify-center mb-6">

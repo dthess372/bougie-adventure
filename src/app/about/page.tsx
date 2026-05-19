@@ -37,7 +37,7 @@ export default function AboutPage() {
             {/* Guide 1 */}
             <div className="space-y-5">
               <div className="relative aspect-square rounded-2xl overflow-hidden max-w-xs mx-auto w-full">
-                <Image src="/laurel.jpg" alt="Laurel" fill sizes="(max-width: 768px) 100vw, 320px" className="object-cover object-top" />
+                <Image src="/laurel-river.jpg" alt="Laurel on the river" fill sizes="(max-width: 768px) 100vw, 320px" className="object-cover object-top" />
               </div>
               <div className="text-center space-y-2">
                 <h3 className="font-serif text-2xl font-bold text-royal-blue">Laurel</h3>
@@ -56,8 +56,8 @@ export default function AboutPage() {
 
             {/* Guide 2 */}
             <div className="space-y-5">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-royal-blue to-royal-blue-light flex items-center justify-center max-w-xs mx-auto w-full">
-                <span className="text-cream/30 text-xs tracking-widest uppercase">Photo Coming Soon</span>
+              <div className="relative aspect-square rounded-2xl overflow-hidden max-w-xs mx-auto w-full">
+                <Image src="/nicole.jpg" alt="Nicole on a mountain hike" fill sizes="(max-width: 768px) 100vw, 320px" className="object-cover object-top" />
               </div>
               <div className="text-center space-y-2">
                 <h3 className="font-serif text-2xl font-bold text-royal-blue">Nicole</h3>
