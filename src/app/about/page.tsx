@@ -43,7 +43,13 @@ export default function AboutPage() {
                 <h3 className="font-serif text-2xl font-bold text-royal-blue">Laurel</h3>
                 <p className="text-gold text-sm tracking-widest uppercase">Co-Founder & Guide</p>
                 <p className="text-charcoal/70 text-sm leading-relaxed max-w-sm mx-auto">
-                  [Add your bio here: your experience, what you love about leading trips, and what guests can expect traveling with you.]
+                  I believe the best adventures happen somewhere between courage and comfort, and preferably near a river. A lifelong explorer and experienced group trip organizer, I have spent more than 20 years bringing people together through meaningful travel centered around connection, wellness, laughter, and the outdoors.
+                </p>
+                <p className="text-charcoal/70 text-sm leading-relaxed max-w-sm mx-auto">
+                  Having white water rafted more than 20 rivers, with a personal goal of rafting one new river every year for the rest of my life, I see travel as both adventure and healing. A way to reconnect with nature, community, and ourselves.
+                </p>
+                <p className="text-charcoal/70 text-sm leading-relaxed max-w-sm mx-auto">
+                  Guests traveling with me can expect active days, beautiful scenery, genuine sisterhood, creative problem-solving when adventure strikes, sore muscles, full hearts, and probably a great glass of wine at the end of the day.
                 </p>
               </div>
             </div>
