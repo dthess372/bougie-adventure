@@ -56,8 +56,8 @@ export default function AboutPage() {
 
             {/* Guide 2 */}
             <div className="space-y-5">
-              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden max-w-xs mx-auto w-full">
-                <Image src="/gallery-nicole-bridge.jpg" alt="Nicole on a bridge overlook" fill sizes="(max-width: 768px) 100vw, 320px" className="object-cover object-[50%_20%]" />
+              <div className="relative aspect-square rounded-2xl overflow-hidden max-w-xs mx-auto w-full">
+                <Image src="/gallery-nicole-bridge.jpg" alt="Nicole on a bridge overlook" fill sizes="(max-width: 768px) 100vw, 320px" className="object-cover object-[50%_40%]" />
               </div>
               <div className="text-center space-y-2">
                 <h3 className="font-serif text-2xl font-bold text-royal-blue">Nicole</h3>
