@@ -3,23 +3,27 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Users, ShieldCheck, Bed, Mountain, Check, Star } from 'lucide-react';
 
-const features: { icon: React.ElementType; title: React.ReactNode; body: string }[] = [
+const features: { id: string; icon: React.ElementType; title: React.ReactNode; body: string }[] = [
   {
+    id: 'small-groups',
     icon: Users,
     title: <>Small Groups,<br />Big Bonds</>,
     body: 'Max 10 women per trip. More personal attention from your guides, more flexibility in the day, and the chance to actually connect with who you\'re adventuring with.',
   },
   {
+    id: 'female-guides',
     icon: ShieldCheck,
     title: <>Certified<br />Female Guides</>,
     body: 'Every trip is led by experienced, certified women who live for this work. You\'re in expert hands from the first morning to the last evening.',
   },
   {
+    id: 'luxury-nights',
     icon: Bed,
     title: <>Luxury<br />Every Night</>,
     body: 'Hand-selected lodges, boutique inns, and glamping sites. Never an afterthought, always a highlight.',
   },
   {
+    id: 'your-terms',
     icon: Mountain,
     title: <>Adventure on<br />Your Terms</>,
     body: 'Every trip has difficulty options. Easy floats to challenging runs. You set the pace and we make it work. No pressure, ever.',
@@ -148,8 +152,8 @@ export default function HomePage() {
             <h2 className="font-serif text-4xl font-semibold text-royal-blue tracking-wide">What Every Trip Delivers</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map(({ icon: Icon, title, body }) => (
-              <div key={Icon.displayName} className="text-center space-y-4 p-6">
+            {features.map(({ id, icon: Icon, title, body }) => (
+              <div key={id} className="text-center space-y-4 p-6">
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-pink border border-pink-dark">
                   <Icon className="text-royal-blue" size={24} />
                 </div>
