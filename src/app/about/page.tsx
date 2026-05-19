@@ -33,7 +33,7 @@ export default function AboutPage() {
             <h2 className="font-serif text-4xl font-semibold text-royal-blue">Meet Your Guides</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_48px_1fr] gap-8 md:gap-0 items-start">
             {/* Guide 1 */}
             <div className="space-y-5">
               <div className="relative aspect-square rounded-2xl overflow-hidden max-w-xs mx-auto w-full">
@@ -52,6 +52,15 @@ export default function AboutPage() {
                   Guests traveling with me can expect active days, beautiful scenery, genuine sisterhood, creative problem-solving when adventure strikes, sore muscles, full hearts, and probably a great glass of wine at the end of the day.
                 </p>
               </div>
+            </div>
+
+            {/* Decoration */}
+            <div className="hidden md:flex flex-col items-center justify-center gap-3 pt-24 text-pink-dark">
+              <span className="text-gold text-lg leading-none">✦</span>
+              <svg width={28} height={28} viewBox="0 0 24 24" fill="currentColor" className="text-pink-dark drop-shadow-sm">
+                <path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/>
+              </svg>
+              <span className="text-gold text-lg leading-none">✦</span>
             </div>
 
             {/* Guide 2 */}
