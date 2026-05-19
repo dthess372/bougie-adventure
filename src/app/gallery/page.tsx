@@ -16,7 +16,6 @@ const galleryImages = [
   { id: 6,  alt: 'Waterfall in the wilderness',        src: '/gallery-waterfall.jpg',          trip: 'Pacific Northwest' },
   { id: 7,  alt: 'Towering redwood trees',             src: '/gallery-redwood.jpg',            trip: 'Pacific Northwest' },
   { id: 8,  alt: 'Fly-in arrival to the backcountry',  src: '/gallery-plane.jpg',              trip: 'Salmon River' },
-  { id: 9,  alt: 'Nicole rafting the river',           src: '/gallery-nicole-raft.png',        trip: 'Salmon River' },
   { id: 10, alt: 'Nicole on a bridge overlook',        src: '/gallery-nicole-bridge.jpg',      trip: 'Custom Trip' },
   { id: 11, alt: 'Nicole on a rocky outcrop',          src: '/gallery-nicole-rock.jpg',        trip: 'Mountain Retreat' },
   { id: 12, alt: 'Laurel on the river',                src: '/laurel.jpg',                     trip: 'Salmon River' },
