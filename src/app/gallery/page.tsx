@@ -20,6 +20,7 @@ const galleryImages = [
   { id: 10, alt: 'Nicole on a bridge overlook',        src: '/gallery-nicole-bridge.jpg',      trip: 'Custom Trip' },
   { id: 11, alt: 'Nicole on a rocky outcrop',          src: '/gallery-nicole-rock.jpg',        trip: 'Mountain Retreat' },
   { id: 12, alt: 'Laurel on the river',                src: '/laurel.jpg',                     trip: 'Salmon River' },
+  { id: 13, alt: 'Guides on the water',               src: '/hero-home.png',                  trip: 'Salmon River' },
 ];
 
 export default function GalleryPage() {
