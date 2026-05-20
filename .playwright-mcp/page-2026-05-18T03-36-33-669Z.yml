@@ -1,0 +1,127 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Bougie Adventure Bougie Adventure" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "Bougie Adventure" [ref=e5]
+        - generic [ref=e6]: Bougie Adventure
+      - navigation [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /
+        - link "About Us" [ref=e9] [cursor=pointer]:
+          - /url: /about
+        - link "Adventures" [ref=e10] [cursor=pointer]:
+          - /url: /services
+        - link "Gallery" [ref=e11] [cursor=pointer]:
+          - /url: /gallery
+        - link "Journal" [ref=e12] [cursor=pointer]:
+          - /url: /blog
+        - link "Contact" [ref=e13] [cursor=pointer]:
+          - /url: /contact
+      - link "Book a Trip" [ref=e14] [cursor=pointer]:
+        - /url: /contact
+  - main [ref=e15]:
+    - generic [ref=e16]:
+      - img "Mountains reflecting in a turquoise lake" [ref=e17]
+      - generic [ref=e19]:
+        - paragraph [ref=e20]: Let's Talk
+        - heading "Your Adventure Starts Here" [level=1] [ref=e21]
+        - paragraph [ref=e22]: Tell us about your dream trip and we'll start planning. No question is too big or too small.
+    - generic [ref=e24]:
+      - generic [ref=e25]:
+        - generic [ref=e26]:
+          - heading "Get in Touch" [level=2] [ref=e27]
+          - paragraph [ref=e28]: We respond to all inquiries within 24 hours. For urgent questions, reach us directly on Instagram.
+        - generic [ref=e29]:
+          - link "hello@bougieadventure.com" [ref=e30] [cursor=pointer]:
+            - /url: mailto:hello@bougieadventure.com
+            - img [ref=e32]
+            - text: hello@bougieadventure.com
+          - link "@bougieadventure" [ref=e35] [cursor=pointer]:
+            - /url: https://instagram.com/bougieadventure
+            - img [ref=e37]
+            - text: "@bougieadventure"
+        - generic [ref=e40]:
+          - paragraph [ref=e41]: Planning a group trip?
+          - paragraph [ref=e42]: Birthdays, reunions, and girl's trips are our specialty. Groups of 6 or more get priority scheduling and a complimentary planning call.
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - generic [ref=e46]:
+            - text: Full Name *
+            - textbox "Full Name *" [ref=e47]:
+              - /placeholder: Jane Smith
+          - generic [ref=e48]:
+            - text: Email *
+            - textbox "Email *" [ref=e49]:
+              - /placeholder: jane@example.com
+        - generic [ref=e50]:
+          - text: Phone (optional)
+          - textbox "Phone (optional)" [ref=e51]:
+            - /placeholder: +1 (555) 000-0000
+        - generic [ref=e52]:
+          - text: Interested in which adventure?
+          - combobox "Interested in which adventure?" [ref=e53]:
+            - option "Select a trip…" [selected]
+            - option "Salmon River Expedition"
+            - option "Wine Country E-Bike Tour"
+            - option "Mountain Yoga & Wilderness Retreat"
+            - option "Smoky Mountain Kayak Escape"
+            - option "Pacific Northwest White Water"
+            - option "Custom Private Adventure"
+            - option "Not sure yet, tell me what's available"
+        - generic [ref=e54]:
+          - text: Group size
+          - combobox "Group size" [ref=e55]:
+            - option "Select…" [selected]
+            - option "Just me"
+            - option "2–3 people"
+            - option "4–6 people"
+            - option "7 or more"
+        - generic [ref=e56]:
+          - text: Your message *
+          - textbox "Your message *" [ref=e57]:
+            - /placeholder: Tell us about your dream adventure, any questions, or the occasion you're celebrating…
+        - button "Send Message" [ref=e58]:
+          - img [ref=e59]
+          - text: Send Message
+  - contentinfo [ref=e62]:
+    - generic [ref=e63]:
+      - generic [ref=e64]:
+        - generic [ref=e65]:
+          - img "Bougie Adventure" [ref=e66]
+          - generic [ref=e68]: Bougie Adventure
+        - paragraph [ref=e69]: Luxury adventure travel designed for women who refuse to choose between comfort and thrill.
+        - generic [ref=e70]:
+          - link "Instagram" [ref=e71] [cursor=pointer]:
+            - /url: https://instagram.com
+            - img [ref=e72]
+          - link "Email" [ref=e75] [cursor=pointer]:
+            - /url: mailto:hello@bougieadventure.com
+            - img [ref=e76]
+      - generic [ref=e79]:
+        - heading "Explore" [level=4] [ref=e80]
+        - navigation [ref=e81]:
+          - link "About Us" [ref=e82] [cursor=pointer]:
+            - /url: /about
+          - link "Adventures" [ref=e83] [cursor=pointer]:
+            - /url: /services
+          - link "Gallery" [ref=e84] [cursor=pointer]:
+            - /url: /gallery
+          - link "Journal" [ref=e85] [cursor=pointer]:
+            - /url: /blog
+          - link "Contact" [ref=e86] [cursor=pointer]:
+            - /url: /contact
+      - generic [ref=e87]:
+        - heading "Get in Touch" [level=4] [ref=e88]
+        - generic [ref=e89]:
+          - link "hello@bougieadventure.com" [ref=e90] [cursor=pointer]:
+            - /url: mailto:hello@bougieadventure.com
+          - paragraph [ref=e91]:
+            - text: Ready for your next great adventure?
+            - text: We'd love to plan it with you.
+          - link "Book a Trip" [ref=e92] [cursor=pointer]:
+            - /url: /contact
+    - paragraph [ref=e94]: © 2026 Bougie Adventure. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=e100] [cursor=pointer]:
+    - img [ref=e101]
+  - alert [ref=e104]

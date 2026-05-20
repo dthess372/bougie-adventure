@@ -1,0 +1,94 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Bougie Adventure Bougie Adventure" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "Bougie Adventure" [ref=e5]
+        - generic [ref=e6]: Bougie Adventure
+      - navigation [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /
+        - link "About Us" [ref=e9] [cursor=pointer]:
+          - /url: /about
+        - link "Adventures" [ref=e10] [cursor=pointer]:
+          - /url: /services
+        - link "Gallery" [ref=e11] [cursor=pointer]:
+          - /url: /gallery
+        - link "Journal" [ref=e12] [cursor=pointer]:
+          - /url: /blog
+        - link "Contact" [ref=e13] [cursor=pointer]:
+          - /url: /contact
+      - link "Book a Trip" [ref=e14] [cursor=pointer]:
+        - /url: /contact
+  - main [ref=e15]:
+    - generic [ref=e16]:
+      - img "Two women hiking toward mountain peaks" [ref=e17]
+      - generic [ref=e19]:
+        - paragraph [ref=e20]: Our Story
+        - heading "Women Who Lead the Way" [level=1] [ref=e21]
+        - paragraph [ref=e22]: "Bougie Adventure was born from a simple belief: that women over 50 deserve trips that are equal parts thrilling and indulgent."
+    - generic [ref=e24]:
+      - generic [ref=e25]:
+        - paragraph [ref=e26]: The Team
+        - heading "Meet Your Guides" [level=2] [ref=e27]
+      - generic [ref=e28]:
+        - generic [ref=e29]:
+          - img "Laurel" [ref=e31]
+          - generic [ref=e32]:
+            - heading "Laurel" [level=3] [ref=e33]
+            - paragraph [ref=e34]: Co-Founder & Guide
+            - paragraph [ref=e35]: "[Add your bio here: your experience, what you love about leading trips, and what guests can expect traveling with you.]"
+        - generic [ref=e36]:
+          - generic [ref=e38]: Photo Coming Soon
+          - generic [ref=e39]:
+            - heading "Nicole" [level=3] [ref=e40]
+            - paragraph [ref=e41]: Co-Founder & Guide
+            - paragraph [ref=e42]: "[Add partner bio here: her background, certifications, what she brings to every trip, and her adventure philosophy.]"
+    - generic [ref=e44]:
+      - paragraph [ref=e45]: “We got tired of trips that were either too tame or too rough. So we built our own.”
+      - paragraph [ref=e46]: "Bougie Adventure is owned and operated by two women who have spent decades on the water, in the wilderness, and at the table of life's best experiences. After years of guiding independently, they partnered to create something that didn't exist: luxury adventure travel tailored specifically for women in their prime."
+      - paragraph [ref=e47]: Every itinerary is personally crafted. Every accommodation is hand-selected. Every guide is someone they would trust with their own mother.
+    - generic [ref=e48]:
+      - heading "Ready to Adventure With Us?" [level=2] [ref=e49]
+      - link "Let's Plan Your Trip" [ref=e50] [cursor=pointer]:
+        - /url: /contact
+  - contentinfo [ref=e51]:
+    - generic [ref=e52]:
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - img "Bougie Adventure" [ref=e55]
+          - generic [ref=e57]: Bougie Adventure
+        - paragraph [ref=e58]: Luxury adventure travel designed for women who refuse to choose between comfort and thrill.
+        - generic [ref=e59]:
+          - link "Instagram" [ref=e60] [cursor=pointer]:
+            - /url: https://instagram.com
+            - img [ref=e61]
+          - link "Email" [ref=e64] [cursor=pointer]:
+            - /url: mailto:hello@bougieadventure.com
+            - img [ref=e65]
+      - generic [ref=e68]:
+        - heading "Explore" [level=4] [ref=e69]
+        - navigation [ref=e70]:
+          - link "About Us" [ref=e71] [cursor=pointer]:
+            - /url: /about
+          - link "Adventures" [ref=e72] [cursor=pointer]:
+            - /url: /services
+          - link "Gallery" [ref=e73] [cursor=pointer]:
+            - /url: /gallery
+          - link "Journal" [ref=e74] [cursor=pointer]:
+            - /url: /blog
+          - link "Contact" [ref=e75] [cursor=pointer]:
+            - /url: /contact
+      - generic [ref=e76]:
+        - heading "Get in Touch" [level=4] [ref=e77]
+        - generic [ref=e78]:
+          - link "hello@bougieadventure.com" [ref=e79] [cursor=pointer]:
+            - /url: mailto:hello@bougieadventure.com
+          - paragraph [ref=e80]:
+            - text: Ready for your next great adventure?
+            - text: We'd love to plan it with you.
+          - link "Book a Trip" [ref=e81] [cursor=pointer]:
+            - /url: /contact
+    - paragraph [ref=e83]: © 2026 Bougie Adventure. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=e89] [cursor=pointer]:
+    - img [ref=e90]

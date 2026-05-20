@@ -1,0 +1,347 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Bougie Adventure Bougie Adventure" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "Bougie Adventure" [ref=e5]
+        - generic [ref=e6]: Bougie Adventure
+      - navigation [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /
+        - link "About Us" [ref=e9] [cursor=pointer]:
+          - /url: /about
+        - link "Adventures" [ref=e10] [cursor=pointer]:
+          - /url: /services
+        - link "Gallery" [ref=e11] [cursor=pointer]:
+          - /url: /gallery
+        - link "Journal" [ref=e12] [cursor=pointer]:
+          - /url: /blog
+        - link "Contact" [ref=e13] [cursor=pointer]:
+          - /url: /contact
+      - link "Book a Trip" [ref=e14] [cursor=pointer]:
+        - /url: /contact
+  - main [ref=e15]:
+    - generic [ref=e18]:
+      - paragraph [ref=e19]: Adventures
+      - heading "Find Your Perfect Trip" [level=1] [ref=e20]
+      - paragraph [ref=e21]: From white water rapids to mountain yoga retreats to wine country e-biking. Every trip is designed for women who want real adventure without giving up a single comfort.
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - generic [ref=e25]:
+          - img "Salmon River Expedition" [ref=e26]
+          - generic [ref=e28]: Signature
+        - generic [ref=e29]:
+          - generic [ref=e30]:
+            - generic [ref=e31]:
+              - img [ref=e32]
+              - text: 6 days / 5 nights
+            - generic [ref=e35]:
+              - img [ref=e36]
+              - text: Moderate
+          - heading "Salmon River Expedition" [level=2] [ref=e38]
+          - paragraph [ref=e39]: Our most iconic trip. Six days rafting Idaho's legendary River of No Return through a protected wilderness corridor so remote it can only be reached by boat or small plane.
+          - list [ref=e40]:
+            - listitem [ref=e41]:
+              - img [ref=e42]
+              - text: Class III-IV Salmon River rapids
+            - listitem [ref=e44]:
+              - img [ref=e45]
+              - text: Fly-in access to a pristine backcountry put-in
+            - listitem [ref=e47]:
+              - img [ref=e48]
+              - text: Luxury tent camps with real beds and linens
+            - listitem [ref=e50]:
+              - img [ref=e51]
+              - text: Gourmet riverside dinners each evening
+            - listitem [ref=e53]:
+              - img [ref=e54]
+              - text: "Wildlife spotting: bears, eagles, bighorn sheep"
+          - link "Inquire About This Trip" [ref=e56] [cursor=pointer]:
+            - /url: /contact
+      - generic [ref=e57]:
+        - generic [ref=e58]:
+          - img "Wine Country E-Bike Tour" [ref=e59]
+          - generic [ref=e61]: New
+        - generic [ref=e62]:
+          - generic [ref=e63]:
+            - generic [ref=e64]:
+              - img [ref=e65]
+              - text: 5 days / 4 nights
+            - generic [ref=e68]:
+              - img [ref=e69]
+              - text: Easy
+          - heading "Wine Country E-Bike Tour" [level=2] [ref=e71]
+          - paragraph [ref=e72]: Glide through stunning vineyard landscapes on premium e-bikes at your own pace, with curated wine tastings, farm-to-table lunches, and boutique inn stays each evening.
+          - list [ref=e73]:
+            - listitem [ref=e74]:
+              - img [ref=e75]
+              - text: Electric bikes, no cycling experience required
+            - listitem [ref=e77]:
+              - img [ref=e78]
+              - text: Private winery tours and tastings
+            - listitem [ref=e80]:
+              - img [ref=e81]
+              - text: Boutique inn accommodations nightly
+            - listitem [ref=e83]:
+              - img [ref=e84]
+              - text: Farm-to-table dining and local artisan markets
+            - listitem [ref=e86]:
+              - img [ref=e87]
+              - text: Scenic countryside routes, no traffic
+          - link "Inquire About This Trip" [ref=e89] [cursor=pointer]:
+            - /url: /contact
+      - generic [ref=e90]:
+        - generic [ref=e91]:
+          - img "Mountain Yoga & Wilderness Retreat" [ref=e92]
+          - generic [ref=e94]: Wellness
+        - generic [ref=e95]:
+          - generic [ref=e96]:
+            - generic [ref=e97]:
+              - img [ref=e98]
+              - text: 6 days / 5 nights
+            - generic [ref=e101]:
+              - img [ref=e102]
+              - text: Gentle
+          - heading "Mountain Yoga & Wilderness Retreat" [level=2] [ref=e104]
+          - paragraph [ref=e105]: Morning yoga overlooking mountain peaks, afternoon nature hikes, and evenings at a secluded luxury lodge. Rest, restore, and reconnect with yourself and your fellow adventurers.
+          - list [ref=e106]:
+            - listitem [ref=e107]:
+              - img [ref=e108]
+              - text: Daily guided yoga, all levels welcome
+            - listitem [ref=e110]:
+              - img [ref=e111]
+              - text: Guided wilderness hikes through meadows and peaks
+            - listitem [ref=e113]:
+              - img [ref=e114]
+              - text: Luxury mountain lodge accommodations
+            - listitem [ref=e116]:
+              - img [ref=e117]
+              - text: Spa treatments and restorative sessions
+            - listitem [ref=e119]:
+              - img [ref=e120]
+              - text: Wholesome gourmet meals included
+          - link "Inquire About This Trip" [ref=e122] [cursor=pointer]:
+            - /url: /contact
+      - generic [ref=e123]:
+        - generic [ref=e124]:
+          - img "Smoky Mountain Kayak Escape" [ref=e125]
+          - generic [ref=e127]: Popular
+        - generic [ref=e128]:
+          - generic [ref=e129]:
+            - generic [ref=e130]:
+              - img [ref=e131]
+              - text: 4 days / 3 nights
+            - generic [ref=e134]:
+              - img [ref=e135]
+              - text: Easy
+          - heading "Smoky Mountain Kayak Escape" [level=2] [ref=e137]
+          - paragraph [ref=e138]: A peaceful float through Appalachian splendor with stops at hidden waterfalls, local artisan markets, and a luxury mountain lodge each evening.
+          - list [ref=e139]:
+            - listitem [ref=e140]:
+              - img [ref=e141]
+              - text: Class I–II gentle river kayaking
+            - listitem [ref=e143]:
+              - img [ref=e144]
+              - text: Luxury lodge accommodations nightly
+            - listitem [ref=e146]:
+              - img [ref=e147]
+              - text: Farm-to-table dining
+            - listitem [ref=e149]:
+              - img [ref=e150]
+              - text: Guided waterfall hike
+            - listitem [ref=e152]:
+              - img [ref=e153]
+              - text: Optional spa day add-on
+          - link "Inquire About This Trip" [ref=e155] [cursor=pointer]:
+            - /url: /contact
+      - generic [ref=e156]:
+        - generic [ref=e157]:
+          - img "Pacific Northwest White Water" [ref=e158]
+          - generic [ref=e160]: Thrill
+        - generic [ref=e161]:
+          - generic [ref=e162]:
+            - generic [ref=e163]:
+              - img [ref=e164]
+              - text: 5 days / 4 nights
+            - generic [ref=e167]:
+              - img [ref=e168]
+              - text: Challenging
+          - heading "Pacific Northwest White Water" [level=2] [ref=e170]
+          - paragraph [ref=e171]: Heart-pounding white water through the Cascades by day, cedar spa retreat and gourmet Pacific Northwest cuisine by night.
+          - list [ref=e172]:
+            - listitem [ref=e173]:
+              - img [ref=e174]
+              - text: Class IV–V rapids (optional Class III alternative)
+            - listitem [ref=e176]:
+              - img [ref=e177]
+              - text: Boutique cedar lodge retreat
+            - listitem [ref=e179]:
+              - img [ref=e180]
+              - text: Professional safety kayakers on all runs
+            - listitem [ref=e182]:
+              - img [ref=e183]
+              - text: Pacific Northwest culinary experience
+            - listitem [ref=e185]:
+              - img [ref=e186]
+              - text: Guided forest trail on rest day
+          - link "Inquire About This Trip" [ref=e188] [cursor=pointer]:
+            - /url: /contact
+      - generic [ref=e189]:
+        - generic [ref=e190]:
+          - img "Custom Private Adventure" [ref=e191]
+          - generic [ref=e193]: Bespoke
+        - generic [ref=e194]:
+          - generic [ref=e195]:
+            - generic [ref=e196]:
+              - img [ref=e197]
+              - text: Your choice
+            - generic [ref=e200]:
+              - img [ref=e201]
+              - text: Your choice
+          - heading "Custom Private Adventure" [level=2] [ref=e203]
+          - paragraph [ref=e204]: Design your dream adventure from scratch. Choose your destination, activity level, group size, and we'll handle everything else.
+          - list [ref=e205]:
+            - listitem [ref=e206]:
+              - img [ref=e207]
+              - text: Fully customized itinerary
+            - listitem [ref=e209]:
+              - img [ref=e210]
+              - text: Perfect for birthdays, reunions, and milestones
+            - listitem [ref=e212]:
+              - img [ref=e213]
+              - text: Private guide team
+            - listitem [ref=e215]:
+              - img [ref=e216]
+              - text: Any destination, any pace
+            - listitem [ref=e218]:
+              - img [ref=e219]
+              - text: White-glove planning from start to finish
+          - link "Start Designing Your Trip" [ref=e221] [cursor=pointer]:
+            - /url: /contact
+    - generic [ref=e223]:
+      - generic [ref=e224]:
+        - paragraph [ref=e225]: Simple by Design
+        - heading "How It Works" [level=2] [ref=e226]
+      - generic [ref=e227]:
+        - generic [ref=e228]:
+          - generic [ref=e229]: "01"
+          - heading "Tell Us Your Dream" [level=3] [ref=e230]
+          - paragraph [ref=e231]: Fill out a quick inquiry with your dates, travel interests, and group size. No commitment required. Just a conversation starter.
+        - generic [ref=e232]:
+          - generic [ref=e233]: "02"
+          - heading "We Craft Your Plan" [level=3] [ref=e234]
+          - paragraph [ref=e235]: You'll hear from us within 24 hours. We'll schedule a planning call and send you a custom itinerary built around what you actually want.
+        - generic [ref=e236]:
+          - generic [ref=e237]: "03"
+          - heading "Show Up and Thrive" [level=3] [ref=e238]
+          - paragraph [ref=e239]: Your only job is to enjoy every single moment. We handle every detail, from gear to dinners to the stories you'll tell for years.
+    - generic [ref=e241]:
+      - heading "Every Trip Includes" [level=2] [ref=e242]
+      - generic [ref=e243]:
+        - generic [ref=e244]:
+          - img [ref=e245]
+          - text: Experienced, certified female guides
+        - generic [ref=e247]:
+          - img [ref=e248]
+          - text: All adventure equipment and safety gear
+        - generic [ref=e250]:
+          - img [ref=e251]
+          - text: Curated accommodations, hand selected
+        - generic [ref=e253]:
+          - img [ref=e254]
+          - text: Most meals (detailed per itinerary)
+        - generic [ref=e256]:
+          - img [ref=e257]
+          - text: Airport pickup / group transport
+        - generic [ref=e259]:
+          - img [ref=e260]
+          - text: Pre-trip planning consultation
+        - generic [ref=e262]:
+          - img [ref=e263]
+          - text: 24/7 guide support during the trip
+        - generic [ref=e265]:
+          - img [ref=e266]
+          - text: Post-trip photo share from our guides
+      - link "Book a Consultation" [ref=e268] [cursor=pointer]:
+        - /url: /contact
+    - generic [ref=e270]:
+      - generic [ref=e271]:
+        - paragraph [ref=e272]: Questions & Answers
+        - heading "Things You Might Be Wondering" [level=2] [ref=e273]
+        - paragraph [ref=e274]: We hear these before most trips. Hopefully one of them is yours.
+      - generic [ref=e275]:
+        - button "Do I need prior experience with rafting or kayaking?" [ref=e277]:
+          - generic [ref=e278]: Do I need prior experience with rafting or kayaking?
+          - img [ref=e280]
+        - button "What fitness level is required?" [ref=e282]:
+          - generic [ref=e283]: What fitness level is required?
+          - img [ref=e285]
+        - button "Are the trips women-only?" [ref=e287]:
+          - generic [ref=e288]: Are the trips women-only?
+          - img [ref=e290]
+        - button "How big are the groups?" [ref=e292]:
+          - generic [ref=e293]: How big are the groups?
+          - img [ref=e295]
+        - button "What does a typical day look like?" [ref=e297]:
+          - generic [ref=e298]: What does a typical day look like?
+          - img [ref=e300]
+        - button "Are flights included?" [ref=e302]:
+          - generic [ref=e303]: Are flights included?
+          - img [ref=e305]
+        - button "What's your cancellation policy?" [ref=e307]:
+          - generic [ref=e308]: What's your cancellation policy?
+          - img [ref=e310]
+        - button "Can I join a trip as a solo traveler?" [ref=e312]:
+          - generic [ref=e313]: Can I join a trip as a solo traveler?
+          - img [ref=e315]
+        - button "I'm in my 60s or 70s. Is this still for me?" [ref=e317]:
+          - generic [ref=e318]: I'm in my 60s or 70s. Is this still for me?
+          - img [ref=e320]
+        - button "Can you create a custom private trip for our group?" [ref=e322]:
+          - generic [ref=e323]: Can you create a custom private trip for our group?
+          - img [ref=e325]
+    - generic [ref=e326]:
+      - heading "Still have questions?" [level=2] [ref=e327]
+      - paragraph [ref=e328]: Reach out directly and we'll answer every single one. No pressure, no sales pitch.
+      - link "Get in Touch" [ref=e329] [cursor=pointer]:
+        - /url: /contact
+  - contentinfo [ref=e330]:
+    - generic [ref=e331]:
+      - generic [ref=e332]:
+        - generic [ref=e333]:
+          - img "Bougie Adventure" [ref=e334]
+          - generic [ref=e336]: Bougie Adventure
+        - paragraph [ref=e337]: Luxury adventure travel designed for women who refuse to choose between comfort and thrill.
+        - generic [ref=e338]:
+          - link "Instagram" [ref=e339] [cursor=pointer]:
+            - /url: https://instagram.com
+            - img [ref=e340]
+          - link "Email" [ref=e343] [cursor=pointer]:
+            - /url: mailto:hello@bougieadventure.com
+            - img [ref=e344]
+      - generic [ref=e347]:
+        - heading "Explore" [level=4] [ref=e348]
+        - navigation [ref=e349]:
+          - link "About Us" [ref=e350] [cursor=pointer]:
+            - /url: /about
+          - link "Adventures" [ref=e351] [cursor=pointer]:
+            - /url: /services
+          - link "Gallery" [ref=e352] [cursor=pointer]:
+            - /url: /gallery
+          - link "Journal" [ref=e353] [cursor=pointer]:
+            - /url: /blog
+          - link "Contact" [ref=e354] [cursor=pointer]:
+            - /url: /contact
+      - generic [ref=e355]:
+        - heading "Get in Touch" [level=4] [ref=e356]
+        - generic [ref=e357]:
+          - link "hello@bougieadventure.com" [ref=e358] [cursor=pointer]:
+            - /url: mailto:hello@bougieadventure.com
+          - paragraph [ref=e359]:
+            - text: Ready for your next great adventure?
+            - text: We'd love to plan it with you.
+          - link "Book a Trip" [ref=e360] [cursor=pointer]:
+            - /url: /contact
+    - paragraph [ref=e362]: © 2026 Bougie Adventure. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=e368] [cursor=pointer]:
+    - img [ref=e369]

@@ -57,7 +57,7 @@ const trips = [
     description: "Six days rafting Idaho's legendary River of No Return through one of the most remote wilderness corridors in North America. Class III-IV rapids, riverside glamping with real beds and linens, and gourmet dinners under a sky full of stars.",
     duration: '6 days',
     difficulty: 'Moderate',
-    image: '/trip-idaho.jpg',
+    image: '/images/trips/trip-idaho-salmon-river.jpg',
   },
   {
     name: 'Wine Country E-Bike Tour',
@@ -66,7 +66,7 @@ const trips = [
     description: 'Pedal through stunning vineyard landscapes at your own pace, with curated wine tastings, farm-to-table lunches, and boutique inn stays each night.',
     duration: '5 days',
     difficulty: 'Easy',
-    image: '/trip-ebike.jpg',
+    image: '/images/trips/trip-ebike-wine-country.jpg',
   },
   {
     name: 'Mountain Yoga & Wilderness Retreat',
@@ -75,7 +75,7 @@ const trips = [
     description: 'Morning yoga overlooking mountain peaks, afternoon nature hikes, and evenings at a secluded luxury lodge. Rest, restore, and reconnect.',
     duration: '6 days',
     difficulty: 'Gentle',
-    image: '/trip-yoga.jpg',
+    image: '/images/trips/trip-mountain-yoga-retreat.jpg',
   },
 ];
 
@@ -111,7 +111,7 @@ export default function HomePage() {
 
       {/* Hero */}
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
-        <Image src="/hero.jpg" alt="Mountain peaks above a sea of clouds at sunset" fill priority className="object-cover object-center scale-105 blur-sm" />
+        <Image src="/images/heroes/home-mountain-peaks-sunset.jpg" alt="Mountain peaks above a sea of clouds at sunset" fill priority className="object-cover object-center scale-105 blur-sm" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/55 to-royal-blue-dark/90" />
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto -mt-20">
           <div className="flex justify-center mb-6">

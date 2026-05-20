@@ -12,7 +12,7 @@ export default function AboutPage() {
     <>
       {/* Hero */}
       <section className="relative py-28 px-6 text-cream overflow-hidden">
-        <Image src="/hero-about.jpg" alt="Two women hiking toward mountain peaks" fill className="object-cover object-center scale-105 blur-sm" priority />
+        <Image src="/images/heroes/about-women-mountain-hike.jpg" alt="Two women hiking toward mountain peaks" fill className="object-cover object-center scale-105 blur-sm" priority />
         <div className="absolute inset-0 bg-gradient-to-b from-royal-blue-dark/70 via-black/50 to-royal-blue-dark/80" />
         <div className="relative z-10 max-w-3xl mx-auto text-center space-y-4">
           <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium">Our Story</p>
@@ -37,7 +37,7 @@ export default function AboutPage() {
             {/* Guide 1 */}
             <div className="space-y-5">
               <div className="relative aspect-square rounded-2xl overflow-hidden max-w-xs mx-auto w-full">
-                <Image src="/laurel-river.jpg" alt="Laurel on the river" fill sizes="(max-width: 768px) 100vw, 320px" className="object-cover object-[30%_20%]" />
+                <Image src="/images/team/laurel-on-river.jpg" alt="Laurel on the river" fill sizes="(max-width: 768px) 100vw, 320px" className="object-cover object-[30%_20%]" />
               </div>
               <div className="text-center space-y-2">
                 <h3 className="font-serif text-2xl font-bold text-royal-blue">Laurel</h3>
@@ -66,7 +66,7 @@ export default function AboutPage() {
             {/* Guide 2 */}
             <div className="space-y-5">
               <div className="relative aspect-square rounded-2xl overflow-hidden max-w-xs mx-auto w-full">
-                <Image src="/gallery-nicole-bridge.jpg" alt="Nicole on a bridge overlook" fill sizes="(max-width: 768px) 100vw, 320px" className="object-cover object-[50%_40%]" />
+                <Image src="/images/team/nicole-on-bridge-overlook.jpg" alt="Nicole on a bridge overlook" fill sizes="(max-width: 768px) 100vw, 320px" className="object-cover object-[50%_40%]" />
               </div>
               <div className="text-center space-y-2">
                 <h3 className="font-serif text-2xl font-bold text-royal-blue">Nicole</h3>

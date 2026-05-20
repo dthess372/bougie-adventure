@@ -13,7 +13,7 @@ const placeholderPosts = [
     excerpt: "We expected rapids. We didn't expect to cry at sunset every single night. Here's what our spring Grand Canyon trip was really like.",
     date: 'April 2025',
     tag: 'Trip Recap',
-    image: '/blog-canyon.jpg',
+    image: '/images/blog/blog-canyon.jpg',
   },
   {
     slug: 'packing-list',
@@ -21,7 +21,7 @@ const placeholderPosts = [
     excerpt: "After dozens of river trips, we've narrowed it down. Pack light, pack right. And always bring one thing that makes you feel like yourself.",
     date: 'March 2025',
     tag: 'Travel Tips',
-    image: '/blog-packing.jpg',
+    image: '/images/blog/blog-packing.jpg',
   },
   {
     slug: 'why-women-50',
@@ -29,7 +29,7 @@ const placeholderPosts = [
     excerpt: "They show up prepared. They don't complain. They laugh harder and sleep better than anyone else on the river. Here's our love letter to our guests.",
     date: 'February 2025',
     tag: 'Story',
-    image: '/blog-women.jpg',
+    image: '/images/blog/blog-women.jpg',
   },
 ];
 
@@ -38,7 +38,7 @@ export default function BlogPage() {
     <>
       {/* Hero */}
       <section className="relative py-28 px-6 text-cream overflow-hidden">
-        <Image src="/hero-blog.jpg" alt="Wide river flowing through a lush forest" fill className="object-cover object-center scale-105 blur-sm" priority />
+        <Image src="/images/heroes/blog-river-forest.jpg" alt="Wide river flowing through a lush forest" fill className="object-cover object-center scale-105 blur-sm" priority />
         <div className="absolute inset-0 bg-gradient-to-b from-royal-blue-dark/70 via-black/50 to-royal-blue-dark/80" />
         <div className="relative z-10 max-w-3xl mx-auto text-center space-y-4">
           <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium">Journal</p>

@@ -13,7 +13,7 @@ export default function ContactPage() {
     <>
       {/* Hero */}
       <section className="relative py-28 px-6 text-cream overflow-hidden">
-        <Image src="/hero-contact.jpg" alt="Mountains reflecting in a turquoise lake" fill className="object-cover object-center scale-105 blur-sm" priority />
+        <Image src="/images/heroes/contact-mountain-lake.jpg" alt="Mountains reflecting in a turquoise lake" fill className="object-cover object-center scale-105 blur-sm" priority />
         <div className="absolute inset-0 bg-gradient-to-b from-royal-blue-dark/70 via-black/50 to-royal-blue-dark/80" />
         <div className="relative z-10 max-w-3xl mx-auto text-center space-y-4">
           <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium">Let's Talk</p>

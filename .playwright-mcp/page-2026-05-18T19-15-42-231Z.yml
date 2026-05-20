@@ -1,0 +1,214 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Bougie Adventure Bougie Adventure" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "Bougie Adventure" [ref=e5]
+        - generic [ref=e6]: Bougie Adventure
+      - navigation [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /
+        - link "About Us" [ref=e9] [cursor=pointer]:
+          - /url: /about
+        - link "Adventures" [ref=e10] [cursor=pointer]:
+          - /url: /services
+        - link "Gallery" [ref=e11] [cursor=pointer]:
+          - /url: /gallery
+        - link "Journal" [ref=e12] [cursor=pointer]:
+          - /url: /blog
+        - link "Contact" [ref=e13] [cursor=pointer]:
+          - /url: /contact
+      - link "Book a Trip" [ref=e14] [cursor=pointer]:
+        - /url: /contact
+  - main [ref=e15]:
+    - generic [ref=e17]: Our site is coming soon. We're putting the finishing touches on something beautiful. Stay tuned!
+    - generic [ref=e20]:
+      - img "Mountain peaks above a sea of clouds at sunset" [ref=e21]
+      - generic [ref=e23]:
+        - img "Bougie Adventure" [ref=e26]
+        - paragraph [ref=e27]: Adventure · Wellness · Sisterhood
+        - heading "Your Next Bougie Adventure Awaits." [level=1] [ref=e28]:
+          - text: Your Next
+          - emphasis [ref=e29]: Bougie
+          - text: Adventure Awaits.
+        - paragraph [ref=e30]: Curated luxury adventure trips for women 50+ who want thrilling experiences without sacrificing comfort, community, or style.
+        - generic [ref=e31]:
+          - link "Explore Adventures" [ref=e32] [cursor=pointer]:
+            - /url: /services
+          - link "Meet Your Guides" [ref=e33] [cursor=pointer]:
+            - /url: /about
+      - img [ref=e35]
+    - generic [ref=e40]:
+      - generic [ref=e41]:
+        - paragraph [ref=e42]: The Bougie Promise
+        - heading "What Every Trip Delivers" [level=2] [ref=e43]
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - img [ref=e47]
+          - heading "Small Groups, Big Bonds" [level=3] [ref=e52]
+          - paragraph [ref=e53]: Max 10 women per trip. More personal attention from your guides, more flexibility in the day, and the chance to actually connect with who you're adventuring with.
+        - generic [ref=e54]:
+          - img [ref=e56]
+          - heading "Certified Female Guides" [level=3] [ref=e59]
+          - paragraph [ref=e60]: Every trip is led by experienced, certified women who live for this work. You're in expert hands from the first morning to the last evening.
+        - generic [ref=e61]:
+          - img [ref=e63]
+          - heading "Luxury Every Night" [level=3] [ref=e65]
+          - paragraph [ref=e66]: Hand-selected lodges, boutique inns, and glamping sites. Never an afterthought, always a highlight.
+        - generic [ref=e67]:
+          - img [ref=e69]
+          - heading "Adventure on Your Terms" [level=3] [ref=e71]
+          - paragraph [ref=e72]: Every trip has difficulty options. Easy floats to challenging runs. You set the pace and we make it work. No pressure, ever.
+    - img [ref=e74]
+    - generic [ref=e77]:
+      - generic [ref=e78]:
+        - paragraph [ref=e79]: Made for Women Like You
+        - heading "No Experience Required. No Compromises Either." [level=2] [ref=e80]:
+          - text: No Experience Required.
+          - text: No Compromises Either.
+        - paragraph [ref=e81]: We hear the same questions before every trip. Here is what we want you to know.
+      - generic [ref=e82]:
+        - generic [ref=e83]:
+          - img [ref=e85]
+          - generic [ref=e87]:
+            - heading "No experience needed." [level=3] [ref=e88]
+            - paragraph [ref=e89]: First time on the water? Perfect. Our certified guides handle everything from fitting gear to safety briefings. If you're willing to try, you're qualified.
+        - generic [ref=e90]:
+          - img [ref=e92]
+          - generic [ref=e94]:
+            - heading "All fitness levels welcome." [level=3] [ref=e95]
+            - paragraph [ref=e96]: "Every trip has a difficulty rating: Easy, Moderate, or Challenging. We'll help you find your fit. If you can walk a mile comfortably, you can do most of our trips."
+        - generic [ref=e97]:
+          - img [ref=e99]
+          - generic [ref=e101]:
+            - heading "You will never be left behind." [level=3] [ref=e102]
+            - paragraph [ref=e103]: Our groups move together. No rushing, no racing. Our guides are here to make sure every woman has her best day, every single day.
+        - generic [ref=e104]:
+          - img [ref=e106]
+          - generic [ref=e108]:
+            - heading "Luxury is non-negotiable." [level=3] [ref=e109]
+            - paragraph [ref=e110]: Adventure ends at the water's edge. Every evening is a real bed, a real meal, and room to breathe. No roughing it. Ever.
+    - generic [ref=e112]:
+      - generic [ref=e113]:
+        - paragraph [ref=e114]: Featured Adventures
+        - heading "Trips Made for You" [level=2] [ref=e115]
+      - generic [ref=e116]:
+        - generic [ref=e117]:
+          - generic [ref=e118]:
+            - img "Salmon River Expedition" [ref=e119]
+            - generic [ref=e121]:
+              - generic [ref=e122]: 6 days
+              - generic [ref=e123]: ·
+              - generic [ref=e124]: Moderate
+            - generic [ref=e125]: Signature
+          - generic [ref=e126]:
+            - heading "Salmon River Expedition" [level=3] [ref=e127]
+            - paragraph [ref=e128]: Six days rafting Idaho's legendary River of No Return through one of the most remote and spectacular wilderness corridors in North America. Class III-IV rapids, luxury riverside camps, and gourmet dinners under a sky full of stars.
+        - generic [ref=e129]:
+          - generic [ref=e130]:
+            - img "Wine Country E-Bike Tour" [ref=e131]
+            - generic [ref=e133]:
+              - generic [ref=e134]: 5 days
+              - generic [ref=e135]: ·
+              - generic [ref=e136]: Easy
+            - generic [ref=e137]: New
+          - generic [ref=e138]:
+            - heading "Wine Country E-Bike Tour" [level=3] [ref=e139]
+            - paragraph [ref=e140]: Pedal through stunning vineyard landscapes at your own pace, with curated wine tastings, farm-to-table lunches, and boutique inn stays each night.
+        - generic [ref=e141]:
+          - generic [ref=e142]:
+            - img "Mountain Yoga & Wilderness Retreat" [ref=e143]
+            - generic [ref=e145]:
+              - generic [ref=e146]: 6 days
+              - generic [ref=e147]: ·
+              - generic [ref=e148]: Gentle
+            - generic [ref=e149]: Wellness
+          - generic [ref=e150]:
+            - heading "Mountain Yoga & Wilderness Retreat" [level=3] [ref=e151]
+            - paragraph [ref=e152]: Morning yoga overlooking mountain peaks, afternoon nature hikes, and evenings at a secluded luxury lodge. Rest, restore, and reconnect.
+      - link "View All Adventures" [ref=e154] [cursor=pointer]:
+        - /url: /services
+    - img [ref=e156]
+    - generic [ref=e158]:
+      - img [ref=e159]
+      - img [ref=e161]
+      - generic [ref=e163]:
+        - generic [ref=e164]:
+          - paragraph [ref=e165]: Real Women, Real Trips
+          - heading "What Our Adventurers Say" [level=2] [ref=e166]
+        - generic [ref=e167]:
+          - generic [ref=e168]:
+            - generic [ref=e169]:
+              - img [ref=e170]
+              - img [ref=e172]
+              - img [ref=e174]
+              - img [ref=e176]
+              - img [ref=e178]
+            - blockquote [ref=e180]: “I turned 56 on a white water raft in the Grand Canyon. Best birthday of my life, and I didn't break a nail.”
+            - paragraph [ref=e182]: Margaret T., Arizona
+          - generic [ref=e183]:
+            - generic [ref=e184]:
+              - img [ref=e185]
+              - img [ref=e187]
+              - img [ref=e189]
+              - img [ref=e191]
+              - img [ref=e193]
+            - blockquote [ref=e195]: “I was terrified before I went. By day two I was leading the charge. These guides make you believe in yourself.”
+            - paragraph [ref=e197]: Carol R., Colorado
+          - generic [ref=e198]:
+            - generic [ref=e199]:
+              - img [ref=e200]
+              - img [ref=e202]
+              - img [ref=e204]
+              - img [ref=e206]
+              - img [ref=e208]
+            - blockquote [ref=e210]: “I've done luxury travel. I've done adventure travel. I've never done both at the same time until Bougie Adventure.”
+            - paragraph [ref=e212]: Diane W., Tennessee
+    - img [ref=e214]
+    - generic [ref=e217]:
+      - img [ref=e220]
+      - paragraph [ref=e223]: Ready?
+      - heading "Your Next Chapter Starts Here" [level=2] [ref=e224]
+      - paragraph [ref=e225]: Tell us your dream adventure and we'll build the perfect itinerary around you.
+      - link "Start Planning" [ref=e226] [cursor=pointer]:
+        - /url: /contact
+  - contentinfo [ref=e227]:
+    - generic [ref=e228]:
+      - generic [ref=e229]:
+        - generic [ref=e230]:
+          - img "Bougie Adventure" [ref=e231]
+          - generic [ref=e233]: Bougie Adventure
+        - paragraph [ref=e234]: Luxury adventure travel designed for women who refuse to choose between comfort and thrill.
+        - generic [ref=e235]:
+          - link "Instagram" [ref=e236] [cursor=pointer]:
+            - /url: https://instagram.com
+            - img [ref=e237]
+          - link "Email" [ref=e240] [cursor=pointer]:
+            - /url: mailto:hello@bougieadventure.com
+            - img [ref=e241]
+      - generic [ref=e244]:
+        - heading "Explore" [level=4] [ref=e245]
+        - navigation [ref=e246]:
+          - link "About Us" [ref=e247] [cursor=pointer]:
+            - /url: /about
+          - link "Adventures" [ref=e248] [cursor=pointer]:
+            - /url: /services
+          - link "Gallery" [ref=e249] [cursor=pointer]:
+            - /url: /gallery
+          - link "Journal" [ref=e250] [cursor=pointer]:
+            - /url: /blog
+          - link "Contact" [ref=e251] [cursor=pointer]:
+            - /url: /contact
+      - generic [ref=e252]:
+        - heading "Get in Touch" [level=4] [ref=e253]
+        - generic [ref=e254]:
+          - link "hello@bougieadventure.com" [ref=e255] [cursor=pointer]:
+            - /url: mailto:hello@bougieadventure.com
+          - paragraph [ref=e256]:
+            - text: Ready for your next great adventure?
+            - text: We'd love to plan it with you.
+          - link "Book a Trip" [ref=e257] [cursor=pointer]:
+            - /url: /contact
+    - paragraph [ref=e259]: © 2026 Bougie Adventure. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=e265] [cursor=pointer]:
+    - img [ref=e266]

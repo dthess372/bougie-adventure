@@ -26,7 +26,7 @@ const packages = [
       'Wildlife spotting: bears, eagles, bighorn sheep',
     ],
     cta: 'Inquire About This Trip',
-    image: '/trip-idaho.jpg',
+    image: '/images/trips/trip-idaho-salmon-river.jpg',
   },
   {
     name: 'Wine Country E-Bike Tour',
@@ -44,7 +44,7 @@ const packages = [
       'Scenic countryside routes, no traffic',
     ],
     cta: 'Inquire About This Trip',
-    image: '/trip-ebike.jpg',
+    image: '/images/trips/trip-ebike-wine-country.jpg',
   },
   {
     name: 'Mountain Yoga & Wilderness Retreat',
@@ -62,7 +62,7 @@ const packages = [
       'Wholesome gourmet meals included',
     ],
     cta: 'Inquire About This Trip',
-    image: '/trip-yoga.jpg',
+    image: '/images/trips/trip-mountain-yoga-retreat.jpg',
   },
   {
     name: 'Smoky Mountain Kayak Escape',
@@ -80,7 +80,7 @@ const packages = [
       'Optional spa day add-on',
     ],
     cta: 'Inquire About This Trip',
-    image: '/trip-smoky-kayak.jpg',
+    image: '/images/trips/trip-smoky-mountain-kayak.jpg',
   },
   {
     name: 'Pacific Northwest White Water',
@@ -98,7 +98,7 @@ const packages = [
       'Guided forest trail on rest day',
     ],
     cta: 'Inquire About This Trip',
-    image: '/trip-whitewater.jpg',
+    image: '/images/trips/trip-whitewater-rafting.jpg',
   },
   {
     name: 'Custom Private Adventure',
@@ -116,7 +116,7 @@ const packages = [
       'White-glove planning from start to finish',
     ],
     cta: 'Start Designing Your Trip',
-    image: '/trip-custom.jpg',
+    image: '/images/trips/trip-custom-adventure.jpg',
   },
 ];
 
@@ -143,7 +143,7 @@ export default function ServicesPage() {
     <>
       {/* Hero */}
       <section className="relative py-24 px-6 text-cream overflow-hidden">
-        <Image src="/hero-adventures.jpg" alt="Mountain wilderness landscape" fill className="object-cover object-center scale-105 blur-sm" priority />
+        <Image src="/images/heroes/adventures-mountain-wilderness.jpg" alt="Mountain wilderness landscape" fill className="object-cover object-center scale-105 blur-sm" priority />
         <div className="absolute inset-0 bg-gradient-to-b from-royal-blue-dark/70 via-black/50 to-royal-blue-dark/80" />
         <div className="relative z-10 max-w-3xl mx-auto text-center space-y-4">
           <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium">Adventure by Day. Wine by Night.</p>

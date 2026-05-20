@@ -1,33 +1,19 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import GalleryGrid from './GalleryGrid';
 
 export const metadata: Metadata = {
   title: 'Gallery',
   description: 'Photos from our luxury adventure trips. See where Bougie Adventure has taken women like you.',
 };
 
-const galleryImages = [
-  { id: 1,  alt: 'Guides on the raft together',        src: '/gallery-guides-raft.jpg',       trip: 'Salmon River' },
-  { id: 2,  alt: 'Rafting the river',                  src: '/gallery-raft.jpg',               trip: 'Salmon River' },
-  { id: 10, alt: 'Nicole on a mountain hike',           src: '/nicole.jpg',                     trip: 'Mountain Retreat' },
-  { id: 12, alt: 'Laurel on the river',                src: '/laurel.jpg',                     trip: 'Salmon River' },
-  { id: 5,  alt: 'Nicole at a waterfall',              src: '/gallery-nicole-waterfall.jpg',   trip: 'Pacific Northwest' },
-  { id: 6,  alt: 'Waterfall in the wilderness',        src: '/gallery-waterfall.jpg',          trip: 'Pacific Northwest' },
-  { id: 7,  alt: 'Towering redwood trees',             src: '/gallery-redwood.jpg',            trip: 'Pacific Northwest' },
-  { id: 8,  alt: 'Fly-in arrival to the backcountry',  src: '/gallery-plane.jpg',              trip: 'Salmon River' },
-  { id: 11, alt: 'Nicole on a rocky outcrop',          src: '/gallery-nicole-rock.jpg',        trip: 'Mountain Retreat' },
-  { id: 13, alt: 'Guides on the water',                src: '/hero-home.png',                  trip: 'Salmon River' },
-  { id: 3,  alt: 'Kayaks on calm water',               src: '/gallery-kayaks.jpg',             trip: 'Smoky Mountain Kayak' },
-  { id: 4,  alt: 'E-bikes through wine country',       src: '/gallery-bikes.jpg',              trip: 'Wine Country E-Bike' },
-];
-
 export default function GalleryPage() {
   return (
     <>
       {/* Hero */}
       <section className="relative py-28 px-6 text-cream overflow-hidden">
-        <Image src="/hero-gallery.jpg" alt="Turquoise mountain lake surrounded by forest" fill className="object-cover object-center scale-105 blur-sm" priority />
+        <Image src="/images/heroes/gallery-mountain-lake.jpg" alt="Turquoise mountain lake surrounded by forest" fill className="object-cover object-center scale-105 blur-sm" priority />
         <div className="absolute inset-0 bg-gradient-to-b from-royal-blue-dark/70 via-black/50 to-royal-blue-dark/80" />
         <div className="relative z-10 max-w-3xl mx-auto text-center space-y-4">
           <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium">Gallery</p>
@@ -40,22 +26,7 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Grid */}
-      <section className="py-16 px-6 bg-cream">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-            {galleryImages.map(({ id, alt, src, trip }) => (
-              <div key={id} className="aspect-square rounded-xl overflow-hidden relative group cursor-pointer">
-                <Image src={src} alt={alt} fill sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                <span className="absolute bottom-3 left-3 px-2.5 py-1 rounded-full bg-black/40 text-white/90 text-xs font-medium tracking-wide">
-                  {trip}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <GalleryGrid />
 
       {/* Instagram CTA */}
       <section className="py-16 px-6 bg-royal-blue text-cream text-center space-y-6">
