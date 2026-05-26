@@ -9,17 +9,43 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
     }
 
-    // TODO: Replace with Resend email delivery once API key is set up
-    // Example with Resend:
-    // const resend = new Resend(process.env.RESEND_API_KEY);
-    // await resend.emails.send({
-    //   from: 'contact@bougieadventure.com',
-    //   to: ['laurel@bougieadventure.com', 'nicole@bougieadventure.com'],
-    //   subject: `New inquiry from ${name}`,
-    //   html: `<p>Name: ${name}</p><p>Email: ${email}</p>...`
-    // });
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      console.error('RESEND_API_KEY not set');
+      return NextResponse.json({ error: 'Server configuration error' }, { status: 500 });
+    }
 
-    console.log('Contact form submission:', { name, email, phone, trip, groupSize, message });
+    const html = `
+      <h2>New inquiry from ${name}</h2>
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ''}
+      ${trip ? `<p><strong>Trip interest:</strong> ${trip}</p>` : ''}
+      ${groupSize ? `<p><strong>Group size:</strong> ${groupSize}</p>` : ''}
+      <p><strong>Message:</strong></p>
+      <p>${message.replace(/\n/g, '<br>')}</p>
+    `;
+
+    const res = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        from: 'Bougie Adventure <onboarding@resend.dev>',
+        to: ['info@bougieadventure.com'],
+        reply_to: email,
+        subject: `New inquiry from ${name}`,
+        html,
+      }),
+    });
+
+    if (!res.ok) {
+      const error = await res.text();
+      console.error('Resend error:', error);
+      return NextResponse.json({ error: 'Failed to send email' }, { status: 500 });
+    }
 
     return NextResponse.json({ ok: true });
   } catch {

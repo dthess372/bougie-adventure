@@ -130,7 +130,7 @@ export default function ContactForm() {
       )}
       {status === 'error' && (
         <div className="p-4 rounded-xl bg-red-50 border border-red-200 text-red-700 text-sm">
-          Something went wrong. Please email us directly at laurel@bougieadventure.com or nicole@bougieadventure.com
+          Something went wrong. Please email us directly at info@bougieadventure.com
         </div>
       )}
 

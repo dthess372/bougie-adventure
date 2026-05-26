@@ -39,6 +39,12 @@ export default function ContactPage() {
             </div>
 
             <div className="space-y-4">
+              <a href="mailto:info@bougieadventure.com" className="flex items-center gap-3 text-sm text-charcoal/70 hover:text-gold transition-colors group">
+                <div className="w-10 h-10 rounded-full bg-pink flex items-center justify-center group-hover:bg-gold/10 transition-colors">
+                  <Mail size={16} className="text-royal-blue" />
+                </div>
+                info@bougieadventure.com
+              </a>
               <a href="mailto:laurel@bougieadventure.com" className="flex items-center gap-3 text-sm text-charcoal/70 hover:text-gold transition-colors group">
                 <div className="w-10 h-10 rounded-full bg-pink flex items-center justify-center group-hover:bg-gold/10 transition-colors">
                   <Mail size={16} className="text-royal-blue" />
