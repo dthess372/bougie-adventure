@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://bougieadventure.com'),
   icons: {
     icon: '/logo.png',
-    apple: '/logo.png',
+    apple: '/apple-icon.png',
   },
   title: {
     default: "Bougie Adventure | Luxury Adventure Travel for Women 50+",

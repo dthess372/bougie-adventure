@@ -23,22 +23,13 @@ export default function OGImage() {
         {/* Subtle top accent bar */}
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 6, backgroundColor: '#C5A059' }} />
 
-        {/* Logo circle placeholder */}
-        <div
-          style={{
-            width: 96,
-            height: 96,
-            borderRadius: '50%',
-            border: '2px solid rgba(197,160,89,0.5)',
-            backgroundColor: 'rgba(197,160,89,0.1)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            marginBottom: 32,
-          }}
-        >
-          <div style={{ fontSize: 40 }}>⛵</div>
-        </div>
+        {/* Logo */}
+        <img
+          src="https://bougieadventure.com/logo.png"
+          width={120}
+          height={120}
+          style={{ marginBottom: 32 }}
+        />
 
         <p style={{ color: '#C5A059', fontSize: 14, letterSpacing: '0.4em', textTransform: 'uppercase', marginBottom: 16 }}>
           Adventure · Wellness · Sisterhood

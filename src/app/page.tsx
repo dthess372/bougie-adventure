@@ -116,7 +116,7 @@ export default function HomePage() {
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto -mt-20">
           <div className="flex justify-center mb-6">
             <div className="logo-glimmer drop-shadow-xl w-[200px] h-[200px]">
-              <Image src="/logo.png" alt="Bougie Adventure" width={200} height={200} className="scale-[1.263]" />
+              <Image src="/logo.png" alt="Bougie Adventure" width={200} height={200} />
             </div>
           </div>
           <h1 className="font-serif text-4xl md:text-6xl font-bold text-cream leading-tight mb-6">
