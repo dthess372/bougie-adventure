@@ -29,13 +29,15 @@ export default function Navbar() {
     <header className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-sm transition-all duration-300 ${scrolled ? 'bg-royal-blue/98 shadow-lg' : 'bg-royal-blue/95 shadow-md'}`}>
       <div className={`max-w-6xl mx-auto px-6 flex items-center justify-between transition-all duration-300 ${scrolled ? 'h-13' : 'h-16'}`}>
         <Link href="/" onClick={() => setOpen(false)} className="flex items-center gap-2.5">
-          <Image
-            src="/logo.png"
-            alt="Bougie Adventure"
-            width={48}
-            height={48}
-            className={`drop-shadow-sm transition-all duration-300 ${scrolled ? 'w-9 h-9' : 'w-12 h-12'}`}
-          />
+          <div className={`shrink-0 rounded-full bg-cream ring-2 ring-gold/50 shadow-sm overflow-hidden flex items-center justify-center transition-all duration-300 ${scrolled ? 'w-9 h-9' : 'w-12 h-12'}`}>
+            <Image
+              src="/logo.png"
+              alt="Bougie Adventure"
+              width={48}
+              height={48}
+              className="w-full h-full object-contain"
+            />
+          </div>
           <span className={`font-serif font-bold text-gold tracking-wide hidden sm:block transition-all duration-300 drop-shadow-sm ${scrolled ? 'text-lg' : 'text-2xl'}`}>Bougie Adventure</span>
         </Link>
 

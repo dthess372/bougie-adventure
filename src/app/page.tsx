@@ -134,7 +134,7 @@ export default function HomePage() {
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
         <Image src="/images/heroes/home-mountain-peaks-sunset.jpg" alt="Mountain peaks above a sea of clouds at sunset" fill priority className="object-cover object-center scale-105 blur-sm" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/55 to-royal-blue-dark/90" />
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto -mt-20">
+        <div className="relative z-10 text-center px-6 max-w-6xl mx-auto -mt-20">
           <div className="flex justify-center mb-6">
             <div className="flex items-center justify-center w-[190px] h-[190px] rounded-full bg-cream ring-4 ring-gold/50 shadow-2xl overflow-hidden">
               <Image src="/logo.png" alt="Bougie Adventure" width={190} height={190} className="w-full h-full object-contain" />
@@ -144,8 +144,10 @@ export default function HomePage() {
             Big Adventures.<br />
             <span className="text-pink-dark">Soft Landings.</span>
           </h1>
-          <p className="text-cream/80 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-10">
-            For women who crave adventure, cherish connection, and believe life&apos;s too short for ordinary trips. Find your people. Find your courage. Find your next adventure.
+          <p className="text-cream/80 text-lg md:text-xl leading-relaxed max-w-6xl mx-auto mb-10">
+            For women who crave adventure, cherish connection, and believe life&apos;s too short for ordinary trips.
+            <br />
+            Find your people. Find your courage. Find your next adventure.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-gold text-royal-blue-dark font-semibold text-base tracking-wide hover:bg-gold-light hover:scale-105 transition-all shadow-lg btn-shimmer">
