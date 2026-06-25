@@ -79,39 +79,6 @@ h1, h2, h3, h4, h5, h6 {
   animation: shimmer-slide 0.55s ease-in-out forwards;
 }
 
-@keyframes logo-glimmer {
-  0%   { transform: translateX(-180%) skewX(-15deg); opacity: 0; }
-  8%   { opacity: 1; }
-  35%  { transform: translateX(220%) skewX(-15deg); opacity: 0; }
-  100% { transform: translateX(220%) skewX(-15deg); opacity: 0; }
-}
-
-.logo-glimmer {
-  position: relative;
-  overflow: hidden;
-  border-radius: 9999px;
-}
-
-.logo-glimmer::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 9999px;
-  border: 7px solid #1D3557;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.logo-glimmer::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  width: 45%;
-  background: linear-gradient(to right, transparent, rgba(255,255,255,0.35), transparent);
-  animation: logo-glimmer 4s ease-in-out infinite;
-  z-index: 2;
-}
-
 @keyframes sparkle-pop {
   0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
   40%, 60% { opacity: 1; transform: scale(1) rotate(20deg); }

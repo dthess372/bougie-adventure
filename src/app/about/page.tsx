@@ -3,9 +3,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'About Us',
-  description: 'Meet the women behind Bougie Adventure, expert guides who believe every woman deserves a thrilling, luxurious adventure.',
+  title: 'Meet Your Guides',
+  description: 'Meet Laurel and Nicole, the Certified Accessible Travel Planners behind Bougie Adventure who believe every woman deserves a thrilling, luxurious adventure.',
 };
+
+const candids = [
+  { src: '/images/guides-come-sail-away.jpg', alt: 'Laurel and Nicole celebrating a sailing send-off' },
+  { src: '/images/laurel-desert-hike.jpg', alt: 'Laurel on a desert mountain hike' },
+  { src: '/images/laurel-riverside.jpg', alt: 'Laurel relaxing riverside on a rafting trip' },
+];
 
 export default function AboutPage() {
   return (
@@ -42,6 +48,7 @@ export default function AboutPage() {
               <div className="text-center space-y-2">
                 <h3 className="font-serif text-2xl font-bold text-royal-blue">Laurel</h3>
                 <p className="text-gold text-sm tracking-widest uppercase">Co-Founder & Guide</p>
+                <p className="text-royal-blue/70 text-xs tracking-wide font-medium">Certified Accessible Travel Planner (CATP)</p>
                 <p className="text-charcoal/70 text-sm leading-relaxed max-w-sm mx-auto">
                   I believe the best adventures happen somewhere between courage and comfort, and preferably near a river. A lifelong explorer and experienced group trip organizer, I have spent more than 20 years bringing people together through meaningful travel centered around connection, wellness, laughter, and the outdoors.
                 </p>
@@ -71,6 +78,7 @@ export default function AboutPage() {
               <div className="text-center space-y-2">
                 <h3 className="font-serif text-2xl font-bold text-royal-blue">Nicole</h3>
                 <p className="text-gold text-sm tracking-widest uppercase">Co-Founder & Guide</p>
+                <p className="text-royal-blue/70 text-xs tracking-wide font-medium">Certified Accessible Travel Planner (CATP)</p>
                 <p className="text-charcoal/70 text-sm leading-relaxed max-w-sm mx-auto">
                   Travel is more than reaching a destination. It&apos;s about creating experiences that stay with you long after you return home. Growing up immersed in travel from an early age, I learned that the best trips are thoughtfully designed around the people taking them. Those early experiences shaped not only my love of travel, but my understanding of what makes a journey truly meaningful.
                 </p>
@@ -82,6 +90,22 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CATP certification */}
+      <section className="py-16 px-6 bg-pink/20">
+        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12 text-center md:text-left">
+          <div className="relative w-44 h-44 shrink-0 drop-shadow-sm">
+            <Image src="/images/catp-badge.png" alt="Certified Accessible Travel Planner (CATP) badge" fill sizes="176px" className="object-contain" />
+          </div>
+          <div className="space-y-3">
+            <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium">Accredited & Certified</p>
+            <h2 className="font-serif text-3xl font-semibold text-royal-blue">Certified Accessible Travel Planners</h2>
+            <p className="text-charcoal/70 text-base leading-relaxed">
+              Both Laurel and Nicole are Certified Accessible Travel Planners (CATP). It is a credential that means they know how to design adventures that welcome every body and every ability, so no one gets left at the trailhead. Thoughtful planning, real expertise, and a seat at the table for everyone.
+            </p>
           </div>
         </div>
       </section>
@@ -98,6 +122,23 @@ export default function AboutPage() {
           <p>
             Every itinerary is personally crafted. Every accommodation is hand-selected. And you&apos;ll always be in the hands of Laurel or Nicole, never a stranger.
           </p>
+        </div>
+      </section>
+
+      {/* Moments from the trail */}
+      <section className="py-16 px-6 bg-cream">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-10">
+            <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium mb-3">Off the Clock</p>
+            <h2 className="font-serif text-3xl font-semibold text-royal-blue">Moments From the Trail</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {candids.map(({ src, alt }) => (
+              <div key={src} className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-md ring-1 ring-gold/10">
+                <Image src={src} alt={alt} fill sizes="(max-width: 640px) 100vw, 33vw" className="object-cover" />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Users, ShieldCheck, Bed, Mountain, Check, Star } from 'lucide-react';
+import { Users, ShieldCheck, Bed, Mountain, Check, Star, Sparkles, Compass } from 'lucide-react';
 
 const features: { id: string; icon: React.ElementType; title: React.ReactNode; body: string }[] = [
   {
@@ -79,6 +79,27 @@ const trips = [
   },
 ];
 
+const adventureTypes: { label: string; href: string; icon: React.ElementType; blurb: string }[] = [
+  {
+    label: 'Our Retreats',
+    href: '/services',
+    icon: Sparkles,
+    blurb: 'Join us for our exclusive, intimate annual getaways.',
+  },
+  {
+    label: 'Group Adventures',
+    href: '/services',
+    icon: Users,
+    blurb: 'Hike, raft, and explore the world with a ready-made sisterhood.',
+  },
+  {
+    label: 'Custom Trips',
+    href: '/services',
+    icon: Compass,
+    blurb: 'You pick the destination. We design it perfectly for your private circle.',
+  },
+];
+
 const testimonials = [
   {
     quote: "[Add guest quote here — something about how the trip made her feel, a specific moment, or a before/after.]",
@@ -115,23 +136,23 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/55 to-royal-blue-dark/90" />
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto -mt-20">
           <div className="flex justify-center mb-6">
-            <div className="logo-glimmer drop-shadow-xl w-[200px] h-[200px]">
-              <Image src="/logo.png" alt="Bougie Adventure" width={200} height={200} />
+            <div className="flex items-center justify-center w-[190px] h-[190px] rounded-full bg-cream ring-4 ring-gold/50 shadow-2xl overflow-hidden">
+              <Image src="/logo.png" alt="Bougie Adventure" width={190} height={190} className="w-full h-full object-contain" />
             </div>
           </div>
           <h1 className="font-serif text-4xl md:text-6xl font-bold text-cream leading-tight mb-6">
-            Come as a stranger<br />
-            <span className="text-pink-dark">Stay as a sister</span>
+            Big Adventures.<br />
+            <span className="text-pink-dark">Soft Landings.</span>
           </h1>
           <p className="text-cream/80 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-10">
-            Curated luxury adventure trips for women 50+ who want thrilling experiences without sacrificing comfort, community, or style.
+            For women who crave adventure, cherish connection, and believe life&apos;s too short for ordinary trips. Find your people. Find your courage. Find your next adventure.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/services" className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-gold text-royal-blue-dark font-semibold text-base tracking-wide hover:bg-gold-light hover:scale-105 transition-all shadow-lg btn-shimmer">
-              Find Your Next Bougie Adventure
+            <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-gold text-royal-blue-dark font-semibold text-base tracking-wide hover:bg-gold-light hover:scale-105 transition-all shadow-lg btn-shimmer">
+              Let&apos;s Plan Your Trip
             </Link>
-            <Link href="/about" className="inline-flex items-center justify-center px-8 py-4 rounded-full border-2 border-cream/40 text-cream font-medium text-base tracking-wide hover:border-gold hover:text-gold hover:scale-105 transition-all">
-              Meet Your Guides
+            <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 rounded-full border-2 border-cream/40 text-cream font-medium text-base tracking-wide hover:border-gold hover:text-gold hover:scale-105 transition-all">
+              Speak to an Expert
             </Link>
           </div>
         </div>
@@ -141,6 +162,34 @@ export default function HomePage() {
             <path d="M0,130 L0,90 L90,62 L180,82 L270,52 L360,75 L450,48 L540,70 L630,55 L720,78 L810,50 L900,72 L990,60 L1080,80 L1170,55 L1260,74 L1350,63 L1440,76 L1440,130 Z" fill="#fdfaf5" fillOpacity="0.12"/>
             <path d="M0,130 L0,105 L80,88 L160,108 L240,85 L320,100 L400,80 L480,98 L560,82 L640,102 L720,86 L800,104 L880,88 L960,106 L1040,84 L1120,100 L1200,88 L1280,105 L1360,90 L1440,100 L1440,130 Z" fill="#fdfaf5"/>
           </svg>
+        </div>
+      </section>
+
+      {/* Three Ways to Adventure */}
+      <section className="py-20 px-6 bg-cream" data-animate>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium mb-3">Choose Your Adventure</p>
+            <h2 className="font-serif text-4xl font-semibold text-royal-blue tracking-wide">Three Ways to Travel With Us</h2>
+            <p className="text-charcoal/60 text-lg mt-4 max-w-xl mx-auto leading-relaxed">However you want to explore, there is a Bougie way to do it.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {adventureTypes.map(({ label, href, icon: Icon, blurb }) => (
+              <Link
+                key={label}
+                href={href}
+                className="group flex flex-col items-center text-center gap-4 p-8 rounded-2xl bg-white border border-gold/15 shadow-md hover:shadow-2xl hover:ring-2 hover:ring-gold/30 transition-all duration-300"
+              >
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-pink border border-pink-dark">
+                  <Icon className="text-royal-blue" size={24} />
+                </div>
+                <span className="inline-flex items-center justify-center px-7 py-3 rounded-full bg-royal-blue text-cream font-semibold text-base tracking-wide group-hover:bg-gold group-hover:text-royal-blue-dark transition-colors">
+                  {label}
+                </span>
+                <p className="text-base text-charcoal/70 leading-relaxed">{blurb}</p>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -161,6 +210,25 @@ export default function HomePage() {
                 <p className="text-base text-charcoal/70 leading-relaxed">{body}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Meet the founders teaser */}
+      <section className="py-20 px-6 bg-cream" data-animate>
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl ring-1 ring-gold/15">
+            <Image src="/images/guides-rafting.jpg" alt="Laurel and Nicole rafting a river together" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
+          </div>
+          <div className="space-y-5">
+            <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium">Your Guides</p>
+            <h2 className="font-serif text-4xl font-semibold text-royal-blue tracking-wide">Adventure Led by Women Who Live It</h2>
+            <p className="text-charcoal/70 text-lg leading-relaxed">
+              Laurel and Nicole have spent decades on the water and in the wild, planning the trips their friends still talk about. Now they do it for you, as Certified Accessible Travel Planners who believe every woman deserves a thrilling, beautifully run adventure.
+            </p>
+            <Link href="/about" className="inline-flex items-center justify-center px-7 py-3 rounded-full border-2 border-royal-blue text-royal-blue font-semibold text-sm tracking-wide hover:bg-royal-blue hover:text-cream transition-colors">
+              Meet Your Guides
+            </Link>
           </div>
         </div>
       </section>
@@ -295,7 +363,7 @@ export default function HomePage() {
             Tell us your dream adventure and we&apos;ll build the perfect itinerary around you.
           </p>
           <Link href="/contact" className="inline-flex items-center justify-center px-10 py-4 rounded-full bg-gold text-royal-blue-dark font-semibold text-base tracking-wide hover:bg-gold-light transition-colors shadow-lg btn-shimmer">
-            Start Planning
+            INQUIRE NOW
           </Link>
         </div>
       </section>

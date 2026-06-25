@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import EmailCapturePopup from "@/components/ui/EmailCapturePopup";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://bougieadventure.com'),
@@ -38,6 +39,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1 pt-16">{children}</main>
         <Footer />
+        <EmailCapturePopup />
       </body>
     </html>
   );

@@ -42,10 +42,10 @@ export default function Footer() {
           <h4 className="text-gold font-serif text-sm tracking-widest uppercase mb-4">Explore</h4>
           <nav className="flex flex-col gap-2">
             {[
-              { href: '/about', label: 'About Us' },
+              { href: '/about', label: 'Meet Your Guides' },
               { href: '/services', label: 'Adventures' },
               { href: '/gallery', label: 'Gallery' },
-              { href: '/blog', label: 'Journal' },
+              { href: '/blog', label: 'Blog' },
               { href: '/contact', label: 'Contact' },
             ].map(({ href, label }) => (
               <Link
@@ -77,7 +77,7 @@ export default function Footer() {
               href="/contact"
               className="inline-flex items-center px-5 py-2 mt-2 rounded-full bg-gold text-royal-blue-dark text-sm font-semibold tracking-wide hover:bg-gold-light transition-colors"
             >
-              Book a Trip
+              INQUIRE NOW
             </Link>
           </div>
         </div>

@@ -7,10 +7,10 @@ import { Menu, X } from 'lucide-react';
 
 const links = [
   { href: '/', label: 'Home' },
-  { href: '/about', label: 'About Us' },
+  { href: '/about', label: 'Meet Your Guides' },
   { href: '/services', label: 'Adventures' },
   { href: '/gallery', label: 'Gallery' },
-  { href: '/blog', label: 'Journal' },
+  { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
 ];
 
@@ -56,7 +56,7 @@ export default function Navbar() {
           href="/contact"
           className="hidden md:inline-flex items-center px-5 py-2 rounded-full bg-gold text-royal-blue-dark text-sm font-semibold tracking-wide hover:bg-gold-light transition-colors duration-200 btn-shimmer"
         >
-          Book a Bougie Trip
+          INQUIRE NOW
         </Link>
 
         {/* Mobile hamburger */}
@@ -88,7 +88,7 @@ export default function Navbar() {
               className="mt-2 inline-flex items-center justify-center px-5 py-2 rounded-full bg-gold text-royal-blue-dark text-sm font-semibold tracking-wide hover:bg-gold-light transition-colors btn-shimmer"
               onClick={() => setOpen(false)}
             >
-              Book a Bougie Trip
+              INQUIRE NOW
             </Link>
           </nav>
         </div>
