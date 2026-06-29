@@ -20,25 +20,6 @@ const galleryImages = [
   { id: 13, alt: 'Fly-in arrival to the backcountry',             src: '/images/gallery/fly-in-backcountry-arrival.jpg',           trip: 'Salmon River' },
   { id: 14, alt: 'Mountain silhouette at dusk',                   src: '/images/gallery/mountain-silhouette-blue-dusk.jpg',        trip: 'Salmon River' },
   { id: 15, alt: 'Mountain ridge at pink sunset',                 src: '/images/gallery/mountain-ridge-pink-sunset.jpg',           trip: 'Salmon River' },
-  // Pacific Northwest
-  { id: 16, alt: 'Nicole at a waterfall',                         src: '/images/gallery/nicole-at-waterfall.jpg',                  trip: 'Pacific Northwest' },
-  { id: 17, alt: 'Waterfall in the wilderness',                   src: '/images/gallery/wilderness-waterfall.jpg',                 trip: 'Pacific Northwest' },
-  { id: 18, alt: 'Towering redwood trees',                        src: '/images/gallery/towering-redwood-trees.jpg',               trip: 'Pacific Northwest' },
-  { id: 19, alt: 'Woman hugging a giant sequoia',                 src: '/images/gallery/woman-hugging-giant-sequoia.jpg',          trip: 'Pacific Northwest' },
-  // Mountain Retreat
-  { id: 20, alt: 'Nicole on a rocky outcrop',                     src: '/images/gallery/nicole-on-rocky-outcrop.jpg',              trip: 'Mountain Retreat' },
-  { id: 21, alt: 'Woman hiking a forested trail',                 src: '/images/gallery/woman-hiking-forested-trail.jpg',          trip: 'Mountain Retreat' },
-  { id: 22, alt: 'Woman sitting by a mountain river',             src: '/images/gallery/woman-sitting-by-mountain-river.jpg',      trip: 'Mountain Retreat' },
-  // Smoky Mountain Kayak
-  { id: 23, alt: 'Kayaks on calm water',                          src: '/images/gallery/kayaks-calm-water.jpg',                    trip: 'Smoky Mountain Kayak' },
-  // Wine Country E-Bike
-  { id: 24, alt: 'E-bikes through wine country',                  src: '/images/gallery/ebikes-through-wine-country.jpg',          trip: 'Wine Country E-Bike' },
-  // Costa Rica
-  { id: 25, alt: 'Group hiking through jungle water',             src: '/images/gallery/group-water-hike-through-jungle.jpg',      trip: 'Costa Rica' },
-  { id: 26, alt: 'Group climbing a rocky cliff',                  src: '/images/gallery/group-climbing-rocky-cliff.jpg',           trip: 'Costa Rica' },
-  { id: 27, alt: 'Group on horseback in a tropical setting',      src: '/images/gallery/group-horseback-riding-tropical.jpg',      trip: 'Costa Rica' },
-  { id: 28, alt: 'Guides relaxing in a tropical hot spring',      src: '/images/gallery/guides-relaxing-tropical-hot-spring.jpg',  trip: 'Costa Rica' },
-  { id: 29, alt: 'Golden sunset over the ocean beach',            src: '/images/gallery/ocean-beach-golden-sunset.jpg',            trip: 'Costa Rica' },
 ];
 
 const trips = ['All', ...Array.from(new Set(galleryImages.map((img) => img.trip)))];
@@ -51,22 +32,24 @@ export default function GalleryGrid() {
   return (
     <section className="py-16 px-6 bg-cream">
       <div className="max-w-6xl mx-auto">
-        {/* Filter bar */}
-        <div className="flex flex-wrap gap-2 justify-center mb-10">
-          {trips.map((trip) => (
-            <button
-              key={trip}
-              onClick={() => setActive(trip)}
-              className={`px-4 py-2 rounded-full text-sm font-medium tracking-wide transition-colors ${
-                active === trip
-                  ? 'bg-gold text-royal-blue-dark'
-                  : 'bg-white border border-gold/30 text-royal-blue hover:border-gold hover:bg-gold/10'
-              }`}
-            >
-              {trip}
-            </button>
-          ))}
-        </div>
+        {/* Filter bar — shown only when there is more than one trip to filter by */}
+        {trips.length > 2 && (
+          <div className="flex flex-wrap gap-2 justify-center mb-10">
+            {trips.map((trip) => (
+              <button
+                key={trip}
+                onClick={() => setActive(trip)}
+                className={`px-4 py-2 rounded-full text-sm font-medium tracking-wide transition-colors ${
+                  active === trip
+                    ? 'bg-gold text-royal-blue-dark'
+                    : 'bg-white border border-gold/30 text-royal-blue hover:border-gold hover:bg-gold/10'
+                }`}
+              >
+                {trip}
+              </button>
+            ))}
+          </div>
+        )}
 
         {/* Grid */}
         <div key={active} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 animate-fadeIn">
