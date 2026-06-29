@@ -9,96 +9,40 @@ export const metadata: Metadata = {
   description: 'Browse our curated luxury adventure packages: river kayaking, white water rafting, and more for women 50+.',
 };
 
-const packages = [
+type Package = {
+  name: string;
+  tag: string;
+  tagColor: string;
+  description: string;
+  duration: string;
+  difficulty: string;
+  groupSize: string;
+  highlights: string[];
+  cta: string;
+  image: string;
+  journalHref?: string;
+};
+
+const packages: Package[] = [
   {
     name: 'Salmon River Expedition',
     tag: 'Signature',
     tagColor: 'bg-gold text-royal-blue-dark',
-    description: "Our most iconic trip. Six days rafting Idaho's legendary River of No Return through a protected wilderness corridor so remote it can only be reached by boat or small plane.",
+    description:
+      "Our signature trip, and the very same adventure we recap day by day in our River of No Return journal. Six days rafting 80 miles of Idaho's Salmon River through the Frank Church Wilderness, a protected corridor so remote it can only be reached by boat or small plane. Class III-IV rapids by day, riverside camp and gourmet Dutch-oven dinners by night.",
     duration: '6 days / 5 nights',
     difficulty: 'Moderate',
     groupSize: 'Up to 10',
     highlights: [
-      'Class III-IV Salmon River rapids',
-      'Fly-in access to a pristine backcountry put-in',
-      'Riverside glamping — real beds, linens, and lights',
-      'Gourmet riverside dinners each evening',
-      'Wildlife spotting: bears, eagles, bighorn sheep',
+      '80 miles of Class III-IV rapids through the Frank Church Wilderness',
+      'Fly-in access to a pristine, protected backcountry corridor',
+      'Riverside camp each night under a sky full of stars',
+      'Gourmet riverside meals, Dutch-oven desserts, and wine shipped in',
+      'Wildlife spotting: bears, eagles, bighorn sheep, and trout',
     ],
     cta: 'Inquire About This Trip',
+    journalHref: '/blog',
     image: '/images/trips/trip-idaho-salmon-river.jpg',
-  },
-  {
-    name: 'Wine Country E-Bike Tour',
-    tag: 'New',
-    tagColor: 'bg-royal-blue text-cream',
-    description: 'Glide through stunning vineyard landscapes on premium e-bikes at your own pace, with curated wine tastings, farm-to-table lunches, and boutique inn stays each evening.',
-    duration: '5 days / 4 nights',
-    difficulty: 'Easy',
-    groupSize: 'Up to 10',
-    highlights: [
-      'Electric bikes, no cycling experience required',
-      'Private winery tours and tastings',
-      'Boutique inn accommodations nightly',
-      'Farm-to-table dining and local artisan markets',
-      'Scenic countryside routes, no traffic',
-    ],
-    cta: 'Inquire About This Trip',
-    image: '/images/trips/trip-ebike-wine-country.jpg',
-  },
-  {
-    name: 'Mountain Yoga & Wilderness Retreat',
-    tag: 'Wellness',
-    tagColor: 'bg-pink-dark text-royal-blue-dark',
-    description: 'Morning yoga overlooking mountain peaks, afternoon nature hikes, and evenings at a secluded luxury lodge. Rest, restore, and reconnect with yourself and your fellow adventurers.',
-    duration: '6 days / 5 nights',
-    difficulty: 'Gentle',
-    groupSize: 'Up to 8',
-    highlights: [
-      'Daily guided yoga, all levels welcome',
-      'Guided wilderness hikes through meadows and peaks',
-      'Luxury mountain lodge accommodations',
-      'Spa treatments and restorative sessions',
-      'Wholesome gourmet meals included',
-    ],
-    cta: 'Inquire About This Trip',
-    image: '/images/trips/trip-mountain-yoga-retreat.jpg',
-  },
-  {
-    name: 'Smoky Mountain Kayak Escape',
-    tag: 'Popular',
-    tagColor: 'bg-pink text-royal-blue',
-    description: 'A peaceful float through Appalachian splendor with stops at hidden waterfalls, local artisan markets, and a luxury mountain lodge each evening.',
-    duration: '4 days / 3 nights',
-    difficulty: 'Easy',
-    groupSize: 'Up to 8',
-    highlights: [
-      'Class I–II gentle river kayaking',
-      'Luxury lodge accommodations nightly',
-      'Farm-to-table dining',
-      'Guided waterfall hike',
-      'Optional spa day add-on',
-    ],
-    cta: 'Inquire About This Trip',
-    image: '/images/trips/trip-smoky-mountain-kayak.jpg',
-  },
-  {
-    name: 'Pacific Northwest White Water',
-    tag: 'Thrill',
-    tagColor: 'bg-royal-blue-dark text-cream',
-    description: 'Heart-pounding white water through the Cascades by day, cedar spa retreat and gourmet Pacific Northwest cuisine by night.',
-    duration: '5 days / 4 nights',
-    difficulty: 'Challenging',
-    groupSize: 'Up to 8',
-    highlights: [
-      'Class IV–V rapids (optional Class III alternative)',
-      'Boutique cedar lodge retreat',
-      'Professional safety kayakers on all runs',
-      'Pacific Northwest culinary experience',
-      'Guided forest trail on rest day',
-    ],
-    cta: 'Inquire About This Trip',
-    image: '/images/trips/trip-whitewater-rafting.jpg',
   },
   {
     name: 'Custom Private Adventure',
@@ -151,7 +95,7 @@ export default function ServicesPage() {
             Find Your Perfect Trip
           </h1>
           <p className="text-cream/85 text-lg leading-relaxed max-w-xl mx-auto">
-            From white water rapids to mountain yoga retreats to wine country e-biking. Every trip is designed for women who want real adventure without giving up a single comfort.
+            From white water rapids in remote wilderness to a fully custom trip designed around your circle. Every adventure is built for women who want the real thing without giving up a single comfort.
           </p>
         </div>
       </section>
@@ -183,9 +127,16 @@ export default function ServicesPage() {
                     </li>
                   ))}
                 </ul>
-                <Link href="/contact" className="inline-flex items-center justify-center px-7 py-3 rounded-full bg-gold text-royal-blue-dark text-sm font-semibold tracking-wide hover:bg-gold-light transition-colors">
-                  {pkg.cta}
-                </Link>
+                <div className="flex flex-wrap items-center gap-x-6 gap-y-3 pt-1">
+                  <Link href="/contact" className="inline-flex items-center justify-center px-7 py-3 rounded-full bg-gold text-royal-blue-dark text-sm font-semibold tracking-wide hover:bg-gold-light transition-colors">
+                    {pkg.cta}
+                  </Link>
+                  {pkg.journalHref && (
+                    <Link href={pkg.journalHref} className="inline-flex items-center gap-1.5 text-royal-blue text-sm font-semibold tracking-wide hover:text-gold transition-colors">
+                      Read the trip journal &rarr;
+                    </Link>
+                  )}
+                </div>
               </div>
             </div>
           ))}

@@ -60,22 +60,13 @@ const trips = [
     image: '/images/trips/trip-idaho-salmon-river.jpg',
   },
   {
-    name: 'Wine Country E-Bike Tour',
-    tag: 'New',
-    tagClass: 'bg-royal-blue text-cream',
-    description: 'Pedal through stunning vineyard landscapes at your own pace, with curated wine tastings, farm-to-table lunches, and boutique inn stays each night.',
-    duration: '5 days',
-    difficulty: 'Easy',
-    image: '/images/trips/trip-ebike-wine-country.jpg',
-  },
-  {
-    name: 'Mountain Yoga & Wilderness Retreat',
-    tag: 'Wellness',
-    tagClass: 'bg-pink-dark text-royal-blue-dark',
-    description: 'Morning yoga overlooking mountain peaks, afternoon nature hikes, and evenings at a secluded luxury lodge. Rest, restore, and reconnect.',
-    duration: '6 days',
-    difficulty: 'Gentle',
-    image: '/images/trips/trip-mountain-yoga-retreat.jpg',
+    name: 'Custom Private Adventure',
+    tag: 'Bespoke',
+    tagClass: 'bg-cream text-royal-blue-dark',
+    description: "Have a destination or a milestone in mind? Tell us and we'll design the whole thing around your circle, from the first conversation to the last night on the trail.",
+    duration: 'Your choice',
+    difficulty: 'Your choice',
+    image: '/images/trips/trip-custom-adventure.jpg',
   },
 ];
 
@@ -273,7 +264,7 @@ export default function HomePage() {
             <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium mb-3">Featured Adventures</p>
             <h2 className="font-serif text-4xl font-semibold text-royal-blue tracking-wide">Trips Made for You</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {trips.map((trip) => (
               <div key={trip.name} className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:ring-2 hover:ring-gold/30 transition-all duration-300 border border-gold/10 group">
                 <div className="h-52 overflow-hidden relative">
