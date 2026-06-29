@@ -13,7 +13,7 @@ export default function NotFound() {
       />
       <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium mb-3">Lost on the trail</p>
       <h1 className="font-serif text-5xl font-bold text-royal-blue mb-4">Page Not Found</h1>
-      <p className="text-charcoal/65 text-lg leading-relaxed max-w-md mb-10">
+      <p className="text-charcoal/80 text-lg leading-relaxed max-w-md mb-10">
         Looks like this path leads nowhere. Let's get you back to the adventure.
       </p>
       <div className="flex flex-col sm:flex-row gap-4">

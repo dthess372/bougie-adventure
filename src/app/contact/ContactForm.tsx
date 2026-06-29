@@ -32,7 +32,7 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-5">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div className="space-y-1.5">
-          <label htmlFor="name" className="text-xs font-medium text-charcoal/60 tracking-wide uppercase">
+          <label htmlFor="name" className="text-xs font-medium text-charcoal/75 tracking-wide uppercase">
             Full Name *
           </label>
           <input
@@ -45,7 +45,7 @@ export default function ContactForm() {
           />
         </div>
         <div className="space-y-1.5">
-          <label htmlFor="email" className="text-xs font-medium text-charcoal/60 tracking-wide uppercase">
+          <label htmlFor="email" className="text-xs font-medium text-charcoal/75 tracking-wide uppercase">
             Email *
           </label>
           <input
@@ -60,7 +60,7 @@ export default function ContactForm() {
       </div>
 
       <div className="space-y-1.5">
-        <label htmlFor="phone" className="text-xs font-medium text-charcoal/60 tracking-wide uppercase">
+        <label htmlFor="phone" className="text-xs font-medium text-charcoal/75 tracking-wide uppercase">
           Phone (optional)
         </label>
         <input
@@ -73,7 +73,7 @@ export default function ContactForm() {
       </div>
 
       <div className="space-y-1.5">
-        <label htmlFor="trip" className="text-xs font-medium text-charcoal/60 tracking-wide uppercase">
+        <label htmlFor="trip" className="text-xs font-medium text-charcoal/75 tracking-wide uppercase">
           Interested in which adventure?
         </label>
         <select
@@ -93,7 +93,7 @@ export default function ContactForm() {
       </div>
 
       <div className="space-y-1.5">
-        <label htmlFor="groupSize" className="text-xs font-medium text-charcoal/60 tracking-wide uppercase">
+        <label htmlFor="groupSize" className="text-xs font-medium text-charcoal/75 tracking-wide uppercase">
           Group size
         </label>
         <select
@@ -110,7 +110,7 @@ export default function ContactForm() {
       </div>
 
       <div className="space-y-1.5">
-        <label htmlFor="message" className="text-xs font-medium text-charcoal/60 tracking-wide uppercase">
+        <label htmlFor="message" className="text-xs font-medium text-charcoal/75 tracking-wide uppercase">
           Your message *
         </label>
         <textarea

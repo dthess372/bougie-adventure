@@ -141,10 +141,10 @@ export default function HomePage() {
             </div>
           </div>
           <h1 className="font-serif text-4xl md:text-6xl font-bold text-cream leading-tight mb-6">
-            Big Adventures.<br />
-            <span className="text-pink-dark">Soft Landings.</span>
+            Big Adventures&hellip;<br />
+            <span className="text-pink-dark">With Soft Landings</span>
           </h1>
-          <p className="text-cream/80 text-lg md:text-xl leading-relaxed max-w-6xl mx-auto mb-10">
+          <p className="text-cream/85 text-lg md:text-xl leading-relaxed max-w-6xl mx-auto mb-10">
             For women who crave adventure, cherish connection, and believe life&apos;s too short for ordinary trips.
             <br />
             Find your people. Find your courage. Find your next adventure.
@@ -173,7 +173,7 @@ export default function HomePage() {
           <div className="text-center mb-12">
             <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium mb-3">Choose Your Adventure</p>
             <h2 className="font-serif text-4xl font-semibold text-royal-blue tracking-wide">Three Ways to Travel With Us</h2>
-            <p className="text-charcoal/60 text-lg mt-4 max-w-xl mx-auto leading-relaxed">However you want to explore, there is a Bougie way to do it.</p>
+            <p className="text-charcoal/75 text-lg mt-4 max-w-xl mx-auto leading-relaxed">However you want to explore, there is a Bougie way to do it.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {adventureTypes.map(({ label, href, icon: Icon, blurb }) => (
@@ -188,7 +188,7 @@ export default function HomePage() {
                 <span className="inline-flex items-center justify-center px-7 py-3 rounded-full bg-royal-blue text-cream font-semibold text-base tracking-wide group-hover:bg-gold group-hover:text-royal-blue-dark transition-colors">
                   {label}
                 </span>
-                <p className="text-base text-charcoal/70 leading-relaxed">{blurb}</p>
+                <p className="text-base text-charcoal/80 leading-relaxed">{blurb}</p>
               </Link>
             ))}
           </div>
@@ -209,7 +209,7 @@ export default function HomePage() {
                   <Icon className="text-royal-blue" size={24} />
                 </div>
                 <h3 className="font-serif text-xl font-semibold text-royal-blue">{title}</h3>
-                <p className="text-base text-charcoal/70 leading-relaxed">{body}</p>
+                <p className="text-base text-charcoal/80 leading-relaxed">{body}</p>
               </div>
             ))}
           </div>
@@ -225,7 +225,7 @@ export default function HomePage() {
           <div className="space-y-5">
             <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium">Your Guides</p>
             <h2 className="font-serif text-4xl font-semibold text-royal-blue tracking-wide">Adventure Led by Women Who Live It</h2>
-            <p className="text-charcoal/70 text-lg leading-relaxed">
+            <p className="text-charcoal/80 text-lg leading-relaxed">
               Laurel and Nicole have spent decades on the water and in the wild, planning the trips their friends still talk about. Now they do it for you, as Certified Accessible Travel Planners who believe every woman deserves a thrilling, beautifully run adventure.
             </p>
             <Link href="/about" className="inline-flex items-center justify-center px-7 py-3 rounded-full border-2 border-royal-blue text-royal-blue font-semibold text-sm tracking-wide hover:bg-royal-blue hover:text-cream transition-colors">
@@ -248,7 +248,7 @@ export default function HomePage() {
           <div className="text-center mb-14">
             <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium mb-3">Made for Women Like You</p>
             <h2 className="font-serif text-4xl font-semibold text-royal-blue">No Experience Required.<br className="hidden sm:block" /> No Compromises Either.</h2>
-            <p className="text-charcoal/60 text-lg mt-4 max-w-xl mx-auto leading-relaxed">We hear the same questions before every trip. Here is what we want you to know.</p>
+            <p className="text-charcoal/75 text-lg mt-4 max-w-xl mx-auto leading-relaxed">We hear the same questions before every trip. Here is what we want you to know.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {reassurances.map(({ title, body }) => (
@@ -258,7 +258,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <h3 className="font-serif text-lg font-semibold text-royal-blue mb-2">{title}</h3>
-                  <p className="text-sm text-charcoal/65 leading-relaxed">{body}</p>
+                  <p className="text-sm text-charcoal/80 leading-relaxed">{body}</p>
                 </div>
               </div>
             ))}
@@ -290,7 +290,7 @@ export default function HomePage() {
                 </div>
                 <div className="px-6 pt-5 pb-7 space-y-3">
                   <h3 className="font-serif text-xl font-semibold text-royal-blue">{trip.name}</h3>
-                  <p className="text-base text-charcoal/70 leading-relaxed">{trip.description}</p>
+                  <p className="text-base text-charcoal/80 leading-relaxed">{trip.description}</p>
                 </div>
               </div>
             ))}
@@ -361,7 +361,7 @@ export default function HomePage() {
           </div>
           <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium">Ready?</p>
           <h2 className="font-serif text-4xl font-semibold text-royal-blue tracking-wide">Your Next Chapter Starts Here</h2>
-          <p className="text-charcoal/70 text-lg leading-relaxed">
+          <p className="text-charcoal/80 text-lg leading-relaxed">
             Tell us your dream adventure and we&apos;ll build the perfect itinerary around you.
           </p>
           <Link href="/contact" className="inline-flex items-center justify-center px-10 py-4 rounded-full bg-gold text-royal-blue-dark font-semibold text-base tracking-wide hover:bg-gold-light transition-colors shadow-lg btn-shimmer">

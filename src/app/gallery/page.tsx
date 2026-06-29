@@ -20,7 +20,7 @@ export default function GalleryPage() {
           <h1 className="font-serif text-5xl md:text-6xl font-bold leading-tight">
             Adventures Worth Remembering
           </h1>
-          <p className="text-cream/75 text-lg leading-relaxed max-w-xl mx-auto">
+          <p className="text-cream/85 text-lg leading-relaxed max-w-xl mx-auto">
             A glimpse into the moments that make our trips unforgettable.
           </p>
         </div>
@@ -32,7 +32,7 @@ export default function GalleryPage() {
       <section className="py-16 px-6 bg-royal-blue text-cream text-center space-y-6">
         <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium">Stay Connected</p>
         <h2 className="font-serif text-3xl font-semibold">Follow Our Adventures</h2>
-        <p className="text-cream/70 text-base">
+        <p className="text-cream/80 text-base">
           We share real moments from every trip on Instagram. Tag us in yours.
         </p>
         <a

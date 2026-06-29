@@ -96,7 +96,7 @@ export default function EmailCapturePopup() {
         <button
           onClick={close}
           aria-label="Close"
-          className="absolute top-4 right-4 z-20 text-charcoal/40 hover:text-charcoal transition-colors"
+          className="absolute top-4 right-4 z-20 text-charcoal/55 hover:text-charcoal transition-colors"
         >
           <X size={20} />
         </button>
@@ -107,7 +107,7 @@ export default function EmailCapturePopup() {
           {status === 'success' ? (
             <div className="py-8 space-y-3">
               <h2 className="font-serif text-2xl font-semibold text-royal-blue">You&apos;re in!</h2>
-              <p className="text-charcoal/70 text-sm leading-relaxed">
+              <p className="text-charcoal/80 text-sm leading-relaxed">
                 Welcome to the Bougies. First-class inspiration is on its way to your inbox.
               </p>
             </div>
@@ -120,10 +120,10 @@ export default function EmailCapturePopup() {
               >
                 Join the Bougies!
               </h2>
-              <p className="text-charcoal/70 text-sm leading-relaxed mb-1">
+              <p className="text-charcoal/80 text-sm leading-relaxed mb-1">
                 Your next great adventure shouldn&apos;t require roughing it.
               </p>
-              <p className="text-charcoal/70 text-sm leading-relaxed mb-6">
+              <p className="text-charcoal/80 text-sm leading-relaxed mb-6">
                 Be the first to unlock luxury itineraries, receive exclusive deals, and get trusted travel inspiration delivered straight to your inbox.
               </p>
 
@@ -132,14 +132,14 @@ export default function EmailCapturePopup() {
                   name="name"
                   type="text"
                   placeholder="Name"
-                  className="w-full px-4 py-3 rounded-xl border border-gold/25 bg-white text-sm text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold transition"
+                  className="w-full px-4 py-3 rounded-xl border border-gold/25 bg-white text-sm text-charcoal placeholder:text-charcoal/55 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold transition"
                 />
                 <input
                   name="email"
                   type="email"
                   required
                   placeholder="Email Address"
-                  className="w-full px-4 py-3 rounded-xl border border-gold/25 bg-white text-sm text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold transition"
+                  className="w-full px-4 py-3 rounded-xl border border-gold/25 bg-white text-sm text-charcoal placeholder:text-charcoal/55 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold transition"
                 />
                 {status === 'error' && (
                   <p className="text-red-600 text-xs text-center">Something went wrong. Please try again.</p>
@@ -157,7 +157,7 @@ export default function EmailCapturePopup() {
                 </button>
               </form>
 
-              <p className="text-charcoal/45 text-xs leading-relaxed mt-4">
+              <p className="text-charcoal/60 text-xs leading-relaxed mt-4">
                 No spam. Just first-class inspiration and priority access.
               </p>
             </>

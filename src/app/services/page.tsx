@@ -150,7 +150,7 @@ export default function ServicesPage() {
           <h1 className="font-serif text-5xl md:text-6xl font-bold leading-tight">
             Find Your Perfect Trip
           </h1>
-          <p className="text-cream/75 text-lg leading-relaxed max-w-xl mx-auto">
+          <p className="text-cream/85 text-lg leading-relaxed max-w-xl mx-auto">
             From white water rapids to mountain yoga retreats to wine country e-biking. Every trip is designed for women who want real adventure without giving up a single comfort.
           </p>
         </div>
@@ -169,15 +169,15 @@ export default function ServicesPage() {
                 </span>
               </div>
               <div className="md:col-span-3 p-8 space-y-5">
-                <div className="flex items-center gap-4 text-sm text-charcoal/50">
+                <div className="flex items-center gap-4 text-sm text-charcoal/65">
                   <span className="flex items-center gap-1"><Clock size={13} /> {pkg.duration}</span>
                   <span className="flex items-center gap-1"><ChartBar size={13} /> {pkg.difficulty}</span>
                 </div>
                 <h2 className="font-serif text-2xl font-semibold text-royal-blue">{pkg.name}</h2>
-                <p className="text-base text-charcoal/70 leading-relaxed">{pkg.description}</p>
+                <p className="text-base text-charcoal/80 leading-relaxed">{pkg.description}</p>
                 <ul className="space-y-1.5">
                   {pkg.highlights.map((h) => (
-                    <li key={h} className="flex items-start gap-2 text-base text-charcoal/70">
+                    <li key={h} className="flex items-start gap-2 text-base text-charcoal/80">
                       <Check size={14} className="text-gold mt-1 shrink-0" />
                       {h}
                     </li>
@@ -204,7 +204,7 @@ export default function ServicesPage() {
               <div key={step} className="text-center space-y-4">
                 <div className="font-serif text-7xl font-bold text-gold/25 leading-none">{step}</div>
                 <h3 className="font-serif text-xl font-semibold text-cream">{title}</h3>
-                <p className="text-cream/65 text-sm leading-relaxed">{body}</p>
+                <p className="text-cream/80 text-sm leading-relaxed">{body}</p>
               </div>
             ))}
           </div>
@@ -226,7 +226,7 @@ export default function ServicesPage() {
               '24/7 guide support during the trip',
               'Post-trip photo share from our guides',
             ].map((item) => (
-              <div key={item} className="flex items-start gap-2 text-sm text-charcoal/70">
+              <div key={item} className="flex items-start gap-2 text-sm text-charcoal/80">
                 <Check size={14} className="text-gold mt-0.5 shrink-0" />
                 {item}
               </div>
@@ -244,7 +244,7 @@ export default function ServicesPage() {
           <div className="text-center mb-12">
             <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium mb-3">Questions & Answers</p>
             <h2 className="font-serif text-4xl font-semibold text-royal-blue">Things You Might Be Wondering</h2>
-            <p className="text-charcoal/60 text-base mt-3 leading-relaxed">We hear these before most trips. Hopefully one of them is yours.</p>
+            <p className="text-charcoal/75 text-base mt-3 leading-relaxed">We hear these before most trips. Hopefully one of them is yours.</p>
           </div>
           <FAQ />
         </div>
@@ -253,7 +253,7 @@ export default function ServicesPage() {
       {/* CTA */}
       <section className="py-16 px-6 bg-royal-blue text-cream text-center space-y-5">
         <h2 className="font-serif text-3xl font-semibold">Still have questions?</h2>
-        <p className="text-cream/65 text-base max-w-md mx-auto">Reach out directly and we&apos;ll answer every single one. No pressure, no sales pitch.</p>
+        <p className="text-cream/80 text-base max-w-md mx-auto">Reach out directly and we&apos;ll answer every single one. No pressure, no sales pitch.</p>
         <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-gold text-royal-blue-dark font-semibold tracking-wide hover:bg-gold-light transition-colors">
           Get in Touch
         </Link>

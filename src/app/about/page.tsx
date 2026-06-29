@@ -21,12 +21,12 @@ export default function AboutPage() {
         <Image src="/images/heroes/about-women-mountain-hike.jpg" alt="Two women hiking toward mountain peaks" fill className="object-cover object-center scale-105 blur-sm" priority />
         <div className="absolute inset-0 bg-gradient-to-b from-royal-blue-dark/70 via-black/50 to-royal-blue-dark/80" />
         <div className="relative z-10 max-w-3xl mx-auto text-center space-y-4">
-          <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium">Our Story</p>
-          <h1 className="font-serif text-5xl md:text-6xl font-bold leading-tight">
-            Women Who Lead the Way
+          <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium">The Bougie Way</p>
+          <h1 className="font-serif text-4xl md:text-5xl font-bold leading-tight">
+            Adventure should challenge you, not your standards.
           </h1>
-          <p className="text-cream/75 text-lg leading-relaxed max-w-xl mx-auto">
-            Bougie Adventure was born from a simple belief: that women over 50 deserve trips that are equal parts thrilling and indulgent.
+          <p className="text-cream/85 text-lg leading-relaxed max-w-2xl mx-auto">
+            Bougie Adventure was born from one simple idea: women shouldn&apos;t have to choose between adventure and comfort. We believe you can chase waterfalls, climb mountains, sip wine at sunset, and sleep in a fabulous bed, all in the same day. All this can be done while making lifelong friends along the way. Because the best adventures aren&apos;t just about the places you visit, they&apos;re about the women you share them with along the way.
           </p>
         </div>
       </section>
@@ -48,14 +48,14 @@ export default function AboutPage() {
               <div className="text-center space-y-2">
                 <h3 className="font-serif text-2xl font-bold text-royal-blue">Laurel</h3>
                 <p className="text-gold text-sm tracking-widest uppercase">Co-Founder & Guide</p>
-                <p className="text-royal-blue/70 text-xs tracking-wide font-medium">Certified Accessible Travel Planner (CATP)</p>
-                <p className="text-charcoal/70 text-sm leading-relaxed max-w-sm mx-auto">
+                <p className="text-royal-blue/80 text-xs tracking-wide font-medium">Certified Accessible Travel Planner (CATP)</p>
+                <p className="text-charcoal/80 text-base leading-relaxed max-w-sm mx-auto">
                   I believe the best adventures happen somewhere between courage and comfort, and preferably near a river. A lifelong explorer and experienced group trip organizer, I have spent more than 20 years bringing people together through meaningful travel centered around connection, wellness, laughter, and the outdoors.
                 </p>
-                <p className="text-charcoal/70 text-sm leading-relaxed max-w-sm mx-auto">
+                <p className="text-charcoal/80 text-base leading-relaxed max-w-sm mx-auto">
                   Having white water rafted more than 20 rivers, with a personal goal of rafting one new river every year for the rest of my life, I see travel as both adventure and healing. A way to reconnect with nature, community, and ourselves.
                 </p>
-                <p className="text-charcoal/70 text-sm leading-relaxed max-w-sm mx-auto">
+                <p className="text-charcoal/80 text-base leading-relaxed max-w-sm mx-auto">
                   Guests traveling with me can expect active days, beautiful scenery, genuine sisterhood, creative problem-solving when adventure strikes, sore muscles, full hearts, and probably a great glass of wine at the end of the day.
                 </p>
               </div>
@@ -78,14 +78,14 @@ export default function AboutPage() {
               <div className="text-center space-y-2">
                 <h3 className="font-serif text-2xl font-bold text-royal-blue">Nicole</h3>
                 <p className="text-gold text-sm tracking-widest uppercase">Co-Founder & Guide</p>
-                <p className="text-royal-blue/70 text-xs tracking-wide font-medium">Certified Accessible Travel Planner (CATP)</p>
-                <p className="text-charcoal/70 text-sm leading-relaxed max-w-sm mx-auto">
+                <p className="text-royal-blue/80 text-xs tracking-wide font-medium">Certified Accessible Travel Planner (CATP)</p>
+                <p className="text-charcoal/80 text-base leading-relaxed max-w-sm mx-auto">
                   Travel is more than reaching a destination. It&apos;s about creating experiences that stay with you long after you return home. Growing up immersed in travel from an early age, I learned that the best trips are thoughtfully designed around the people taking them. Those early experiences shaped not only my love of travel, but my understanding of what makes a journey truly meaningful.
                 </p>
-                <p className="text-charcoal/70 text-sm leading-relaxed max-w-sm mx-auto">
+                <p className="text-charcoal/80 text-base leading-relaxed max-w-sm mx-auto">
                   For the past 15 years, I have specialized in creating personalized travel experiences tailored to each client&apos;s unique interests, travel style, and sense of adventure. My approach combines thoughtful planning, curated experiences, and seamless logistics to remove the stress from travel while maximizing the moments that matter most.
                 </p>
-                <p className="text-charcoal/70 text-sm leading-relaxed max-w-sm mx-auto">
+                <p className="text-charcoal/80 text-base leading-relaxed max-w-sm mx-auto">
                   The greatest reward is helping travelers create lifelong memories, strengthen connections, and experience the excitement and joy that meaningful travel can bring to their lives.
                 </p>
               </div>
@@ -103,7 +103,7 @@ export default function AboutPage() {
           <div className="space-y-3">
             <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium">Accredited & Certified</p>
             <h2 className="font-serif text-3xl font-semibold text-royal-blue">Certified Accessible Travel Planners</h2>
-            <p className="text-charcoal/70 text-base leading-relaxed">
+            <p className="text-charcoal/80 text-base leading-relaxed">
               Both Laurel and Nicole are Certified Accessible Travel Planners (CATP). It is a credential that means they know how to design adventures that welcome every body and every ability, so no one gets left at the trailhead. Thoughtful planning, real expertise, and a seat at the table for everyone.
             </p>
           </div>
@@ -112,8 +112,8 @@ export default function AboutPage() {
 
       {/* Story — after guides, so readers know who's speaking */}
       <section className="py-20 px-6 bg-cream">
-        <div className="max-w-4xl mx-auto space-y-6 text-charcoal/80 text-lg leading-relaxed">
-          <p className="font-serif text-2xl text-royal-blue italic">
+        <div className="max-w-4xl mx-auto space-y-6 text-charcoal/85 text-base leading-relaxed">
+          <p className="font-serif text-xl text-royal-blue italic">
             &ldquo;We got tired of trips that were either too tame or too rough. So we built our own.&rdquo;
           </p>
           <p>

@@ -4,7 +4,7 @@ import { Mail } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-royal-blue-dark text-cream/80">
+    <footer className="bg-royal-blue-dark text-cream/85">
       <div className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
         {/* Brand */}
         <div className="space-y-3">
@@ -20,18 +20,18 @@ export default function Footer() {
               <span className="text-gold font-serif font-bold text-xl block">Bougie Adventure</span>
             </div>
           </div>
-          <p className="text-sm leading-relaxed text-cream/60">
+          <p className="text-sm leading-relaxed text-cream/75">
             Luxury adventure travel designed for women who refuse to choose between comfort and thrill.
           </p>
           <div className="flex items-center gap-4 pt-2">
             <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram"
-              className="text-cream/60 hover:text-gold transition-colors">
+              className="text-cream/75 hover:text-gold transition-colors">
               <svg width={20} height={20} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
                 <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
               </svg>
             </a>
             <a href="mailto:laurel@bougieadventure.com" aria-label="Email Laurel"
-              className="text-cream/60 hover:text-gold transition-colors">
+              className="text-cream/75 hover:text-gold transition-colors">
               <Mail size={20} />
             </a>
           </div>
@@ -51,7 +51,7 @@ export default function Footer() {
               <Link
                 key={href}
                 href={href}
-                className="text-sm text-cream/60 hover:text-gold transition-colors"
+                className="text-sm text-cream/75 hover:text-gold transition-colors"
               >
                 {label}
               </Link>
@@ -62,7 +62,7 @@ export default function Footer() {
         {/* Contact */}
         <div>
           <h4 className="text-gold font-serif text-sm tracking-widest uppercase mb-4">Get in Touch</h4>
-          <div className="space-y-2 text-sm text-cream/60">
+          <div className="space-y-2 text-sm text-cream/75">
             <a href="mailto:laurel@bougieadventure.com" className="hover:text-gold transition-colors block">
               laurel@bougieadventure.com
             </a>
