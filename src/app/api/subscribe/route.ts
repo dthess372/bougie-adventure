@@ -1,5 +1,44 @@
 import { NextResponse } from 'next/server';
 
+// Adds the subscriber to the Emma (Email+) audience. Returns false on any
+// failure so the Resend notification below still captures the lead.
+async function addToEmma(email: string, name?: string): Promise<boolean> {
+  const accountId = process.env.EMMA_ACCOUNT_ID;
+  const publicKey = process.env.EMMA_PUBLIC_KEY;
+  const privateKey = process.env.EMMA_PRIVATE_KEY;
+  if (!accountId || !publicKey || !privateKey) return false;
+
+  const [firstName, ...rest] = (name ?? '').trim().split(/\s+/);
+  const fields: Record<string, string> = {};
+  if (firstName) fields.first_name = firstName;
+  if (rest.length) fields.last_name = rest.join(' ');
+
+  const groupId = process.env.EMMA_GROUP_ID;
+
+  try {
+    const res = await fetch(`https://api.e2ma.net/${accountId}/members/add`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Basic ${Buffer.from(`${publicKey}:${privateKey}`).toString('base64')}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email,
+        fields,
+        ...(groupId ? { group_ids: [Number(groupId)] } : {}),
+      }),
+    });
+    if (!res.ok) {
+      console.error('Emma error:', res.status, await res.text());
+      return false;
+    }
+    return true;
+  } catch (err) {
+    console.error('Emma request failed:', err);
+    return false;
+  }
+}
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
@@ -8,6 +47,8 @@ export async function POST(request: Request) {
     if (!email) {
       return NextResponse.json({ error: 'Email is required' }, { status: 400 });
     }
+
+    const addedToEmma = await addToEmma(email, name);
 
     const apiKey = process.env.RESEND_API_KEY;
     if (!apiKey) {
@@ -19,7 +60,9 @@ export async function POST(request: Request) {
       <h2>New Bougie email signup</h2>
       ${name ? `<p><strong>Name:</strong> ${name}</p>` : ''}
       <p><strong>Email:</strong> ${email}</p>
-      <p>Add this contact to your mailing list.</p>
+      ${addedToEmma
+        ? '<p>Already added to your Email+ audience automatically. No action needed.</p>'
+        : '<p>Could not add this contact to Email+ automatically. Add them manually.</p>'}
     `;
 
     const res = await fetch('https://api.resend.com/emails', {

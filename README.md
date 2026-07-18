@@ -20,6 +20,15 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Email capture
+
+Two API routes handle leads, both notify the owners by email via Resend (`RESEND_API_KEY`):
+
+- `src/app/api/subscribe/route.ts`: newsletter signup popup. Also adds the subscriber to the Emma (Email+ by WorldVia) audience when `EMMA_ACCOUNT_ID`, `EMMA_PUBLIC_KEY`, and `EMMA_PRIVATE_KEY` are set. Optional `EMMA_GROUP_ID` assigns new members to a specific Emma group. If Emma is unconfigured or errors, the signup still succeeds and the notification email says the contact must be added manually.
+- `src/app/api/contact/route.ts`: contact form. Notification only; inquirers are not auto-added to the marketing audience since they did not opt in.
+
+Emma API docs: https://api.myemma.com/ (classic API, Basic auth with public/private key pair).
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
