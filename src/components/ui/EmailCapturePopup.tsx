@@ -1,9 +1,11 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { X, Loader2 } from 'lucide-react';
 
 const STORAGE_KEY = 'bougie-email-capture';
+const FOCUSABLE_SELECTOR =
+  'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
 
@@ -18,6 +20,8 @@ function persistDismiss() {
 export default function EmailCapturePopup() {
   const [open, setOpen] = useState(false);
   const [status, setStatus] = useState<Status>('idle');
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const previouslyFocused = useRef<HTMLElement | null>(null);
 
   // Show once, a few seconds after first visit (unless already dismissed/joined).
   useEffect(() => {
@@ -32,13 +36,39 @@ export default function EmailCapturePopup() {
     return () => window.clearTimeout(timer);
   }, []);
 
-  // Lock scroll + close on Escape while open.
+  // Lock scroll, move focus into the dialog, trap Tab inside it, and close
+  // on Escape while open. This popup opens itself on a timer (not from a
+  // click), so without this a keyboard user's focus stays wherever it was —
+  // Tab then walks them through page content hidden behind the backdrop
+  // while the page is scroll-locked, with no way to reach the dialog itself.
   useEffect(() => {
     if (!open) return;
+
+    previouslyFocused.current = document.activeElement as HTMLElement | null;
+
+    const getFocusable = () =>
+      Array.from(dialogRef.current?.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR) ?? []);
+
+    const firstField = dialogRef.current?.querySelector<HTMLElement>('input') ?? getFocusable()[0];
+    firstField?.focus();
+
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setOpen(false);
         persistDismiss();
+        return;
+      }
+      if (e.key !== 'Tab') return;
+      const items = getFocusable();
+      if (items.length === 0) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
       }
     };
     window.addEventListener('keydown', onKey);
@@ -46,6 +76,7 @@ export default function EmailCapturePopup() {
     return () => {
       window.removeEventListener('keydown', onKey);
       document.body.style.overflow = '';
+      previouslyFocused.current?.focus?.();
     };
   }, [open]);
 
@@ -92,7 +123,11 @@ export default function EmailCapturePopup() {
       />
 
       {/* Card */}
-      <div className="relative z-10 w-full max-w-md rounded-3xl bg-cream shadow-2xl ring-1 ring-gold/30 overflow-hidden">
+      <div
+        ref={dialogRef}
+        tabIndex={-1}
+        className="relative z-10 w-full max-w-md rounded-3xl bg-cream shadow-2xl ring-1 ring-gold/30 overflow-hidden"
+      >
         <button
           onClick={close}
           aria-label="Close"

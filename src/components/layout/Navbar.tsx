@@ -66,6 +66,8 @@ export default function Navbar() {
           className="md:hidden text-cream p-1"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
+          aria-expanded={open}
+          aria-controls="mobile-nav"
         >
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -73,7 +75,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-royal-blue-dark border-t border-gold/20">
+        <div id="mobile-nav" className="md:hidden bg-royal-blue-dark border-t border-gold/20">
           <nav className="flex flex-col px-6 py-4 gap-4">
             {links.map(({ href, label }) => (
               <Link
