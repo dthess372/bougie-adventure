@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { escapeHtml } from '@/lib/escapeHtml';
 
 // Adds the subscriber to the Emma (Email+) audience. Returns false on any
 // failure so the Resend notification below still captures the lead.
@@ -56,10 +57,13 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Server configuration error' }, { status: 500 });
     }
 
+    const safeName = name ? escapeHtml(name) : '';
+    const safeEmail = escapeHtml(email);
+
     const html = `
       <h2>New Bougie email signup</h2>
-      ${name ? `<p><strong>Name:</strong> ${name}</p>` : ''}
-      <p><strong>Email:</strong> ${email}</p>
+      ${safeName ? `<p><strong>Name:</strong> ${safeName}</p>` : ''}
+      <p><strong>Email:</strong> ${safeEmail}</p>
       ${addedToEmma
         ? '<p>Already added to your Email+ audience automatically. No action needed.</p>'
         : '<p>Could not add this contact to Email+ automatically. Add them manually.</p>'}
