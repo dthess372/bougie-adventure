@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { posts, tripSeries } from './posts';
+import NewsletterForm from './NewsletterForm';
 
 export const metadata: Metadata = {
   title: 'Journal',
@@ -73,19 +74,7 @@ export default function BlogPage() {
         <div className="max-w-xl mx-auto space-y-4">
           <h2 className="font-serif text-3xl font-semibold text-royal-blue">Get Trip Stories in Your Inbox</h2>
           <p className="text-charcoal/75 text-sm">Recaps, early trip announcements, and packing guides. No spam, ever.</p>
-          <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="your@email.com"
-              className="flex-1 px-5 py-3 rounded-full border border-gold/30 text-sm focus:outline-none focus:border-gold bg-white"
-            />
-            <button
-              type="submit"
-              className="px-6 py-3 rounded-full bg-gold text-royal-blue-dark text-sm font-semibold hover:bg-gold-light transition-colors"
-            >
-              Subscribe
-            </button>
-          </form>
+          <NewsletterForm />
         </div>
       </section>
     </>

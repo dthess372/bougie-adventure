@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { escapeHtml } from '@/lib/escapeHtml';
 
 export async function POST(request: Request) {
   try {
@@ -15,15 +16,22 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Server configuration error' }, { status: 500 });
     }
 
+    const safeName = escapeHtml(name);
+    const safeEmail = escapeHtml(email);
+    const safePhone = phone ? escapeHtml(phone) : '';
+    const safeTrip = trip ? escapeHtml(trip) : '';
+    const safeGroupSize = groupSize ? escapeHtml(groupSize) : '';
+    const safeMessage = escapeHtml(message).replace(/\n/g, '<br>');
+
     const html = `
-      <h2>New inquiry from ${name}</h2>
-      <p><strong>Name:</strong> ${name}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ''}
-      ${trip ? `<p><strong>Trip interest:</strong> ${trip}</p>` : ''}
-      ${groupSize ? `<p><strong>Group size:</strong> ${groupSize}</p>` : ''}
+      <h2>New inquiry from ${safeName}</h2>
+      <p><strong>Name:</strong> ${safeName}</p>
+      <p><strong>Email:</strong> ${safeEmail}</p>
+      ${safePhone ? `<p><strong>Phone:</strong> ${safePhone}</p>` : ''}
+      ${safeTrip ? `<p><strong>Trip interest:</strong> ${safeTrip}</p>` : ''}
+      ${safeGroupSize ? `<p><strong>Group size:</strong> ${safeGroupSize}</p>` : ''}
       <p><strong>Message:</strong></p>
-      <p>${message.replace(/\n/g, '<br>')}</p>
+      <p>${safeMessage}</p>
     `;
 
     const res = await fetch('https://api.resend.com/emails', {
