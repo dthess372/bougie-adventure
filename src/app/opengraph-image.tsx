@@ -26,6 +26,7 @@ export default function OGImage() {
         {/* Logo */}
         <img
           src="https://bougieadventure.com/logo.png"
+          alt="Bougie Adventure logo"
           width={120}
           height={120}
           style={{ marginBottom: 32 }}

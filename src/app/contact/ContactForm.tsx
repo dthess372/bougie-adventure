@@ -121,7 +121,7 @@ export default function ContactForm() {
 
       {status === 'success' && (
         <div className="p-4 rounded-xl bg-green-50 border border-green-200 text-green-800 text-sm">
-          Message sent! We'll be in touch within 24 hours.
+          Message sent! We&apos;ll be in touch within 24 hours.
         </div>
       )}
       {status === 'error' && (

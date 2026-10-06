@@ -71,7 +71,7 @@ export default function Footer() {
             </a>
             <p className="leading-relaxed">
               Ready for your next great adventure?<br />
-              We'd love to plan it with you.
+              We&apos;d love to plan it with you.
             </p>
             <Link
               href="/contact"
