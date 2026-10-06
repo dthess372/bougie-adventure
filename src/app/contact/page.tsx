@@ -16,12 +16,12 @@ export default function ContactPage() {
         <Image src="/images/heroes/contact-mountain-lake.jpg" alt="Mountains reflecting in a turquoise lake" fill className="object-cover object-center scale-105 blur-sm" priority />
         <div className="absolute inset-0 bg-gradient-to-b from-royal-blue-dark/70 via-black/50 to-royal-blue-dark/80" />
         <div className="relative z-10 max-w-3xl mx-auto text-center space-y-4">
-          <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium">Let's Talk</p>
+          <p className="text-gold text-xs tracking-[0.4em] uppercase font-medium">Let&apos;s Talk</p>
           <h1 className="font-serif text-5xl md:text-6xl font-bold leading-tight">
             Your Adventure Starts Here
           </h1>
           <p className="text-cream/85 text-lg leading-relaxed max-w-xl mx-auto">
-            Tell us about your dream trip and we'll start planning. No question is too big or too small.
+            Tell us about your dream trip and we&apos;ll start planning. No question is too big or too small.
           </p>
         </div>
       </section>
@@ -70,7 +70,7 @@ export default function ContactPage() {
             <div className="p-6 rounded-2xl bg-pink/30 border border-pink-dark/20 space-y-2">
               <p className="font-serif text-royal-blue font-semibold">Planning a group trip?</p>
               <p className="text-sm text-charcoal/80 leading-relaxed">
-                Birthdays, reunions, and girl's trips are our specialty. Groups of 6 or more get priority scheduling and a complimentary planning call.
+                Birthdays, reunions, and girl&apos;s trips are our specialty. Groups of 6 or more get priority scheduling and a complimentary planning call.
               </p>
             </div>
           </div>

@@ -1,8 +1,9 @@
 import type { MetadataRoute } from 'next';
 import { posts } from './blog/posts';
+import { SITE_URL } from '@/lib/site';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = 'https://bougieadventure.com';
+  const base = SITE_URL;
   const now = new Date();
 
   const blogPosts: MetadataRoute.Sitemap = posts.map((post) => ({
