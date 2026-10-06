@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { posts, getPost, tripSeries } from '../posts';
+import JsonLd from '@/components/seo/JsonLd';
+import { SITE_URL } from '@/lib/site';
 
 export function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
@@ -27,8 +29,24 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const prev = idx > 0 ? posts[idx - 1] : null;
   const next = idx < posts.length - 1 ? posts[idx + 1] : null;
 
+  const organization = { '@type': 'Organization', name: 'Bougie Adventure', url: SITE_URL };
+
   return (
     <>
+      <JsonLd
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: `Day ${post.day}: ${post.title}`,
+          description: post.excerpt,
+          image: `${SITE_URL}${post.image}`,
+          url: `${SITE_URL}/blog/${post.slug}`,
+          mainEntityOfPage: `${SITE_URL}/blog/${post.slug}`,
+          isPartOf: { '@type': 'Blog', name: tripSeries.title, url: `${SITE_URL}/blog` },
+          author: organization,
+          publisher: { ...organization, logo: `${SITE_URL}/logo.png` },
+        }}
+      />
       {/* Hero */}
       <section className="relative py-28 px-6 text-cream overflow-hidden">
         <Image src={post.image} alt={post.imageAlt} fill className="object-cover object-center scale-105" priority />

@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Clock, ChartBar, Check } from 'lucide-react';
 import FAQ from './FAQ';
+import { faqs } from './faqs';
+import JsonLd from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
   title: 'Adventures',
@@ -198,6 +200,17 @@ export default function ServicesPage() {
             <p className="text-charcoal/75 text-base mt-3 leading-relaxed">We hear these before most trips. Hopefully one of them is yours.</p>
           </div>
           <FAQ />
+          <JsonLd
+            data={{
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: faqs.map((faq) => ({
+                '@type': 'Question',
+                name: faq.q,
+                acceptedAnswer: { '@type': 'Answer', text: faq.a },
+              })),
+            }}
+          />
         </div>
       </section>
 
